@@ -1,6 +1,8 @@
 *~*
 *#*
-*.so
+*.so*
 *ode-0.13*
 *.tar.bz2*
 *.bzr*
+config/packages/*
+data/packages*
