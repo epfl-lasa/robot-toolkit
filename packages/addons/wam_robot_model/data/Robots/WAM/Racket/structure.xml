@@ -1,0 +1,77 @@
+<Include file="../structure.xml"> Base
+    <Children>
+        <Link> DOF_0
+            <Children>
+                <Link> DOF_1
+                    <Children>
+                        <Link> DOF_2
+                            <Children>
+                                <Link> DOF_3
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Joint type="Revolute">
+                                                                <Zero> -90 </Zero>
+                                                            </Joint>
+                                                            <Children>
+                                                                <Link> RACKET
+                                                                    <Joint type="None">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0.0 0.0 0.0 </Origin>
+                                                                            <Orient>  1  0  0
+                                                                                      0  0 -1
+                                                                                      0  1  0    
+                                                                            </Orient>
+                                                                        </BaseFrame>
+                                                                    </Joint>
+        
+                                                                    <Mass> 0.56602367 </Mass>
+                                                                    <CenterOfMass> 0.0000045558226  0.074035237  0.0029781339 </CenterOfMass>
+                                                                    <InertiaMatrix>  3.4056576e-02 -1.7799691e-06 -7.5987051e-08
+                                                                                    -1.7799691e-06  4.4704598e-03 -5.1568458e-04
+                                                                                    -7.5987051e-08 -5.1568458e-04  3.6539577e-02
+                                                                    </InertiaMatrix>                                                                
+                                                                        
+                                                                    <Children>
+                                                                        <Link> RACKET_CENTER
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0.0 0.19 0.01 </Origin>
+                                                                                    <Orient>  1  0  0
+                                                                                              0  0  1
+                                                                                              0 -1  0    
+                                                                                    </Orient>
+                                                                                </BaseFrame>
+                                                                            </Joint>
+                
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix>  0 0 0
+                                                                                             0 0 0
+                                                                                             0 0 0
+                                                                            </InertiaMatrix>                                                                
+                
+                                                                        </Link>                    
+                                                                        
+                                                                    </Children>    
+                                                                </Link>                    
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Include>
+

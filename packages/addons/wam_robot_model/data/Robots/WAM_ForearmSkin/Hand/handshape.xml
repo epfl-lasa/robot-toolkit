@@ -1,0 +1,56 @@
+<Link> WAMHand
+    <GfxShape>
+        <Shape> WAMHandBase.obj  
+		    <Origin>  0  0  -0.0005 </Origin> 
+		    <Orient>  0  0  1
+		              1  0  0
+		              0  1  0 
+		    </Orient>
+        </Shape>	
+    </GfxShape>
+    <Children>
+        <Link> HandF1Dof0
+            <Children>
+                <Link> HandF1Dof1
+                    <Children>
+                        <Link> HandF1Dof2
+                            <Children>
+                                <Link> HandF1
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+
+        <Link> HandF2Dof0
+            <Children>
+                <Link> HandF2Dof1
+                    <Children>
+                        <Link> HandF2Dof2
+                            <Children>
+                                <Link> HandF2
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+
+        <Link> HandF3Dof1
+            <Children>
+                <Link> HandF3Dof2
+                    <Children>
+                        <Link> HandF3
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>
+        </Link>
+
+    </Children>        
+</Link>
+
+

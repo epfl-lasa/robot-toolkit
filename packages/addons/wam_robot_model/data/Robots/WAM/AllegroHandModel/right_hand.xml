@@ -1,0 +1,475 @@
+<!--
+The geometrical parameters, joint limits and home positions are from Allegro user manual as well as wiki document
+-->
+<Link> AllegroHand
+    <Joint type="None">
+        <BaseFrame>
+            <Origin> 0.0 0.0 0.095 </Origin>
+            <Orient>  1.0  0.0  0.0 
+                      0.0  1.0  0.0
+                      0.0  0.0  1.0
+            </Orient>            
+            
+        </BaseFrame>
+    </Joint>
+
+    <Mass> 0 </Mass>
+    <CenterOfMass> 0 0 0 </CenterOfMass>
+    <InertiaMatrix> 0 0 0
+                    0 0 0
+                    0 0 0
+    </InertiaMatrix>
+    
+    <Children>
+   
+        <Link> HandF1Dof0
+            <Joint type="Revolute">
+                <BaseFrame>
+                    <Origin>  0.0 0.044981 -0.014102 </Origin>
+                    <Orient>  1.0  0.0     0.0 
+                              0.0  0.9962  0.0872
+                              0.0  -0.0872 0.9962
+                    </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> -34.0746 32.7624 </Range>
+                <Zero>  0 </Zero>
+
+            </Joint>
+
+            <Mass> 0 </Mass>
+            <CenterOfMass>   0 0 0 </CenterOfMass>
+            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+            </InertiaMatrix>
+
+            <Children>
+                <Link> HandF1Dof1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin>  0.0 0.0 0.0 </Origin>
+                            <Orient>  -1.0  0.0  0.0 
+                                      0.0   0.0  1.0
+                                      0.0   1.0  0.0
+                            </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -17.0118 99.5079 </Range>
+                        <Zero> -10 </Zero>
+
+                    </Joint>
+
+                    <Mass> 0 </Mass>
+                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                    </InertiaMatrix>
+
+                    <Children>
+                        <Link> HandF1Dof2
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin>  0.0 0.054 0.0 </Origin>
+                                    <Orient>  1.0  0.0  0.0 
+                                              0.0  1.0  0.0
+                                              0.0  0.0  1.0
+                                    </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -15.6997 103.6985 </Range>
+                                <Zero> 45 </Zero>
+
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass>   0 0 0 </CenterOfMass>
+                            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                            </InertiaMatrix>
+                            <Children>
+                            <Link> HandF1Dof3
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0384 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -18.7664 98.4653 </Range>
+                                        <Zero> 45 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+             
+
+                            <Children>
+                                <Link> HandF1
+                                    <Joint type="None">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0387 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+
+                                </Link>
+                            </Children>
+                            </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+        <Link> HandF2Dof0
+            <Joint type="Revolute">
+                <BaseFrame>
+                    <Origin>  0.0 0.0 0.0 </Origin>
+                    <Orient>  1.0  0.0  0.0 
+                              0.0  1.0  0.0
+                              0.0  0.0  1.0
+                    </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> -34.0746 32.7624 </Range>
+                <Zero>  0 </Zero>
+
+            </Joint>
+
+            <Mass> 0 </Mass>
+            <CenterOfMass>   0 0 0 </CenterOfMass>
+            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+            </InertiaMatrix>
+
+            <Children>
+                <Link> HandF2Dof1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin>  0.0 0.0 0.0 </Origin>
+                            <Orient>  -1.0  0.0  0.0 
+                                      0.0   0.0  1.0
+                                      0.0   1.0  0.0
+                            </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -17.0118 99.5079 </Range>
+                        <Zero> -10 </Zero>
+
+                    </Joint>
+
+                    <Mass> 0 </Mass>
+                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                    </InertiaMatrix>
+
+                    <Children>
+                        <Link> HandF2Dof2
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin>  0.0 0.054 0.0 </Origin>
+                                    <Orient>  1.0  0.0  0.0 
+                                              0.0  1.0  0.0
+                                              0.0  0.0  1.0
+                                    </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -15.6997 103.6985 </Range>
+                                <Zero> 45 </Zero>
+
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass>   0 0 0 </CenterOfMass>
+                            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                            </InertiaMatrix>
+                            <Children>
+                            <Link> HandF2Dof3
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0384 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -18.7664 98.4653 </Range>
+                                        <Zero> 45 </Zero>
+                                     </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+             
+
+                            <Children>
+                                <Link> HandF2
+                                    <Joint type="None">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0387 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+
+                                </Link>
+                            </Children>
+                            </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+        
+        <Link> HandF3Dof0
+            <Joint type="Revolute">
+                <BaseFrame>
+                    <Origin>  0.0 -0.044981 -0.014102 </Origin>
+                    <Orient>  1.0  0.0     0.0 
+                              0.0  0.9962  -0.0872
+                              0.0  0.0872  0.9962
+                    </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> -34.0746 32.7624 </Range>
+                <Zero>  5 </Zero>
+
+            </Joint>
+
+            <Mass> 0 </Mass>
+            <CenterOfMass>   0 0 0 </CenterOfMass>
+            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+            </InertiaMatrix>
+
+            <Children>
+                <Link> HandF3Dof1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin>  0.0 0.0 0.0 </Origin>
+                            <Orient>  -1.0  0.0  0.0 
+                                      0.0   0.0  1.0
+                                      0.0   1.0  0.0
+                            </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -17.0118 99.5079 </Range>
+                        <Zero> -5 </Zero>
+
+                    </Joint>
+
+                    <Mass> 0 </Mass>
+                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                    </InertiaMatrix>
+
+                    <Children>
+                        <Link> HandF3Dof2
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin>  0.0 0.054 0.0 </Origin>
+                                    <Orient>  1.0  0.0  0.0 
+                                              0.0  1.0  0.0
+                                              0.0  0.0  1.0
+                                    </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -15.6997 103.6985 </Range>
+                                <Zero> 50 </Zero>
+
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass>   0 0 0 </CenterOfMass>
+                            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                            </InertiaMatrix>
+                            <Children>
+                            <Link> HandF3Dof3
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0384 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -18.7664 98.4653 </Range>
+                                        <Zero> 45 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+             
+
+                            <Children>
+                                <Link> HandF3
+                                    <Joint type="None">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0387 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+
+                                </Link>
+                            </Children>
+                            </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+
+        <Link> HandF4Dof0
+            <Joint type="Revolute">
+                <BaseFrame>
+                    <Origin>  -0.0182 0.019333 -0.044987 </Origin>
+                    <Orient>  -1.0  0.0     0.0 
+                              0.0   0.9962  -0.0872
+                              0.0  -0.0872  -0.9962
+                    </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> 20.8312 85.7611 </Range>
+                <Zero>  50 </Zero>
+
+            </Joint>
+
+            <Mass> 0 </Mass>
+            <CenterOfMass>   0 0 0 </CenterOfMass>
+            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+            </InertiaMatrix>
+
+            <Children>
+                <Link> HandF4Dof1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin>  -0.0034 0.0551 0.027 </Origin>
+                            <Orient>  0.0    -1.0  0.0 
+                                      0.0    0.0   1.0
+                                      -1.0   0.0   0.0
+                            </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -11.7481 72.4217 </Range>
+                        <Zero> 25 </Zero>
+
+                    </Joint>
+
+                    <Mass> 0 </Mass>
+                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                    </InertiaMatrix>
+
+                    <Children>
+                        <Link> HandF4Dof2
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin>  0.0 0.0   0.0 </Origin>
+                                    <Orient>  -1.0  0.0  0.0 
+                                              0.0   0.0  1.0
+                                              0.0   1.0  0.0
+                                    </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -16.6 99.9249 </Range>
+                                <Zero> 15 </Zero>
+
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass>   0 0 0 </CenterOfMass>
+                            <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                            </InertiaMatrix>
+                            <Children>
+                            <Link> HandF4Dof3
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0514 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range>-15.0233 104.2732</Range>
+                                        <Zero> 45 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+             
+
+                            <Children>
+                                <Link> HandF4
+                                    <Joint type="None">
+                                        <BaseFrame>
+                                            <Origin>  0.0 0.0543 0.0 </Origin>
+                                            <Orient>  1.0  0.0  0.0 
+                                                      0.0  1.0  0.0
+                                                      0.0  0.0  1.0
+                                            </Orient>
+                                        </BaseFrame>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass>   0 0 0 </CenterOfMass>
+                                    <InertiaMatrix>  0 0 0 0 0 0 0 0 0 
+                                    </InertiaMatrix>
+
+                                </Link>
+                            </Children>
+                            </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>        
+        </Link>
+
+
+	<Link> EndEffector
+	<Joint type="None">
+		<BaseFrame>
+		    <Origin> 0.0 0.0 0.0 </Origin>
+		    <Orient>  1.0  0.0  0.0 
+			      0.0  1.0  0.0
+			      0.0  0.0  1.0
+		    </Orient>            
+		</BaseFrame>
+	    </Joint>
+	</Link>
+    </Children>        
+</Link>
+
+

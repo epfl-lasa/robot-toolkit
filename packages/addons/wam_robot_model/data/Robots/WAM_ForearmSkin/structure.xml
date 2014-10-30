@@ -1,0 +1,219 @@
+<Link> Base
+<Joint type="None">
+  <BaseFrame>
+    <Origin> 0.0 0.0 0.0 </Origin>
+    <Orient>  1.0  0.0  0.0 
+    0.0  1.0  0.0
+    0.0  0.0  1.0
+    </Orient>            
+    
+  </BaseFrame>
+</Joint>
+
+<Mass> 0 </Mass>
+<CenterOfMass> 0 0 0 </CenterOfMass>
+<InertiaMatrix> 0 0 0
+0 0 0
+0 0 0
+</InertiaMatrix>
+
+
+<Children>
+  <Link> DOF_0
+  <Joint type="Revolute">
+    <BaseFrame>
+      <Origin> 0.0 0.0 0.346 </Origin>
+      <Orient>  1.0  0.0  0.0 
+      0.0  1.0  0.0
+      0.0  0.0  1.0
+      </Orient>
+    </BaseFrame>
+    <Axis> EZ </Axis>
+    <Range> -150 150 </Range>
+    <Zero> 0 </Zero>
+  </Joint>
+
+  <Mass> 8.3936 </Mass>
+  <CenterOfMass>   0.000350600000  0.000628600000 -0.132679500000 </CenterOfMass>
+  <InertiaMatrix>  0.095157429400 -0.000095018300 -0.000246140400 
+  -0.000095018300  0.059290599700  0.000962672500 
+  -0.000246140400  0.000962672500  0.293032352400 
+  </InertiaMatrix>
+
+  
+  <Children>
+    <Link> DOF_1
+    <Joint type="Revolute">
+      <BaseFrame>
+	<Origin> 0.0 0.0 0.0 </Origin>
+	<Orient>  1.0  0.0  0.0 
+	0.0  0.0  1.0
+	0.0 -1.0  0.0
+	</Orient>
+      </BaseFrame>
+      <Axis> EZ </Axis>
+      <Range> -113 113 </Range>
+      <Zero>  -110 </Zero>
+    </Joint>
+
+    <Mass> 4.8487 </Mass>
+    <CenterOfMass>  -0.000223000000 -0.013375400000 -0.021392400000 </CenterOfMass>
+    <InertiaMatrix>  0.029326809800  0.000129294200 -0.000043399400 
+    0.000129294200  0.022807327100 -0.001348692400 
+    -0.000043399400 -0.001348692400  0.202781582600 
+    </InertiaMatrix>                
+    
+
+    <Children>
+      <Link> DOF_2
+      <Joint type="Revolute">
+	<BaseFrame>
+	  <Origin> 0.0 0.0 0.0 </Origin>
+	  <Orient>  1.0  0.0  0.0 
+	  0.0  0.0 -1.0
+	  0.0  1.0  0.0
+	  </Orient>
+	</BaseFrame>
+	<Axis> EZ </Axis>
+	<Range> -157 157 </Range>
+	<Zero> 0 </Zero>
+      </Joint>
+
+      <Mass> 1.7251 </Mass>
+      <CenterOfMass>   0.006243500000  0.000025200000  0.332092200000 </CenterOfMass>
+      <InertiaMatrix>  0.056662297000  0.000008212500  0.002321689200 
+      0.000008212500  0.056806602400  0.000016630700 
+      0.002321689200  0.000016630700  0.070158050900
+      </InertiaMatrix>
+
+      
+      <Children>
+	<Link> DOF_3
+	<Joint type="Revolute">
+	  <BaseFrame>
+	    <Origin> 0.045 0.0 0.550 </Origin>
+	    <Orient>  1.0  0.0  0.0 
+	    0.0  0.0  1.0
+	    0.0 -1.0  0.0
+	    </Orient>
+	  </BaseFrame>
+	  <Axis> EZ </Axis>
+	  <Range> -50 180 </Range>
+	  <Zero> 170 </Zero>
+	</Joint>
+   <Mass> 2.97266212 </Mass>
+	<aMass> 2.17266212 </aMass>
+	<CenterOfMass>  -0.039465920000 -0.119276950000  0.000068220000 </CenterOfMass>
+	<InertiaMatrix>  0.010674910000  0.001355570000  0.000045030000 
+	0.001355570000  0.002820360000  0.000110020000 
+	0.000045030000  0.000110020000  0.044586590000 
+
+	</InertiaMatrix>
+
+	
+	<Children>
+	  <Link> DOF_4
+	  <Joint type="Revolute">
+	    <BaseFrame>
+	      <Origin> -0.045 0.0 0.0 </Origin>
+	      <Orient>  1.0  0.0  0.0 
+	      0.0  0.0 -1.0
+	      0.0  1.0  0.0
+	      </Orient>
+	    </BaseFrame>
+	    <Axis> EZ </Axis>
+	    <Range> -273 71 </Range>
+	    <Zero> 0 </Zero>
+	  </Joint>
+
+	  <Mass> 0.35655692 </Mass>
+	  <CenterOfMass>   0.000054830000  0.001484930000  0.271137140000 </CenterOfMass>
+	  <InertiaMatrix>  0.000371120000 -0.000000030000  0.000000080000 
+	  -0.000000030000  0.000382090000  0.000016130000 
+	  0.000000080000  0.000016130000  0.003516740000
+	  </InertiaMatrix>
+	  
+
+	  <Children>
+	    <Link> DOF_5
+	    <Joint type="Revolute">
+	      <BaseFrame>
+		<Origin> 0.0 0.0 0.3 </Origin>
+		<Orient>  1.0  0.0  0.0 
+		0.0  0.0  1.0
+		0.0 -1.0  0.0
+		</Orient>
+	      </BaseFrame>
+	      <Axis> EZ </Axis>
+	      <Range> -90 90 </Range>
+	      <Zero> 0 </Zero>
+	    </Joint>
+
+	    <Mass> 0.40915886 </Mass>
+	    <CenterOfMass>  -0.000059230000 -0.024190520000 -0.016861230000 </CenterOfMass>
+	    <InertiaMatrix>  0.000548890000  0.000000100000  0.000000190000 
+	    0.000000100000  0.000451330000  0.000044300000 
+	    0.000000190000  0.000044300000  0.003560860000 
+	    </InertiaMatrix>
+	    
+
+	    <Children>
+	      <Link> DOF_6
+	      <Joint type="Revolute">
+		<BaseFrame>
+		  <Origin> 0.0 -0.0609 0.0 </Origin>
+		  <Orient>  1.0  0.0  0.0 
+		  0.0  0.0 -1.0
+		  0.0  1.0  0.0
+		  </Orient>
+		</BaseFrame>
+		<Axis> EZ </Axis>
+		<Range> -172 172 </Range>
+		<Zero> 0 </Zero>
+	      </Joint>
+
+	      <Mass> 0.07548270 </Mass>
+	      <CenterOfMass>   0.000148360000  0.000072520000 -0.003351850000 </CenterOfMass>
+	      <InertiaMatrix>  0.000039110000  0.000000190000  0.000000000000 
+	      0.000000190000  0.000038770000  0.000000000000 
+	      0.000000000000  0.000000000000  0.000543079000 
+	      </InertiaMatrix>
+	      
+
+	      <Children>
+		<Link> TOOLPLATE
+		
+		<Joint type="None">
+		  <BaseFrame>
+		    <Origin> 0.0 0.0 0.0 </Origin>
+		    <Orient>  1  0  0
+		    0  1  0
+		    0  0  1    
+		    </Orient>
+		  </BaseFrame>
+		</Joint>
+		<Mass> 0.1 </Mass>
+		<CenterOfMass> 0 0 0 </CenterOfMass>
+		<InertiaMatrix>  0 0 0
+		0 0 0
+		0 0 0
+		</InertiaMatrix>                                                                
+		</Link>                    
+	      </Children>    
+	      </Link>                    
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+  </Link>
+</Children>    
+</Link>
+</Children>    
+</Link>
+
+

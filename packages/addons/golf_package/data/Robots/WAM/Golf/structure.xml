@@ -1,0 +1,91 @@
+<Include file="../structure.xml"> Base
+    <Children>
+        <Link> DOF_0
+            <Children>
+                <Link> DOF_1
+                    <Children>
+                        <Link> DOF_2
+                            <Children>
+                                <Link> DOF_3
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Joint type="Revolute">
+                                                                <Zero> 0 </Zero>
+                                                            </Joint>
+                                                            <Children>
+                                                                <Link> GOLF
+                                                                    <Joint type="None">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0.0 0.0 0.0 </Origin>
+                                                                            <aOrient> 0 1 0
+										     1 0 0
+										     0 0 -1
+				  
+                                                                            </aOrient>
+									    <Orient> 1 0 0 
+										      0 -1 0
+										     0 0 -1
+				  
+                                                                            </Orient>
+                                                                        </BaseFrame>
+                                                                    </Joint>
+        
+                                                                    <Mass> 0.76  </Mass>
+                                                                    <oMass> 0.75835277  </oMass>
+
+                                                                    <CenterOfMass> 0.005    0.025  -0.125  </CenterOfMass>
+                                                                    <oCenterOfMass> 0.00213180    0.01453794  -0.12889253  </oCenterOfMass>
+                                                                    <InertiaMatrix> 0.00926273    0.00002820   -0.00018630
+								                    0.00002820    0.00850815   -0.00133863
+								                    -0.00018630   -0.00133863   0.00107319
+                                                                    </InertiaMatrix>                                                                
+                                                                        
+                                                                    <Children>
+                                                                        <Link> GOLF_CENTER
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0.008 0.03 -0.22 </Origin>
+                                                                                    <aOrient>  0 1 0
+											      1 0 0
+											      0 0 -1    
+                                                                                    </aOrient>
+										    <Orient> 1 0 0 
+										      0 -1 0
+										     0 0 -1
+				  
+										    </Orient>
+                                                                                </BaseFrame>
+                                                                            </Joint>
+                
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix>  0 0 0
+                                                                                             0 0 0
+                                                                                             0 0 0
+                                                                            </InertiaMatrix>                                                                
+                
+                                                                        </Link>                    
+                                                                        
+                                                                    </Children>    
+                                                                </Link>                    
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Include>
+

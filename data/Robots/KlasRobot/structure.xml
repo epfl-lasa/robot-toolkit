@@ -1,0 +1,77 @@
+<Link> Base
+  <Origin>  0.0 0.0 0.0 </Origin>
+  <Orient>  1.0  0.0  0.0 
+    0.0  1.0  0.0
+    0.0  0.0  1.0
+  </Orient>            
+  <Joint type="None">
+    <BaseFrame>
+      <Origin> 0.0 0.0 0.0 </Origin>
+      <Orient>  1.0  0.0  0.0 
+        0.0  1.0  0.0
+        0.0  0.0  1.0
+      </Orient>                        
+    </BaseFrame>
+  </Joint>
+
+  <Mass> 0 </Mass>
+  <CenterOfMass> 0 0 0 </CenterOfMass>
+  <InertiaMatrix> 0 0 0
+    0 0 0
+    0 0 0
+  </InertiaMatrix>
+  
+  <Children>
+    <Link> DOF_0
+      <Joint type="Revolute">
+        <BaseFrame>
+
+          <Origin> 0.0  0.0 0.1 </Origin>
+          <Orient>  1.0  0.0  0.0 
+            0.0  0.0  -1.0
+            0.0 1.0  0.0
+          </Orient>
+        </BaseFrame>
+        <Axis> EZ </Axis>
+        <Range> 0 179 </Range>
+        <Zero> 45 </Zero>
+        <ControlMode> Torque </ControlMode>
+      </Joint>
+
+      <Mass> 1 </Mass>
+      <CenterOfMass>   0.15 0.0 0 </CenterOfMass>
+      <InertiaMatrix>  0.00005 0 0
+        0 0.007525 0
+        0 0 0.007525
+      </InertiaMatrix>        
+      <Children>
+        <Link> DOF_1
+          <Joint type="Revolute">
+            <BaseFrame>
+              <Origin> 0.3  0.0 0.0 </Origin>
+              <Orient>  1.0  0.0  0.0 
+                0.0 1 0.0
+                0.0 0.0  1.0
+              </Orient>
+            </BaseFrame>
+            <Axis> EZ </Axis>
+            <Range> -65 65 </Range>
+            <Zero> 0 </Zero>
+            <ControlMode> Torque </ControlMode>
+          </Joint>
+
+          <Mass> 1 </Mass>
+          <CenterOfMass>   0.15 0.0 0 </CenterOfMass>
+          <InertiaMatrix>  0.00005 0 0
+            0 0.007525 0
+            0 0 0.007525
+          </InertiaMatrix>        
+        </Link>
+      </Children>    
+
+    </Link>
+  </Children>    
+</Link>
+
+
+

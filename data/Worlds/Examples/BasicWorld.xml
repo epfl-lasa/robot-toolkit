@@ -1,0 +1,11 @@
+<World>
+
+    <Object> Ground
+        <BBoxShape>
+            <Shape> Floor
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+</World>
+

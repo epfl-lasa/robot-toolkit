@@ -1,0 +1,335 @@
+<Include file="../shape.xml"> Base
+    <Children>
+    <Link> DOF_0
+      <Children>
+        <Link> DOF_1
+          <Children>
+            <Link> DOF_2
+              <Children>
+                <Link> DOF_3
+                  <Children>
+                    <Link> DOF_4
+                      <Children>
+                        <Link> DOF_5
+                          <Children>
+                            <Link> DOF_6
+                              <Children>
+                              	<Link> TOOL
+                              		<Children>
+                                <Link> base_link 
+                                  <GfxShape>
+					<Shape id="AllegroHand">  allegro_palm_left.obj  
+					  <Origin>  -0.0282  -0.057  -0.095 </Origin> 
+					  <Orient>  1  0   0
+						    0  -1  0
+						    0  0   -1 
+					  </Orient>
+					  <Color> 0.1 0.1 0.1 0.5</Color>
+					</Shape>
+                                  </GfxShape>																			
+					  <Children>
+					    <Link> EndEffector   </Link>
+					     <Link> link_0_0
+						<GfxShape>
+						<Shape id="HandF1Dof0"> allegro_fingerdof0.obj
+						<Origin>-0.0098 -0.012 0</Origin>
+						<Orient> 1 0  0
+							 0 0  -1
+							 0 1  0
+						</Orient>
+						<Color> 0.1 0.1 0.1 0.5 </Color>
+						</Shape>
+						</GfxShape>
+						<Children>
+							<Link> link_1_0
+								<GfxShape>
+								<Shape id="HandF1Dof1"> allegro_fingerdof1.obj
+								<Origin> 0.0098 0.0098 -0.012</Origin>
+								<Orient> 1 0 0
+									 0 0 1
+									 0 1 0
+								</Orient>
+								<Color> 0.1 0.1 0.1 0.5 </Color>
+								</Shape>
+								</GfxShape>
+								<Children>
+									<Link> link_2_0
+										<GfxShape>
+										<Shape id="HandF1Dof2"> allegro_fingerdof2.obj
+										<Origin> 0.0098 0.0098 -0.012 </Origin>
+										<Orient> 1 0 0
+											 0 0 1
+									 		 0 1 0
+										</Orient>
+										<Color> 0.1 0.1 0.1 0.5 </Color>
+										</Shape>
+										</GfxShape>
+										<Children>
+											<Link> link_3_0
+												<GfxShape>
+												<Shape id="HandF1Dof3"> allegro_fingerdof0.obj
+												<Origin> -0.0098 0.0098 0.012 </Origin>
+												<Orient> -1 0 0
+									 		 		 0 0 1
+									 		 		 0 -1 0
+												</Orient>
+												<Color> 0.1 0.1 0.1 0.5 </Color>
+												</Shape>
+												</GfxShape>
+												<Children>
+													<Link> link_3_0_tip
+													<GfxShape>
+													<Shape id="HandF1"> allegro_fingertip.obj
+													<Origin> 0.012 0.0098 0.012</Origin>
+													<Orient> 1 0 0
+											 		 	 0 0 1
+									 		 		 	 0 1 0
+													</Orient>
+													<Color> 1.0 1.0 1.0 0.5 </Color>
+													</Shape>
+													</GfxShape>
+													<Children>
+													</Children>
+										    			</Link>
+												</Children>
+									    		</Link>
+										</Children>
+							    		</Link>
+								</Children>
+						    	</Link>
+
+						</Children>
+					    </Link>
+
+					     <Link> link_4_0
+						<GfxShape>
+						<Shape id="HandF2Dof0"> allegro_fingerdof0.obj
+						<Origin>-0.0098 -0.012 0</Origin>
+						<Orient> 1 0  0
+							 0 0  -1
+							 0 1  0
+						</Orient>
+						<Color> 0.1 0.1 0.1 0.5 </Color>
+						</Shape>
+						</GfxShape>
+						<Children>
+							<Link> link_5_0
+								<GfxShape>
+								<Shape id="HandF2Dof1"> allegro_fingerdof1.obj
+								<Origin> 0.0098 0.0098 -0.012 </Origin>
+								<Orient> 1 0 0
+									 0 0 1
+									 0 1 0
+								</Orient>
+								<Color> 0.1 0.1 0.1 0.5 </Color>
+								</Shape>
+								</GfxShape>
+								<Children>
+									<Link> link_6_0
+										<GfxShape>
+										<Shape id="HandF2Dof2"> allegro_fingerdof2.obj
+										<Origin> 0.0098 0.0098 -0.012 </Origin>
+										<Orient> 1 0 0
+									 		 0 0 1
+									 		 0 1 0
+										</Orient>
+										<Color> 0.1 0.1 0.1 0.5 </Color>
+										</Shape>
+										</GfxShape>
+										<Children>
+											<Link> link_7_0
+												<GfxShape>
+												<Shape id="HandF2Dof3"> allegro_fingerdof0.obj
+												<Origin> -0.0098 0.0098 0.012 </Origin>
+												<Orient> -1 0 0
+									 		 		 0 0 1
+									 		 		 0 -1 0
+												</Orient>
+												<Color> 0.1 0.1 0.1 0.5 </Color>
+												</Shape>
+												</GfxShape>
+												<Children>
+													<Link> link_7_0_tip
+													<GfxShape>
+													<Shape id="HandF2"> allegro_fingertip.obj
+													<Origin> 0.012 0.0098 0.012</Origin>
+													<Orient> 1 0 0
+											 		 	 0 0 1
+									 		 		 	 0 1 0
+													</Orient>
+													<Color> 1.0 1.0 1.0 0.5 </Color>
+													</Shape>
+													</GfxShape>
+													<Children>
+													</Children>
+										    			</Link>
+												</Children>
+									    		</Link>
+										</Children>
+							    		</Link>
+								</Children>
+						    	</Link>
+						</Children>
+					    </Link>
+					     <Link> link_8_0
+						<GfxShape>
+						<Shape id="HandF3Dof0"> allegro_fingerdof0.obj
+						<Origin>-0.0098 -0.012 0</Origin>
+						<Orient> 1 0  0
+							 0 0  -1
+							 0 1  0
+						</Orient>
+						<Color> 0.1 0.1 0.1 0.5 </Color>
+						</Shape>
+						</GfxShape>
+						<Children>
+							<Link> link_9_0
+								<GfxShape>
+								<Shape id="HandF3Dof1"> allegro_fingerdof1.obj
+								<Origin> 0.0098 0.0098 -0.012 </Origin>
+								<Orient> 1 0 0
+									 0 0 1
+									 0 1 0
+								</Orient>
+								<Color> 0.1 0.1 0.1 0.5 </Color>
+								</Shape>
+								</GfxShape>
+								<Children>
+									<Link> link_10_0
+										<GfxShape>
+										<Shape id="HandF3Dof2"> allegro_fingerdof2.obj
+										<Origin> 0.0098 0.0098 -0.012 </Origin>
+										<Orient> 1 0 0
+									 		 0 0 1
+									 		 0 1 0
+										</Orient>
+										<Color> 0.1 0.1 0.1 0.5 </Color>
+										</Shape>
+										</GfxShape>
+										<Children>
+											<Link> link_11_0
+												<GfxShape>
+												<Shape id="HandF3Dof3"> allegro_fingerdof0.obj
+												<Origin> -0.0098 0.0098 0.012 </Origin>
+												<Orient> -1 0 0
+									 		 		 0 0 1
+									 		 		 0 -1 0
+												</Orient>
+												<Color> 0.1 0.1 0.1 0.5 </Color>
+												</Shape>
+												</GfxShape>
+												<Children>
+													<Link> link_11_0_tip
+													<GfxShape>
+													<Shape id="HandF3"> allegro_fingertip.obj
+													<Origin> 0.012 0.0098 0.012</Origin>
+													<Orient> 1 0 0
+											 		 	 0 0 1
+									 		 		 	 0 1 0
+													</Orient>
+													<Color> 1.0 1.0 1.0 0.5 </Color>
+													</Shape>
+													</GfxShape>
+													<Children>
+													</Children>
+										    			</Link>
+												</Children>
+									    		</Link>
+										</Children>
+							    		</Link>
+								</Children>
+						    	</Link>
+						</Children>
+					    </Link>
+					     <Link> link_12_0
+						<GfxShape>
+						<Shape id="HandF4Dof0"> allegro_thumbdof0.obj
+						<Origin>0.0108 0.025 -0.01</Origin>
+						<Orient> 0    -1   0
+							 -1    0   0
+							 0    0   -1
+						</Orient>
+						<Color> 0.1 0.1 0.1 0.5 </Color>
+						</Shape>
+						</GfxShape>
+						<Children>
+							<Link> link_13_0
+								<GfxShape>
+								<Shape id="HandF4Dof1"> allegro_fingerdof0.obj
+								<Origin>0.012 -0.0098 0</Origin>
+								<Orient> 0 0 1 
+									 1 0 0
+									 0 1 0
+								</Orient>
+								<Color> 0.1 0.1 0.1 0.5 </Color>
+								</Shape>
+								</GfxShape>
+								<Children>
+									<Link> link_14_0
+										<GfxShape>
+										<Shape id="HandF4Dof2"> allegro_fingerdof1.obj
+										<Origin>-0.0098 -0.012 -0.012</Origin>
+										<Orient> 1 0  0
+											 0 0  -1
+											 0 1  0
+										</Orient>
+										<Color> 0.1 0.1 0.1 0.5 </Color>
+										</Shape>
+										</GfxShape>
+										<Children>
+											<Link> link_15_0
+												<GfxShape>
+												<Shape id="HandF4Dof3"> allegro_thumbdof3.obj
+												<Origin>-0.0098 -0.012 -0.012</Origin>
+												<Orient> 1 0  0
+											 		 0 0  -1
+											 	         0 1  0
+												</Orient>
+												<Color> 0.1 0.1 0.1 0.5 </Color>
+												</Shape>
+												</GfxShape>
+												<Children>
+													<Link> link_15_0_tip
+													<GfxShape>
+													<Shape id="HandF4"> allegro_fingertip.obj
+													<Origin>-0.012 -0.012 0.042</Origin>
+													<Orient> 1 0 0
+														 0 0 -1
+														 0 1 0
+													</Orient>
+													<Color> 1.0 1.0 1.0 0.5 </Color>
+													</Shape>
+													</GfxShape>
+													<Children>
+													</Children>
+										    			</Link>
+												</Children>
+									    		</Link>
+										</Children>
+							    		</Link>
+								</Children>
+						    	</Link>
+						</Children>
+					    </Link>
+				  	</Children>
+				  
+                                </Link>                                                              
+                              </Children>    
+                            </Link>                    
+                          </Children>    
+                        </Link>                    
+                      </Children>    
+                    </Link>                    
+                  </Children>    
+                </Link>                    
+              </Children>                    
+            </Link>                
+          </Children>    
+        </Link>
+      </Children>    
+    </Link>
+  </Children>  
+      </Link>
+    </Children>
+    
+</Include>

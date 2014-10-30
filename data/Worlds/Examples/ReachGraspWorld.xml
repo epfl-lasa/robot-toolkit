@@ -1,0 +1,167 @@
+<World>
+
+    <Object> Ground
+        <BBoxShape>
+            <Shape> Floor
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+    <aObject> cylinder
+        <Origin>  0.6 0 0.35 </Origin>
+        <Orient>  -1  0   0 
+                  0  0   1 
+                  0 1  0 </Orient>
+        <GfxShape>
+            <Shape> Cylinder
+                <Origin>  0 0 0 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .1 .1 .1 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+        </GfxShape>
+
+    </aObject>
+
+
+    <Object> glass
+        <Origin>  -0.6 0 0.35 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape> data/Worlds/Examples/Objects/PR2_objects/IKEA_{glass}_463.156.00.obj
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   1 1 1 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+        </GfxShape>
+
+    </Object>
+
+    <Object> IST_9344
+        <Origin>  0.3 0 0.5 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape>  data/Worlds/Examples/Objects/IST_objects/9344r.obj
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .1 .1 .1 </Scale>
+                <Color> 0 1 0 </Color>
+            </Shape>
+	<Shape> Sphere
+                <Origin>  -0.012666 0.023638 -0.0013974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .01 .01 .01 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+
+	<Shape> Sphere
+                <Origin>  5.0209e-005 0.018148 0.0062026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .01 .01 .01 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+	
+
+	<Shape> Sphere
+                <Origin>  0.0084615 -0.021762 0.0071026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .01 .01 .01 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+	<Shape> Sphere
+                <Origin>  -0.013096 0.011678 -0.0083974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .01 .01 .01 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+        </GfxShape>
+
+    </Object>
+    <Object> NetBall0
+        <Origin>  0.3 0 0.3 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape>  data/Worlds/Examples/Objects/IST_objects/9360r.obj
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .1 .1 .1 </Scale>
+                <Color> 0 1 0 </Color>
+            </Shape>
+
+            <Shape> Sphere
+                <Origin>  -0.0046471 -0.0023857 -0.064598 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .02 .02 .02 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+            <Shape> Sphere
+                <Origin>  -0.019029 -0.025328 -0.13363 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .02 .02 .02 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+            <Shape> Sphere
+                <Origin>   0.029711 -0.012848 -0.13315 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .02 .02 .02 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+            <Shape> Sphere
+                <Origin>  -0.015739 0.030942 -0.13308 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .02 .02 .02 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+
+        </GfxShape>
+
+    </Object>
+
+</World>
+

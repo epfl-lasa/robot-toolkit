@@ -1,0 +1,585 @@
+<Link> Base
+    <Joint type="None">  
+        <BaseFrame>
+            <Origin> 0 0 0 </Origin>
+            <Orient> 1 0 0
+                     0 1 0
+                     0 0 1 </Orient> 
+        </BaseFrame>
+    </Joint>
+
+    <Children>
+        <Link> CHEST
+            <Joint type="None">  
+                <BaseFrame>
+                    <Origin> 0 0 0.5 </Origin>
+                    <Orient> 1 0 0
+                             0 1 0
+                             0 0 1 </Orient> 
+                </BaseFrame>
+            </Joint>
+
+            <Mass>  3.26e+00 </Mass>
+            <oCenterOfMass> -6.86488e-02 1.25142e-03 -0.0404895  </oCenterOfMass>
+            <CenterOfMass> -4.94890e-02  8.92912e-04 -0.0408259 </CenterOfMass>
+
+            <Children>
+                <Link> H_PAN
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0 0 0 </Origin>
+                            <Orient> 1 0 0
+                                             0 1 0
+                                             0 0 1 </Orient> 
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -60 60 </Range>
+                        <Zero> 0 </Zero>
+                    </Joint>
+                            
+                    <Mass> 7.10e-02 </Mass>
+                    <CenterOfMass> 5.39731e-03 -1.58067e-03 5.64034e-02 </CenterOfMass>
+
+                    <Children>
+                        <Link> H_TILT
+
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> 0.015 0 0.103 </Origin>
+                                    <Orient>  1  0  0
+                                                      0  0  1
+                                                      0 -1  0 </Orient> 
+                                </BaseFrame>
+                                <Axis> NEG_EZ </Axis>
+                                <Range> -45 15 </Range>
+                                <Zero> 0 </Zero>
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass> 0 0 0 </CenterOfMass>
+
+                            <Children>
+                                <Link> H_ROLL
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient>  1  0  0
+                                                      0  1  0
+                                                      0  0  1 </Orient>
+                                        </BaseFrame>
+                                        <Axis> NEG_EX </Axis>
+                                        <Range> -15 15 </Range>
+                                        <Zero> 0 </Zero>
+                                    </Joint>
+
+                                    <Mass> 4.12e-01 </Mass>
+                                    <CenterOfMass> -1.03952e-03 -5.17985e-03 1.82267e-05 </CenterOfMass>
+
+                                    <Children> 
+                                        <Link> HEAD
+                                            <Joint type="None">
+                                                <BaseFrame>
+                                                    <Origin> 0 -0.07 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                             0 1 0
+                                                             0 0 1 </Orient>
+                                                </BaseFrame>
+                                            </Joint>
+                                        </Link>                                        
+                                        <Link> EYE
+                                            <Joint type="None">
+                                                <BaseFrame>
+                                                    <Origin> 0.06 0.004 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                                     0 1 0
+                                                                     0 0 1 </Orient> 
+                                                </BaseFrame>
+                                            </Joint>
+                                        </Link>
+                                        <Link> REYE
+                                            <Joint type="None">
+                                                <BaseFrame>
+                                                    <Origin> 0.05 0.004 -0.03 </Origin>
+                                                    <Orient> 1 0 0
+                                                                     0 1 0
+                                                                     0 0 1 </Orient> 
+                                                </BaseFrame>
+                                            </Joint>
+                                        </Link>
+                                        <Link> LEYE
+                                            <Joint type="None">
+                                                <BaseFrame>
+                                                    <Origin> 0.05 0.004 0.03 </Origin>
+                                                    <Orient> 1 0 0
+                                                                     0 1 0
+                                                                     0 0 1 </Orient> 
+                                                </BaseFrame>
+                                            </Joint>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+
+                <Link> R_SFE
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0 -0.111 0 </Origin>
+                            <Orient>  1  0  0
+                                      0  0  1
+                                      0 -1  0 </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -90 140 </Range>
+                        <Zero> 50 </Zero>
+                    </Joint>
+
+                    <Mass> 2.10e-01  </Mass>
+                    <CenterOfMass> 8.28367e-05 6.66808e-03 6.34824e-03 </CenterOfMass>
+
+                    <Children>
+                        <Link> R_SAA
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient>  0 -1  0
+                                              0  0 -1
+                                              1  0  0 </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -90 0 </Range>
+                                <Zero> -30 </Zero>
+                            </Joint>
+
+                            <Mass> 2.34e-01  </Mass>
+                            <CenterOfMass> -6.57560e-04 -4.63848e-02 -3.77395e-03 </CenterOfMass>
+
+                            <Children>
+                                <Link> R_SHR
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0  -0.111 0  </Origin>
+                                            <Orient>  0 -1  0
+                                                              0  0 -1
+                                                              1  0  0 </Orient> 
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -90 90 </Range>
+                                        <Zero> -30 </Zero>
+                                    </Joint>
+
+                                    <Mass> 1.965e-01 </Mass>
+                                    <CenterOfMass> -2.72189e-03 -1.60245e-03 -2.20452e-03 </CenterOfMass>
+
+                                    <Children>
+                                        <Link> R_EB
+                                            <Joint type="Revolute">
+                                                <BaseFrame>                            
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient>  1  0  0
+                                                                      0  0 -1
+                                                                      0  1  0 </Orient> 
+                                                </BaseFrame>                                                              
+                                                <Axis> EZ </Axis>
+                                                <Range> -115 0 </Range>
+                                                <Zero> -60 </Zero>
+                                            </Joint>
+
+                                            <Mass> 2.16e-01 </Mass>
+                                            <CenterOfMass> 1.00237e-03 6.64225e-02 -6.15512e-04 </CenterOfMass>
+
+                                            <Children>
+                                                <Link> R_WR
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> 0 0.133 0 </Origin>
+                                                            <Orient>  1  0  0
+                                                                      0  0 -1
+                                                                      0  1  0 </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Zero>  -30 </Zero>
+                                                        <Range> -60 60 </Range>
+                                                    </Joint>
+                                            
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+
+                <Link> L_SFE
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0 0.111 0 </Origin>
+                            <Orient>  1  0  0
+                                      0  0  1
+                                      0 -1  0 </Orient> 
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -90 140 </Range>
+                        <Zero> 50 </Zero>
+                    </Joint>
+
+                    <Mass> 2.10e-01 </Mass>
+                    <CenterOfMass> -3.64197e-05 6.64174e-03 -6.34825e-03 </CenterOfMass>
+
+                    <Children>
+                        <Link> L_SAA
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient>  0 -1  0
+                                              0  0 -1
+                                              1  0  0 </Orient> 
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> 0 90 </Range>
+                                <Zero> 30 </Zero>
+                            </Joint>
+                            <Mass> 2.34e-01 </Mass>
+                            <CenterOfMass> 7.47218e-04 -4.63619e-02 -3.77403e-03 </CenterOfMass>
+
+                            <Children>
+                                <Link> L_SHR
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0 -0.111 0 </Origin>
+                                            <Orient>  0 -1  0
+                                                      0  0 -1
+                                                      1  0  0 </Orient> 
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -91 91 </Range>
+                                        <Zero> 30 </Zero>
+                                    </Joint>
+                                    <Mass> 1.965e-01 </Mass>
+                                    <CenterOfMass> -2.70991e-03 1.60227e-03 -2.09019e-03 </CenterOfMass>
+
+                                    <Children>
+                                        <Link> L_EB
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient>  1  0  0
+                                                              0  0 -1
+                                                              0  1  0 </Orient> 
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> -115 0 </Range>
+                                                <Zero> -60 </Zero>
+                                            </Joint>
+                                            <Mass> 2.16e-01  </Mass>
+                                            <CenterOfMass>  9.62091e-04 6.64766e-02 5.58629e-04 </CenterOfMass>
+
+                                            <Children>
+                                                <Link> L_WR
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> 0 0.133 0 </Origin>
+                                                            <Orient>  1  0  0
+                                                                      0  0  1
+                                                                      0 -1  0 </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> -90 90 </Range>
+                                                        <Zero>  -30 </Zero>
+                                                    </Joint>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>        
+                                </Link>
+                            </Children>        
+                        </Link>
+                    </Children>        
+                </Link>
+
+                <Link> WAIST
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0.035 0 -0.125 </Origin>
+                            <Orient>  1  0  0
+                                      0  0 -1
+                                      0  1  0 </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> 0 35 </Range>
+                        <Zero> 0 </Zero>
+                    </Joint>
+
+                    <Mass> 4.17e-01 </Mass>
+                    <CenterOfMass> -3.22707e-02 1.11375e-02 -3.29172e-04  </CenterOfMass>
+
+                    <Children>
+                        <Link> R_LR
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> -0.035 -0.055 0.039 </Origin>
+                                    <Orient>  0 -1  0
+                                              0  0  1
+                                             -1  0  0 </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -90 30 </Range>
+                                <Zero> -10 </Zero>
+                            </Joint>
+
+                            <Mass> 5.87e-02 </Mass>
+                            <CenterOfMass> -3.01500e-03-2.23990e-03 3.35846e-02 </CenterOfMass>
+
+                            <Children>
+                                <Link> R_LAA
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient>  0 -1  0
+                                                      0  0 -1
+                                                      1  0  0 </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -30 20 </Range>
+                                        <Zero> -5 </Zero>
+                                    </Joint>
+
+                                    <Mass> 2.10e-01 </Mass>
+                                    <CenterOfMass> -2.72697e-03 1.13482e-03 2.37780e-03 </CenterOfMass>
+
+                                    <Children>
+                                        <Link> R_LFE
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient>  1  0  0
+                                                              0  0 -1
+                                                              0  1  0 </Orient>
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> -80 70 </Range>
+                                                <Zero> -10 </Zero>
+                                            </Joint>
+
+                                            <Mass> 5.19e-01 </Mass>
+                                            <CenterOfMass> -6.98208e-02 6.16508e-03 -3.26392e-03 </CenterOfMass>
+
+                                            <Children>
+                                                <Link> R_KN
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> -0.105 0 0 </Origin>
+                                                            <Orient>  1  0  0
+                                                                      0  1  0
+                                                                      0  0  1 </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> 5 130 </Range>
+                                                        <Zero> 20 </Zero>
+                                                    </Joint>
+
+                                                    <Mass> 3.28e-01 </Mass>
+                                                    <CenterOfMass> -5.08521e-02 5.36785e-03 -4.69750e-03 </CenterOfMass>
+
+                                                    <Children>
+                                                        <Link> R_AFE
+                                                            <Joint type="Revolute">
+                                                                <BaseFrame>
+                                                                    <Origin> -0.105 0 0 </Origin>
+                                                                    <Orient>  1  0  0
+                                                                              0  1  0
+                                                                              0  0  1 </Orient>
+                                                                </BaseFrame>
+                                                                <Axis> EZ </Axis>
+                                                                <Range> -60 60 </Range>
+                                                                <Zero> -10 </Zero>
+                                                            </Joint>
+
+                                                            <Mass> 1.95e-01 </Mass>
+                                                            <CenterOfMass> 2.93669e-03 3.66853e-03 -1.33746e-03 </CenterOfMass>
+
+                                                            <Children>
+                                                                <Link> R_AAA
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0 0 0 </Origin>
+                                                                            <Orient>  1  0  0
+                                                                                      0  0  1
+                                                                                      0 -1  0 </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> -25 25 </Range>
+                                                                        <Zero> 6 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 1.54e-01 </Mass>
+                                                                    <CenterOfMass> -2.92236e-02 3.24167e-03 8.27642e-03 </CenterOfMass>
+
+                                                                    <Children>
+                                                                        <Link> R_FOOT
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> -0.040 0.005 0.014 </Origin>
+                                                                                    <Orient>  1  0  0
+                                                                                              0  1  0
+                                                                                              0  0  1 </Orient>
+                                                                                </BaseFrame>
+                                                                            </Joint>
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+
+
+
+
+
+
+                        <Link> L_LR
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> -0.035 -0.055 -0.039 </Origin>
+                                    <Orient>  0 -1  0
+                                              0  0  1
+                                             -1  0  0 </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -30 90 </Range>
+                                <Zero>  10 </Zero>
+                            </Joint>
+
+                            <Mass> 5.87e-02 </Mass>
+                            <CenterOfMass> 3.00449e-03 -2.25088e-03 3.35846e-02 </CenterOfMass>
+
+                            <Children>
+                                <Link> L_LAA
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 0 -1  0
+                                                     0  0 -1
+                                                     1  0  0 </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -20 30 </Range>
+                                        <Zero> 5 </Zero>
+                                    </Joint>
+
+                                    <Mass> 2.10e-01 </Mass>
+                                    <CenterOfMass> -2.71179e-03 -1.24723e-03  2.38665e-03 </CenterOfMass>
+
+                                    <Children>
+                                        <Link> L_LFE
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient>  1  0  0
+                                                              0  0 -1
+                                                              0  1  0 </Orient>
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> -80 70 </Range>
+                                                <Zero> -10 </Zero>
+                                            </Joint>
+
+                                            <Mass> 5.19e-01 </Mass>
+                                            <CenterOfMass>  -6.99224e-02 6.27642e-03 3.31502e-03 </CenterOfMass>
+
+                                            <Children>
+                                                <Link> L_KN
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> -0.105 0 0 </Origin>
+                                                            <Orient>  1  0  0
+                                                                      0  1  0
+                                                                      0  0  1 </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> 5 130 </Range>
+                                                        <Zero> 20 </Zero>
+                                                    </Joint>
+
+                                                    <Mass> 3.28e-01  </Mass>
+                                                    <CenterOfMass>  -5.08386e-02 5.37031e-03 4.87773e-03 </CenterOfMass>
+
+                                                    <Children>
+                                                        <Link> L_AFE
+                                                            <Joint type="Revolute">
+                                                                <BaseFrame>
+                                                                    <Origin> -0.105 0 0 </Origin>
+                                                                    <Orient>  1  0  0
+                                                                              0  1  0
+                                                                              0  0  1 </Orient>
+                                                                </BaseFrame>
+                                                                <Axis> EZ </Axis>
+                                                                <Range> -60 60 </Range>
+                                                                <Zero> -10 </Zero>
+                                                            </Joint>
+
+                                                            <Mass> 1.95e-01  </Mass>
+                                                            <CenterOfMass> 2.92057e-03 3.69219e-03 1.19731e-03 </CenterOfMass>
+
+                                                            <Children>
+                                                                <Link> L_AAA
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0 0 0 </Origin>
+                                                                            <Orient>  1  0  0
+                                                                                      0  0  1
+                                                                                      0 -1  0 </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> -25 25 </Range>
+                                                                        <Zero> -6 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 1.54e-01 </Mass>
+                                                                    <CenterOfMass> -2.92236e-02 -3.34620e-03 8.27642e-03 </CenterOfMass>
+
+                                                                    <Children>
+                                                                        <Link> L_FOOT
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> -0.040 -0.005 0.014 </Origin>
+                                                                                    <Orient>  1  0  0
+                                                                                              0  1  0
+                                                                                              0  0  1 </Orient>
+                                                                                </BaseFrame>
+                                                                            </Joint>
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+
+                    </Children>
+                </Link>
+            </Children>
+        </Link>
+    </Children>
+</Link>
+
+
+
+

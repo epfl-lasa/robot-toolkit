@@ -1,0 +1,31 @@
+<ImpedanceController>
+  <TranslationalStiffness>  
+    400 0 0 
+    0 400 0 
+    0 0 400
+  </TranslationalStiffness>
+
+  <TranslationalDamping> 
+    30 0 0
+    0 30 0
+    0 0 30
+  </TranslationalDamping>
+
+  <RotationalStiffness> 
+    0.5 0 0 
+    0 0.5 0 
+    0 0 0.5
+  </RotationalStiffness>
+
+  <RotationalDamping> 
+    0 0 0
+    0 0 0
+    0 0 0
+  </RotationalDamping>
+
+  <JointSpaceDamping>
+    0 0 0 0 0.5 0.5 0.05
+  </JointSpaceDamping>
+
+</ImpedanceController>
+

@@ -1,0 +1,7 @@
+<Object> Floor
+    <BBoxShape>
+        <Shape> Floor
+        </Shape>
+    </BBoxShape>
+</Object>
+

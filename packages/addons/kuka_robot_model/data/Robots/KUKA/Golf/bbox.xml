@@ -1,0 +1,74 @@
+<Include file="../bbox.xml"> Base
+    <Children>
+        <Link> DOF_0
+            <Children>
+                <Link> DOF_1
+                    <Children>
+                        <Link> DOF_2
+                            <Children>
+                                <Link> DOF_3
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Children>
+                                                                <Link> TOOL
+                                                                    <BBoxShape>
+                                                                        <Shape> Cube
+                                                                            <Origin> 0.007 0.03 -0.215 </Origin>
+                                                                            <Orient>  1 0 0
+                                                                                      0  0.9848 0.1736
+                                                                                      0 -0.1736  0.9848
+                                                                            </Orient>
+                                                                            <Scale>   0.025 0.115 0.025 </Scale>
+                                                                        </Shape>
+                                                                        <Shape> Cube
+                                                                            <Origin> 0.0 0.0 -0.05 </Origin>
+                                                                            <Orient>  1 0 0
+                                                                                      0 1 0
+                                                                                      0 0 1 </Orient>
+                                                                            <Scale>   0.04 0.04 0.07 </Scale>
+                                                                        </Shape>
+                                                                        <Shape> Cube
+                                                                            <Origin> 0.0 0.0 -0.14 </Origin>
+                                                                            <Orient>  1 0 0
+                                                                                      0 1 0
+                                                                                      0 0 1 </Orient>
+                                                                            <Scale>   0.01 0.01 0.11 </Scale>
+                                                                        </Shape>
+
+                                                                    </BBoxShape>
+                                                                    <Children>
+                                                                        <Link> GOLF_CENTER
+                                                                            <BBoxShape>
+                                                                                <Shape> Sphere
+                                                                                    <Origin> 0.0 0.0 0.0 </Origin>
+                                                                                    <Orient>  1 0 0
+                                                                                              0 1 0
+                                                                                              0 0 1 </Orient>
+                                                                                    <Scale>   0.001 0.001 0.001 </Scale>
+                                                                                </Shape>
+                                                                             </BBoxShape>
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Include>
+
+

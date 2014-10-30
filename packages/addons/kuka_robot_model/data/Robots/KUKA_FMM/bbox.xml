@@ -1,0 +1,49 @@
+<Link> Base
+	<BBoxShape>
+	</BBoxShape>	
+    <Children>
+        <Link> DOF_0
+	        <BBoxShape>
+	        </BBoxShape>	
+            <Children>
+                <Link> DOF_1
+                    <BBoxShape>
+                    </BBoxShape>
+                    <Children>
+                        <Link> DOF_2
+                            <BBoxShape>
+                            </BBoxShape>
+                            <Children>
+                                <Link> DOF_3
+                                    <BBoxShape>
+                                    </BBoxShape>
+                                    <Children>
+                                        <Link> DOF_4
+                                            <BBoxShape>
+                                            </BBoxShape>
+                                            <Children>
+                                                <Link> DOF_5                                                    
+                                                    <BBoxShape>
+                                                    </BBoxShape>
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <BBoxShape>
+                                                            </BBoxShape>
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+
+

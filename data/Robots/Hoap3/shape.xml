@@ -1,0 +1,372 @@
+<Link> Base
+    <Children>
+        <Link> CHEST
+            <GfxShape>
+                <Shape> BODY_LINK01.obj
+                    <Origin> 0.035 0 -0.125 </Origin>
+                    <Orient> 1 0 0
+                             0 1 0
+                             0 0 1
+                    </Orient>
+                </Shape>
+            </GfxShape>
+            <Children>
+                <Link> H_PAN
+                    <GfxShape>
+                        <Shape> HEAD_LINK01.obj
+                            <Origin> 0.00 0 0.08 </Origin>
+                            <Orient> 0 1 0
+                                     1 0 0
+                                     0 0 1
+                            </Orient>
+                        </Shape>
+                    </GfxShape>
+                    <Children>
+                        <Link> H_TILT
+                            <Children>
+                                <Link> H_ROLL
+                                    <GfxShape>
+                                        <Shape> HEAD_LINK02.obj
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 1 0 0
+                                                     0 1 0
+                                                     0 0 1
+                                            </Orient>
+                                        </Shape>
+                                    </GfxShape>
+                                    <Children>
+                                        <Link> HEAD
+                                        </Link>
+                                        <Link> EYE
+                                        </Link>
+                                        <Link> REYE
+                                        </Link>
+                                        <Link> LEYE
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+
+                <Link> R_SFE
+                    <GfxShape>
+                        <Shape> RARM_LINK01.obj
+                            <Origin> 0 0 0 </Origin>
+                            <Orient> 1 0 0
+                                     0 1 0
+                                     0 0 1
+                            </Orient>
+                        </Shape>
+                    </GfxShape>
+                    <Children>
+                        <Link> R_SAA
+                            <GfxShape>
+                                <Shape> RARM_LINK02.obj
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient> 1 0 0
+                                             0 1 0
+                                             0 0 1
+                                    </Orient>
+                                </Shape>
+                            </GfxShape>
+                            <Children>
+                                <Link> R_SHR
+                                    <GfxShape>
+                                        <Shape> RARM_LINK03.obj
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 1 0 0
+                                                     0 1 0
+                                                     0 0 1
+                                            </Orient>
+                                        </Shape>
+                                    </GfxShape>
+                                    <Children>
+                                        <Link> R_EB
+                                            <GfxShape>
+                                                <Shape> RARM_LINK04.obj
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                             0 1 0
+                                                             0 0 1
+                                                    </Orient>
+                                                </Shape>
+                                            </GfxShape>
+                                            <Children>
+                                                <Link> R_WR
+                                                    <GfxShape>
+                                                        <Shape> RARM_LINK05.obj
+                                                            <Origin> 0 0 0.133 </Origin>
+                                                            <Orient> 1 0 0
+                                                                     0 0 1
+                                                                     0 -1 0
+                                                            </Orient>
+                                                        </Shape>
+                                                    </GfxShape>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+
+                <Link> L_SFE
+                    <GfxShape>
+                        <Shape> LARM_LINK01.obj
+                            <Origin> 0 0 0 </Origin>
+                            <Orient> 1 0 0
+                                     0 1 0
+                                     0 0 1
+                            </Orient>
+                        </Shape>
+                    </GfxShape>
+                    <Children>
+                        <Link> L_SAA
+                            <GfxShape>
+                                <Shape> LARM_LINK02.obj
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient> 1 0 0
+                                             0 1 0
+                                             0 0 1
+                                    </Orient>
+                                </Shape>
+                            </GfxShape>
+                            <Children>
+                                <Link> L_SHR
+                                    <GfxShape>
+                                        <Shape> LARM_LINK03.obj
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 1 0 0
+                                                     0 1 0
+                                                     0 0 1
+                                            </Orient>
+                                        </Shape>
+                                    </GfxShape>
+                                    <Children>
+                                        <Link> L_EB
+                                            <GfxShape>
+                                                <Shape> LARM_LINK04.obj
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                             0 1 0
+                                                             0 0 1
+                                                    </Orient>
+                                                </Shape>
+                                            </GfxShape>
+                                            <Children>
+                                                <Link> L_WR
+                                                    <GfxShape>
+                                                        <Shape> LARM_LINK05.obj
+                                                            <Origin> 0 0 -0.133 </Origin>
+                                                            <Orient> 1 0 0
+                                                                     0 0 -1
+                                                                     0 1 0
+                                                            </Orient>
+                                                        </Shape>
+                                                    </GfxShape>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+
+                <Link> WAIST
+                    <GfxShape>
+                        <Shape> BODY_LINK02.obj
+                            <Origin> 0 0 0 </Origin>
+                            <Orient> 1 0 0
+                                     0 1 0
+                                     0 0 1
+                            </Orient>
+                        </Shape>
+                    </GfxShape>
+                    <Children>
+                        <Link> R_LR
+                            <GfxShape>
+                                <Shape> RLEG_LINK01.obj
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient> 1 0 0
+                                             0 1 0
+                                             0 0 1
+                                    </Orient>
+                                </Shape>
+                            </GfxShape>
+                            <Children>
+                                <Link> R_LAA
+                                    <GfxShape>
+                                        <Shape> RLEG_LINK02.obj
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 1 0 0
+                                                     0 1 0
+                                                     0 0 1
+                                            </Orient>
+                                        </Shape>
+                                    </GfxShape>
+                                    <Children>
+                                        <Link> R_LFE
+                                            <GfxShape>
+                                                <Shape> RLEG_LINK03.obj
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                             0 1 0
+                                                             0 0 1
+                                                    </Orient>
+                                                </Shape>
+                                            </GfxShape>
+                                            <Children>
+                                                <Link> R_KN
+                                                    <GfxShape>
+                                                        <Shape> RLEG_LINK04.obj
+                                                            <Origin> 0 0 0 </Origin>
+                                                            <Orient> 1 0 0
+                                                                     0 1 0
+                                                                     0 0 1
+                                                            </Orient>
+                                                        </Shape>
+                                                    </GfxShape>
+                                                    <Children>
+                                                        <Link> R_AFE
+                                                            <GfxShape>
+                                                                <Shape> RLEG_LINK05.obj
+                                                                    <Origin> 0 0 0 </Origin>
+                                                                    <Orient> 1 0 0
+                                                                             0 1 0
+                                                                             0 0 1
+                                                                    </Orient>
+                                                                </Shape>
+                                                            </GfxShape>
+                                                            <Children>
+                                                                <Link> R_AAA
+                                                                    <GfxShape>
+                                                                        <Shape> RLEG_LINK06.obj
+                                                                            <Origin> 0 0 0 </Origin>
+                                                                            <Orient> 1 0 0
+                                                                                     0 1 0
+                                                                                     0 0 1
+                                                                            </Orient>
+                                                                        </Shape>
+                                                                    </GfxShape>
+                                                                    <Children>
+                                                                        <Link> R_FOOT
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+
+
+                        <Link> L_LR
+                            <GfxShape>
+                                <Shape> LLEG_LINK01.obj
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient> 1 0 0
+                                             0 1 0
+                                             0 0 1
+                                    </Orient>
+                                </Shape>
+                            </GfxShape>
+                            <Children>
+                                <Link> L_LAA
+                                    <GfxShape>
+                                        <Shape> LLEG_LINK02.obj
+                                            <Origin> 0 0 0 </Origin>
+                                            <Orient> 1 0 0
+                                                     0 1 0
+                                                     0 0 1
+                                            </Orient>
+                                        </Shape>
+                                    </GfxShape>
+                                    <Children>
+                                        <Link> L_LFE
+                                            <GfxShape>
+                                                <Shape> LLEG_LINK03.obj
+                                                    <Origin> 0 0 0 </Origin>
+                                                    <Orient> 1 0 0
+                                                             0 1 0
+                                                             0 0 1
+                                                    </Orient>
+                                                </Shape>
+                                            </GfxShape>
+                                            <Children>
+                                                <Link> L_KN
+                                                    <GfxShape>
+                                                        <Shape> LLEG_LINK04.obj
+                                                            <Origin> 0 0 0 </Origin>
+                                                            <Orient> 1 0 0
+                                                                     0 1 0
+                                                                     0 0 1
+                                                            </Orient>
+                                                        </Shape>
+                                                    </GfxShape>
+                                                    <Children>
+                                                        <Link> L_AFE
+                                                            <GfxShape>
+                                                                <Shape> LLEG_LINK05.obj
+                                                                    <Origin> 0 0 0 </Origin>
+                                                                    <Orient> 1 0 0
+                                                                             0 1 0
+                                                                             0 0 1
+                                                                    </Orient>
+                                                                </Shape>
+                                                            </GfxShape>
+                                                            <Children>
+                                                                <Link> L_AAA
+                                                                    <GfxShape>
+                                                                        <Shape> LLEG_LINK06.obj
+                                                                            <Origin> 0 0 0 </Origin>
+                                                                            <Orient> 1 0 0
+                                                                                     0 1 0
+                                                                                     0 0 1
+                                                                            </Orient>
+                                                                        </Shape>
+                                                                    </GfxShape>
+                                                                    <Children>
+                                                                        <Link> L_FOOT
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+
+
+                    </Children>
+                </Link>
+            </Children>
+        </Link>
+    </Children>
+</Link>
+
+
+
+
+
+
+
+
+
+
+

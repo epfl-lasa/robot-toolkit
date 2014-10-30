@@ -1,0 +1,36 @@
+<GolfConfig>
+
+
+
+<Default_dir>1 -1 0 </Default_dir>
+
+<Hitting_model>DS_model2.txt </Hitting_model>
+
+<Hitting_model_v>DS_v_Model.txt </Hitting_model_v>
+
+
+<Dynamic_dir> -1 0  0 </Dynamic_dir>
+
+<hitting_point>-0.474 -0.596 0.065 </hitting_point>
+
+<Racket_dir> -1 0 0 </Racket_dir>
+
+<manual_initial_position>true </manual_initial_position>
+
+<Initial_point>   -0.8   -0.2 0.2 </Initial_point>
+
+<record_ideal> false  </record_ideal>
+
+<record1> true </record1>
+
+<record2> false </record2>
+
+
+
+
+<visionOrigin> -0.474 -0.596 0.065  </visionOrigin>
+
+<swing_dir> 1 1 0.3   </swing_dir>
+
+
+</GolfConfig>

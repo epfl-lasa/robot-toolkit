@@ -1,0 +1,56 @@
+<Link> Base
+    <Children>
+        <Link> DOF_0
+            <Joint>
+                <Friction>  2.74577046e+00 -2.11669005e+00 1.12638565e+00 2.09225408e-02 2.85366946e+00 -2.07329527e+00 1.07328149e+00 1.77100774e-02 </Friction>
+            </Joint>
+            <Children>
+                <Link> DOF_1
+                    <Joint>
+                        <Friction> 4.18269238e+00 -2.20705304e+00 7.99287797e-01 2.92892988e-01 4.17356140e+00 -2.17446776e+00 8.63700455e-01 2.61842816e-01 </Friction>
+                    </Joint>
+                    <Children>
+                        <Link> DOF_2
+                            <Joint>
+                                <Friction>  2.82415626e+00 -1.23271919e+00 3.40188322e-01 2.41428696e-02 2.66954102e+00 -9.44395379e+00 3.89817195e-01 -7.50233747e-03 </Friction>
+                            </Joint>
+                            <Children>
+                                <Link> DOF_3
+                                    <Joint>
+                                        <Friction>  9.72294181e-01 -6.38634843e-01 2.20155267e-01 1.98574087e-02 9.68043051e-01 -6.88630034e-01 3.16395874e-01 2.78055309e-02 </Friction>
+                                    </Joint>
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Joint>
+                                                <Friction>  2.13380496e-01 -1.89804605e-01 3.06876950e-02 1.98966121e-02
+                                                             2.22582894e-01 -2.26896470e-01 2.61086949e-02 3.07988648e-02 </Friction>
+                                            </Joint>
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Joint>
+                                                        <Friction>  2.96175075e-01 -2.69428138e-01 3.78085504e-02 2.77722387e-02 
+                                                                    3.10762068e-01 -2.71015886e-01 3.30734727e-02 1.93776494e-02 </Friction>
+                                                    </Joint>
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Joint>
+                                                                <Friction>  1.11245582e-01 2.64357792e-02 2.22881539e-03 -6.93102632e-01
+                                                                            1.25872477e-01 -9.71608403e-02 1.93408701e-07 -1.83187239e-02 </Friction>
+                                                            </Joint>
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+

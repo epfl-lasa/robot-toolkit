@@ -1,0 +1,53 @@
+<Include file="../shape.xml"> Base
+<Children>
+  <Link> DOF_0
+  <Children>
+    <Link> DOF_1
+    <Children>
+      <Link> DOF_2
+      <Children>
+	<Link> DOF_3
+	<Children>
+	  <Link> DOF_4
+	  <Children>
+	    <Link> DOF_5
+	    <Children>
+	      <Link> DOF_6
+
+	      <Children>
+		<Link> TOOLPLATE
+
+		<Children>    
+		  <Link> FORCE_SENSOR
+		  <GfxShape>
+		    <Shape> Cylinder
+		  <Origin>  0.0 0.0 0.00 </Origin>
+		  <Orient>  1 0 0 
+		  0 1 0 
+		  0 0 1 </Orient>
+		  <Scale>   0.09 0.09 0.016 </Scale>
+		  <Color>0.2 0.2 0.2 </Color>
+		  </Shape>
+		  </GfxShape>
+		  </Link>
+		</Children>
+
+		</Link>          
+		
+	      </Children>    
+	      </Link>                    
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+    </Link>
+  </Children>    
+  </Link>
+</Children>    
+</Include>
+

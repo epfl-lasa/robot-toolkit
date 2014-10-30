@@ -1,0 +1,60 @@
+<World>
+    <Include file="Objects/Floor.xml">
+    </Include>
+
+    <Include file="Objects/Ball.xml"> BallA
+        <Origin>  -1  1 4 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+     </Include>
+    <Include file="Objects/Ball.xml"> BallB
+        <Origin>  0  1 4 </Origin>
+        <Orient>  0  1  0
+                  -1  0  0 
+                  0  0  1 </Orient>
+     </Include>
+    <Include file="Objects/Ball.xml"> BallC
+        <Origin>  0.5  0 5 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+        <BBoxShape>
+            <Shape> Sphere
+                <Color> 0 1 0 </Color>
+            </Shape>
+        </BBoxShape>
+     </Include>
+
+    <Include file="Objects/BallNoMass.xml"> FixBallA
+        <Origin>  0.1  1.0 1.0 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+        <BBoxShape>
+            <Shape> Sphere
+                <Color> 0 0 1 </Color>
+            </Shape>
+        </BBoxShape>
+     </Include>
+    <Include file="Objects/BallNoMass.xml"> FixBallB
+        <Origin>  0.46  0 0 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+     </Include>
+     <Include file="Objects/BallRed.xml"> FixBallC  
+        <Origin>  0.5  1 0.2 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+     </Include>
+
+     <Include file="Objects/RandomObject.xml"> RA
+        <Origin>  0.5  0.7 1.2 </Origin>
+        <Orient>  0  -1  0
+                  0  0  -1 
+                  1  0  0 </Orient>
+     </Include>
+</World>
+

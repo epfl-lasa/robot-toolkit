@@ -1,0 +1,168 @@
+<Include file="../shape.xml"> Base
+    <Children>
+    <Link> DOF_0
+      <Children>
+        <Link> DOF_1
+          <Children>
+            <Link> DOF_2
+              <Children>
+                <Link> DOF_3
+                  <Children>
+                    <Link> DOF_4
+                      <Children>
+                        <Link> DOF_5
+                          <Children>
+                            <Link> DOF_6
+                              <Children>
+                              	<Link> TOOL
+                              		<Children>
+                                <Link> WAMHand 
+                                  <GfxShape>
+									<Shape id="WAMHand">  WAMHandBase.obj  
+									  <Origin>  0  0  -0.1005 </Origin> 
+									  <Orient>  0  0  1
+										1  0  0
+										0  1  0 
+									  </Orient>
+									  <Color> 0.7 0.7 0.7 0.5</Color>
+									</Shape>
+                                  </GfxShape>																			
+								  <Children>
+								     <Link> EndEffector
+                              		</Link>
+									<Link> HandF1Dof0
+									  <GfxShape>
+										<Shape id="HandF1Dof0"> WAMHandFinger0.obj
+										  <Origin>  0  0  0 </Origin> 
+										  <Orient>  0  0  1
+											-1  0  0
+											0 -1  0 
+										  </Orient>
+										  <Color> 0.7 0.7 0.7 0.5</Color>
+										</Shape>	
+									  </GfxShape>																		
+
+									  <Children>
+										<Link> HandF1Dof1
+										  <GfxShape>	
+											<Shape id="HandF1Dof1"> WAMHandFinger1.obj 
+											  <Origin>  0  0  0 </Origin> 
+											  <Orient>  0  0  1
+												0  1  0
+												-1  0  0
+											  </Orient>
+											  <Color> 0.7 0.7 0.7 0.5</Color>
+											</Shape>	
+										  </GfxShape>
+										  
+										  <Children>
+											<Link> HandF1Dof2
+											  <GfxShape>	
+												<Shape id="HandF1Dof2"> WAMHandFinger2.obj
+												  <Origin>  0  0  0 </Origin> 
+												  <Orient>  0  0  1
+													0  1  0
+													-1  0  0
+												  </Orient>
+												  <Color> 0.7 0.7 0.7 0.5</Color>
+												</Shape>	
+											  </GfxShape>	
+											</Link>
+										  </Children>
+										</Link>
+									  </Children>
+									</Link>
+
+									<Link> HandF2Dof0
+									  <GfxShape>	
+										<Shape id="HandF2Dof0"> WAMHandFinger0.obj
+										  <Origin>  0  0  0 </Origin> 
+										  <Orient>  0  0  1
+											1  0  0
+											0  1  0 
+										  </Orient>
+										  <Color> 0.7 0.7 0.7 0.5</Color>
+										</Shape>	
+									  </GfxShape>
+
+									  <Children>
+										<Link> HandF2Dof1
+										  <GfxShape>	
+											<Shape id="HandF2Dof1"> WAMHandFinger1.obj 
+											  <Origin>  0  0  0 </Origin> 
+											  <Orient>  0  0  1
+												0  1  0
+												-1  0  0
+											  </Orient>
+											  <Color> 0.7 0.7 0.7 0.5</Color>
+											</Shape>	
+										  </GfxShape>	
+										  
+										  <Children>
+											<Link> HandF2Dof2
+											  <GfxShape>
+												<Shape id="HandF2Dof2"> WAMHandFinger2.obj
+												  <Origin>  0  0  0 </Origin> 
+												  <Orient>  0  0  1
+													0  1  0
+													-1  0  0
+												  </Orient>
+												  <Color> 0.7 0.7 0.7 0.5</Color>
+												</Shape>	
+											  </GfxShape>
+											</Link>
+										  </Children>
+										</Link>
+									  </Children>
+									</Link>
+
+									<Link> HandF3Dof1
+									  <GfxShape>
+										<Shape id="HandF3Dof1"> WAMHandFinger1.obj 
+										  <Origin>  0  0  0 </Origin> 
+										  <Orient>  0  0  1
+											0  1  0
+											-1  0  0
+										  </Orient>
+										 <Color> 0.7 0.7 0.7 0.5</Color>
+										</Shape>	
+									  </GfxShape>	
+
+									  <Children>
+										<Link> HandF3Dof2
+										  <GfxShape>
+											<Shape id="HandF3Dof2"> WAMHandFinger2.obj
+											  <Origin>  0  0  0 </Origin> 
+											  <Orient>  0  0  1
+												0  1  0
+												-1  0  0
+											  </Orient>
+											  <Color> 0.7 0.7 0.7 0.5</Color>
+											</Shape>	
+										  </GfxShape>
+										</Link>
+									  </Children>
+									</Link>
+									
+								  </Children>
+								  
+                                </Link>                                                              
+                              </Children>    
+                            </Link>                    
+                          </Children>    
+                        </Link>                    
+                      </Children>    
+                    </Link>                    
+                  </Children>    
+                </Link>                    
+              </Children>                    
+            </Link>                
+          </Children>    
+        </Link>
+      </Children>    
+    </Link>
+  </Children>  
+      </Link>
+    </Children>
+    
+</Include>

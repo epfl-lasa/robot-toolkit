@@ -1,0 +1,118 @@
+<World>
+  <Object> Ground
+    <BBoxShape>
+      <Shape> Floor
+      </Shape>
+    </BBoxShape>
+  </Object>
+
+
+  
+  
+  <Include file="Objects/GolfBall.xml"> Ball
+	<Velocity> 0 0 0</Velocity>
+    <Origin>  0 -0.7 0.07  </Origin>
+    <aOrigin>  1.45 2 0.2 </aOrigin>
+    <Orient>  1  0  0
+      0  1  0 
+      0  0  1 </Orient>
+  </Include>  
+  
+  <Include file="Objects/RandHF.xml"> HF
+    <Origin>  0 0  0 </Origin>
+    <Orient>  1 0 0
+      0 1 0
+      0 0 1 </Orient>
+  </Include> 
+  
+  <aObject> floor
+	<BBoxShape>
+      <Shape> Cube
+		<Color> 0.5 0.8 0.5 </Color>
+        <Origin>  0 0 -0.05 </Origin>
+        <Orient>  1 0 0 
+          0 1 0 
+          0 0 1 </Orient>
+        <Scale>   1 2 0.1 </Scale>
+      </Shape> 
+    </BBoxShape>
+	<Material>
+	  <StaticFriction> 50 </StaticFriction>
+	</Material>
+  </aObject>
+
+
+
+  <Object> obstacle_1
+	<BBoxShape>
+      <Shape> Cube
+		<Color> 0 0 1 </Color>
+        <Origin>  0.0 0 0.05 </Origin>
+        <Orient>  1 0 0 
+          0 1 0 
+          0 0 1 </Orient>
+        <Scale>   0.1 0.1  0.1 </Scale>
+      </Shape> 
+    </BBoxShape>
+
+
+	<Material>
+	  <StaticFriction> 50 </StaticFriction>
+	</Material>
+  </Object>
+
+
+  <Object> obstacle_2
+	<BBoxShape>
+      <Shape> Cube
+		<Color> 1 0 1 </Color>
+        <Origin>  0 0 0.05 </Origin>
+        <Orient>  1 0 0 
+          0 1 0 
+          0 0 1 </Orient>
+        <Scale>   0.3 0.1  0.1 </Scale>
+      </Shape> 
+    </BBoxShape>
+	<Material>
+	  <StaticFriction> 50 </StaticFriction>
+	</Material>
+  </Object>
+ 
+  <Object> obstacle_3
+	<BBoxShape>
+      <Shape> Cube
+		<Color> 1 0 1 </Color>
+        <Origin>  0 0 0.05 </Origin>
+        <Orient>  1 0 0 
+          0 1 0 
+          0 0 1 </Orient>
+        <Scale>   0.3 0.1  0.1 </Scale>
+      </Shape> 
+    </BBoxShape>
+	<Material>
+	  <StaticFriction> 50 </StaticFriction>
+	</Material>
+  </Object>
+
+
+
+  <Object> obstacle_4
+	<BBoxShape>
+      <Shape> Cube
+		<Color> 1 1 1 </Color>
+        <Origin>  0 0 0.05 </Origin>
+        <Orient>  1 0 0 
+          0 1 0 
+          0 0 1 </Orient>
+        <Scale>   0.3 0.1  0.1 </Scale>
+      </Shape> 
+    </BBoxShape>
+	<Material>
+	  <StaticFriction> 50 </StaticFriction>
+	</Material>
+  </Object>
+
+
+
+</World>
+

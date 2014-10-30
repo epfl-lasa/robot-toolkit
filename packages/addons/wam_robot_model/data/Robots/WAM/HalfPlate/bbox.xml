@@ -1,0 +1,45 @@
+<Include file="../bbox.xml"> Base
+    <Children>
+        <Link> DOF_0
+            <Children>
+                <Link> DOF_1
+                    <Children>
+                        <Link> DOF_2
+                            <Children>
+                                <Link> DOF_3
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Children>
+                                                                <Link> HALFPLATE
+                                                                    <BBoxShape>
+                                                                        <Shape> Cube
+                                                                            <Origin>  0.0 0.0 0.2 </Origin>
+                                                                            <Orient>  1 0 0 
+                                                                                      0 1 0 
+                                                                                      0 0 1 </Orient>
+                                                                            <Scale>   0.02 0.2 0.4 </Scale>
+                                                                        </Shape>
+                                                                    </BBoxShape>
+                                                                </Link>                                                                                    
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Include>
+
+

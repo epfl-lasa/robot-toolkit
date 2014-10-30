@@ -1,0 +1,147 @@
+<Include file="../shape.xml"> Base
+    <Children>
+<Link> Base_0
+<Children>
+<Link> Base_1
+<Children>
+<Link> Base_Odometry
+<Children>
+<Link> Mounting
+<Children>
+        <Link> DOF_0
+            <Children>
+                <Link> DOF_1
+                    <Children>
+                        <Link> DOF_2
+                            <Children>
+                                <Link> DOF_3
+                                    <Children>
+                                        <Link> DOF_4
+                                            <Children>
+                                                <Link> DOF_5
+                                                    <Children>
+                                                        <Link> DOF_6
+                                                            <Children>
+                                                                <Link> TOOL 
+							<GfxShape>
+										<Shape> Cylinder
+<Origin> 0.0 0.0 0.015 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+<Scale> 0.035 0.035 0.03  </Scale>
+<Color> 0.6 0.6 0.6  </Color>
+</Shape>
+<Shape> Cube
+<Origin> 0.0 0.0 0.04 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+<Scale> 0.05 0.1 0.03  </Scale>
+<Color> 0.6 0.6 0.6  </Color>
+</Shape>
+</GfxShape>
+										
+                                                                    <Children>
+									<Link> GripperBase
+                                                                    		<Children>
+										<Link> GripperDOF_0
+ <aMass>          0.2       </aMass>
+        <aCenterOfMass>  0 0 -0.1   </aCenterOfMass>
+        <aInertiaMatrix> 0.000004  0 0
+                        0  0.000004 0
+                        0  0   0.000004
+        </aInertiaMatrix>
+<aMaterial>
+<StaticFriction> -2 </StaticFriction>
+</aMaterial>
+										<GfxShape>
+										<Shape> Cube
+										 <Origin> 0.0 -0.04 0.0 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+									      <Scale> 0.03 0.08 0.005 </Scale>
+										<Color> 0.6 0.6 0.6  </Color>
+										</Shape>
+										</GfxShape>
+<aBBoxShape>
+										<Shape> Cube
+										 <Origin> 0.0 -0.04 0.0 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+									      <Scale> 0.03 0.08 0.005 </Scale>
+										<Color> 0.6 0.6 0.6  </Color>
+										</Shape>
+										</aBBoxShape>
+										</Link>
+										<Link> GripperDOF_1
+<aMass>          0.2       </aMass>
+        <aCenterOfMass>  0 0 -0.1   </aCenterOfMass>
+        <aInertiaMatrix> 0.000004  0 0
+                        0  0.000004 0
+                        0  0   0.000004
+        </aInertiaMatrix>
+<aMaterial>
+<StaticFriction> -2 </StaticFriction>
+</aMaterial>
+										<GfxShape>
+										<Shape> Cube
+										 <Origin> 0.0 0.04 0.0 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+										<Color> 0.6 0.6 0.6  </Color>
+									      <Scale> 0.03 0.08 0.005 </Scale>
+										</Shape>
+										</GfxShape>
+<aBBoxShape>
+										<Shape> Cube
+										 <Origin> 0.0 0.04 0.0 </Origin>
+									      <Orient> 1 0 0
+										       0 1 0
+										       0 0 1
+									      </Orient>
+										<Color> 0.6 0.6 0.6  </Color>
+									      <Scale> 0.03 0.08 0.005 </Scale>
+										</Shape>
+										</aBBoxShape>
+										</Link>
+                                                                    		</Children>
+									</Link>
+                                                                    </Children>
+								<Link> CAMERA 
+
+								</Link>
+                                                                </Link>                                                                                    
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+        </Link>
+    </Children>    
+        </Link>
+    </Children>   
+        </Link>
+    </Children>   
+        </Link>
+    </Children>   
+</Include>
+

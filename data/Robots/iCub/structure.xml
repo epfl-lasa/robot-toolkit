@@ -1,0 +1,719 @@
+<Link> Base
+    <Joint type="None">
+        <BaseFrame>
+            <Origin> 0.0 0.0 2.0 </Origin>
+            <Orient>   -1.0  0.0  0.0 
+                       0.0  -1.0  0.0
+                       0.0  0.0  1.0
+            </Orient>            
+        </BaseFrame>
+    </Joint>
+
+    <Mass> 0 </Mass>
+    <CenterOfMass> 0 0 0 </CenterOfMass>
+    <InertiaMatrix> 0 0 0
+                    0 0 0
+                    0 0 0
+    </InertiaMatrix>
+    
+    <Children>
+
+        <Link> Torso_0
+            <Joint type="Revolute">
+                <BaseFrame>
+                    <Origin> 0.0 0 0.0 </Origin>
+                    <Orient> 0 -1 0 
+                             0 0 -1 
+                             1 0 0 
+                             </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> -10 40 </Range>
+                <Zero> 0 </Zero>
+            </Joint>
+
+            <Mass> 0 </Mass>
+            <CenterOfMass> 0 0 0 </CenterOfMass>
+            <InertiaMatrix> 0 0 0
+                            0 0 0
+                            0 0 0
+            </InertiaMatrix>
+        
+            <Children>
+                <Link> Torso_1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0.032 0 0 </Origin>
+                            <Orient> 1 0 0 
+                                     0 0 -1 
+                                     0 1 0 
+                                     </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -30 30 </Range>
+                        <Zero> 0 </Zero>
+                    </Joint>
+
+                    <Mass> 0 </Mass>
+                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                    <InertiaMatrix> 0 0 0
+                                    0 0 0
+                                    0 0 0
+                    </InertiaMatrix>
+
+                    <Children>
+                        <Link> Torso_2
+                            <Joint type="Revolute">
+                                <BaseFrame>
+                                    <Origin> 0 0 0 </Origin>
+                                    <Orient> 0 0 -1 
+                                             -1 0 0 
+                                             0 1 0 
+                                             </Orient>
+                                </BaseFrame>
+                                <Axis> EZ </Axis>
+                                <Range> -40 40 </Range>
+                                <Zero> 0 </Zero>
+                            </Joint>
+
+                            <Mass> 0 </Mass>
+                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                            <InertiaMatrix> 0 0 0
+                                            0 0 0
+                                            0 0 0
+                            </InertiaMatrix>
+                            
+                            <Children>
+                            
+                                <Link> Neck_0
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0 -0.00231 -0.1933 </Origin>
+                                            <Orient> 0 0 1 
+                                                     -1 0 0 
+                                                     0 -1 0 
+                                                     </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -35 15 </Range>
+                                        <Zero> 0 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                    <InertiaMatrix> 0 0 0
+                                                    0 0 0
+                                                    0 0 0
+                                    </InertiaMatrix>
+                                    <Children>
+
+                                        <Link> Neck_1
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0.033 0 </Origin>
+                                                    <Orient> 0 0 1 
+                                                             1 0 0 
+                                                             0 1 0 
+                                                             </Orient>
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> -15 15 </Range>
+                                                <Zero> 0 </Zero>
+                                            </Joint>
+
+                                            <Mass> 0 </Mass>
+                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                            <InertiaMatrix> 0 0 0
+                                                            0 0 0
+                                                            0 0 0
+                                            </InertiaMatrix>
+                                            <Children>
+
+                                                <Link> Neck_2
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> 0 0 0 </Origin>
+                                                            <Orient> 0 0 1 
+                                                                     1 0 0 
+                                                                     0 1 0 
+                                                                     </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> -45 45 </Range>
+                                                        <Zero> 0 </Zero>
+                                                    </Joint>
+
+                                                    <Mass> 0 </Mass>
+                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                    <InertiaMatrix> 0 0 0
+                                                                    0 0 0
+                                                                    0 0 0
+                                                    </InertiaMatrix>
+                                                    <Children>
+
+                                                        <Link> Eye_0
+                                                            <Joint type="Revolute">
+                                                                <BaseFrame>
+                                                                    <Origin> 0 0.054 0.0825 </Origin>
+                                                                    <Orient> 0 0 1 
+                                                                             -1 0 0 
+                                                                             0 -1 0 
+                                                                             </Orient>
+                                                                </BaseFrame>
+                                                                <Axis> EZ </Axis>
+                                                                <Range> -20 10 </Range>
+                                                                <Zero>  0 </Zero>
+                                                            </Joint>
+
+                                                            <Mass> 0 </Mass>
+                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                            <InertiaMatrix> 0 0 0
+                                                                            0 0 0
+                                                                            0 0 0
+                                                            </InertiaMatrix>
+                                                            <Children>
+                                                                <Link> REye_1
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0 0 0.034 </Origin>
+                                                                            <Orient> 1 0 0 
+                                                                                     0 0 1 
+                                                                                     0 -1 0 
+                                                                                     </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> 0 0 </Range>
+                                                                        <Zero> 0 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 0 </Mass>
+                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                    <InertiaMatrix> 0 0 0
+                                                                                    0 0 0
+                                                                                    0 0 0
+                                                                    </InertiaMatrix>
+                                                                    <Children>
+                                                                        <Link> REye
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0 0 0 </Origin>
+                                                                                    <Orient> 0 0 -1 
+                                                                                             -1 0 0 
+                                                                                             0 1 0 
+                                                                                             </Orient>
+                                                                                </BaseFrame>
+                                                                                <Axis> EZ </Axis>
+                                                                                <Range> 0 0 </Range>
+                                                                                <Zero> 0 </Zero>
+                                                                            </Joint>
+
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix> 0 0 0
+                                                                                            0 0 0
+                                                                                            0 0 0
+                                                                            </InertiaMatrix>
+                                                                        </Link> 
+                                                                    </Children>
+                                                                </Link>
+                                                                <Link> LEye_1
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0 0 -0.034 </Origin>
+                                                                            <Orient> 1 0 0 
+                                                                                     0 0 1 
+                                                                                     0 -1 0 
+                                                                                     </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> 0 0 </Range>
+                                                                        <Zero> 0 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 0 </Mass>
+                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                    <InertiaMatrix> 0 0 0
+                                                                                    0 0 0
+                                                                                    0 0 0
+                                                                    </InertiaMatrix>
+                                                                    <Children>
+                                                                        <Link> LEye
+                                                                            <Joint type="None">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0 0 0 </Origin>
+                                                                                    <Orient> 0 0 -1 
+                                                                                             -1 0 0 
+                                                                                             0 1 0 
+                                                                                             </Orient>
+                                                                                </BaseFrame>
+                                                                                <Axis> EZ </Axis>
+                                                                                <Range> 0 0 </Range>
+                                                                                <Zero> 0 </Zero>
+                                                                            </Joint>
+
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix> 0 0 0
+                                                                                            0 0 0
+                                                                                            0 0 0
+                                                                            </InertiaMatrix>
+                                                                        </Link> 
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            
+                            
+                            
+                            
+                            
+                                <Link> RArm_0
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> 0.006047229343 0.02256856715 -0.1433 </Origin>
+                                            <Orient> -0.2588190451 0 -0.9659258263 
+                                                     -0.9659258263 0 0.2588190451 
+                                                     0 1 0 
+                                                     </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -90 10 </Range>
+                                        <Zero> -40 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                    <InertiaMatrix> 0 0 0
+                                                    0 0 0
+                                                    0 0 0
+                                    </InertiaMatrix>
+
+                                    <Children>
+                                        <Link> RArm_1
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0 -0.10774 </Origin>
+                                                    <Orient> 0 0 -1 
+                                                             -1 0 0 
+                                                             0 1 0 
+                                                             </Orient>
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> 20 90 </Range>
+                                                <Zero> 50 </Zero>
+                                            </Joint>
+
+                                            <Mass> 0 </Mass>
+                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                            <InertiaMatrix> 0 0 0
+                                                            0 0 0
+                                                            0 0 0
+                                            </InertiaMatrix>
+                                        
+                                            <Children>
+                                                <Link> RArm_2
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> 0 0 0 </Origin>
+                                                            <Orient> 0 0 1 
+                                                                     -1 0 0 
+                                                                     0 -1 0 
+                                                                     </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> -35 70 </Range>
+                                                        <Zero> 30 </Zero>
+                                                    </Joint>
+
+                                                    <Mass> 0 </Mass>
+                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                    <InertiaMatrix> 0 0 0
+                                                                    0 0 0
+                                                                    0 0 0
+                                                    </InertiaMatrix>
+                                                
+                                                    <Children>
+                                                        <Link> RArm_3
+                                                            <Joint type="Revolute">
+                                                                <BaseFrame>
+                                                                    <Origin> 0 0 -0.15228 </Origin>
+                                                                    <Orient> -0.2588190451 0 0.9659258263 
+                                                                             -0.9659258263 0 -0.2588190451 
+                                                                             0 -1 0 
+                                                                             </Orient>
+                                                                </BaseFrame>
+                                                                <Axis> EZ </Axis>
+                                                                <Range> 15 100 </Range>
+                                                                <Zero> 90 </Zero>
+                                                            </Joint>
+
+                                                            <Mass> 0 </Mass>
+                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                            <InertiaMatrix> 0 0 0
+                                                                            0 0 0
+                                                                            0 0 0
+                                                            </InertiaMatrix>
+                                                        
+                                                            <Children>
+                                                                <Link> RArm_4
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0.01493094298 0.001437686288 0 </Origin>
+                                                                            <Orient> 0.9953961984 0 0.09584575252 
+                                                                                     0.09584575252 0 -0.9953961984 
+                                                                                     0 1 0 
+                                                                                     </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> -80 80 </Range>
+                                                                        <Zero> 0 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 0 </Mass>
+                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                    <InertiaMatrix> 0 0 0
+                                                                                    0 0 0
+                                                                                    0 0 0
+                                                                    </InertiaMatrix>
+                                                                
+                                                                    <Children>
+                                                                        <Link> RArm_5
+                                                                            <Joint type="Revolute">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0 0 -0.1373 </Origin>
+                                                                                    <Orient> 0 0 -1 
+                                                                                             -1 0 0 
+                                                                                             0 1 0 
+                                                                                             </Orient>
+                                                                                </BaseFrame>
+                                                                                <Axis> EZ </Axis>
+                                                                                <Range>  0 0 </Range>
+                                                                                <Zero> 0 </Zero>
+                                                                            </Joint>
+
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix> 0 0 0
+                                                                                            0 0 0
+                                                                                            0 0 0
+                                                                            </InertiaMatrix>
+                                                                        
+                                                                            <Children>
+                                                                                <Link> RArm_6
+                                                                                    <Joint type="Revolute">
+                                                                                        <BaseFrame>
+                                                                                            <Origin> 0 0 0 </Origin>
+                                                                                            <Orient> 0 0 1 
+                                                                                                     1 0 0 
+                                                                                                     0 1 0 
+                                                                                                     </Orient>
+                                                                                        </BaseFrame>
+                                                                                        <Axis> EZ </Axis>
+                                                                                        <Range> 0 0 </Range>
+                                                                                        <Zero> 0 </Zero>
+                                                                                    </Joint>
+
+                                                                                    <Mass> 0 </Mass>
+                                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                                    <InertiaMatrix> 0 0 0
+                                                                                                    0 0 0
+                                                                                                    0 0 0
+                                                                                    </InertiaMatrix>
+                                                                                
+                                                                                    <Children>
+                                                                                        <Link> RHand
+                                                                                            <Joint type="None">
+                                                                                                <BaseFrame>
+                                                                                                    <Origin> -0.0625 0 0.016 </Origin>
+                                                                                                    <Orient> -1 0 0 
+                                                                                                             0 -1 0 
+                                                                                                             0 0 1 
+                                                                                                             </Orient>
+                                                                                                </BaseFrame>
+                                                                                            </Joint>
+
+                                                                                            <Mass> 0 </Mass>
+                                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                                            <InertiaMatrix> 0 0 0
+                                                                                                            0 0 0
+                                                                                                            0 0 0
+                                                                                            </InertiaMatrix>
+                                                                                        </Link>                
+                                                                                        
+
+                                                                                    </Children>    
+                                                                                </Link>                
+                                                                            </Children>    
+                                                                        </Link>                
+                                                                    </Children>    
+                                                                </Link>                
+                                                            </Children>    
+                                                        </Link>                
+                                                    </Children>    
+                                                </Link>                
+                                            </Children>    
+                                        </Link>                
+                                    </Children>    
+                                </Link>                
+
+
+                                <Link> LArm_0
+                                    <Joint type="Revolute">
+                                        <BaseFrame>
+                                            <Origin> -0.006047229343 0.02256856715 -0.1433 </Origin>
+                                            <Orient> -0.2588190451 0 -0.9659258263 
+                                                     0.9659258263 0 -0.2588190451 
+                                                     0 -1 0 
+                                                     </Orient>
+                                        </BaseFrame>
+                                        <Axis> EZ </Axis>
+                                        <Range> -90 10 </Range>
+                                        <Zero> -40 </Zero>
+                                    </Joint>
+
+                                    <Mass> 0 </Mass>
+                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                    <InertiaMatrix> 0 0 0
+                                                    0 0 0
+                                                    0 0 0
+                                    </InertiaMatrix>
+                                
+                                    <Children>
+                                        <Link> LArm_1
+                                            <Joint type="Revolute">
+                                                <BaseFrame>
+                                                    <Origin> 0 0 0.10774 </Origin>
+                                                    <Orient> 0 0 -1 
+                                                             1 0 0 
+                                                             0 -1 0 
+                                                             </Orient>
+                                                </BaseFrame>
+                                                <Axis> EZ </Axis>
+                                                <Range> 20 90 </Range>
+                                                <Zero> 50 </Zero>
+                                            </Joint>
+
+                                            <Mass> 0 </Mass>
+                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                            <InertiaMatrix> 0 0 0
+                                                            0 0 0
+                                                            0 0 0
+                                            </InertiaMatrix>
+                                        
+                                            <Children>
+                                                <Link> LArm_2
+                                                    <Joint type="Revolute">
+                                                        <BaseFrame>
+                                                            <Origin> 0 0 0 </Origin>
+                                                            <Orient> 0 0 -1 
+                                                                     -1 0 0 
+                                                                     0 1 0 
+                                                                     </Orient>
+                                                        </BaseFrame>
+                                                        <Axis> EZ </Axis>
+                                                        <Range> -35 70 </Range>
+                                                        <Zero> 30 </Zero>
+                                                    </Joint>
+
+                                                    <Mass> 0 </Mass>
+                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                    <InertiaMatrix> 0 0 0
+                                                                    0 0 0
+                                                                    0 0 0
+                                                    </InertiaMatrix>
+                                                
+                                                    <Children>
+                                                        <Link> LArm_3
+                                                            <Joint type="Revolute">
+                                                                <BaseFrame>
+                                                                    <Origin> 0 0 0.15228 </Origin>
+                                                                    <Orient> 0.2588190451 0 -0.9659258263 
+                                                                             0.9659258263 0 0.2588190451 
+                                                                             0 -1 0 
+                                                                             </Orient>
+                                                                </BaseFrame>
+                                                                <Axis> EZ </Axis>
+                                                                <Range> 15 100 </Range>
+                                                                <Zero> 90 </Zero>
+                                                            </Joint>
+
+                                                            <Mass> 0 </Mass>
+                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                            <InertiaMatrix> 0 0 0
+                                                                            0 0 0
+                                                                            0 0 0
+                                                            </InertiaMatrix>
+                                                        
+                                                            <Children>
+                                                                <Link> LArm_4
+                                                                    <Joint type="Revolute">
+                                                                        <BaseFrame>
+                                                                            <Origin> -0.01493094298 -0.001437686288 0 </Origin>
+                                                                            <Orient> 0.9953961984 0 0.09584575252 
+                                                                                     0.09584575252 0 -0.9953961984 
+                                                                                     0 1 0 
+                                                                                     </Orient>
+                                                                        </BaseFrame>
+                                                                        <Axis> EZ </Axis>
+                                                                        <Range> -150 150 </Range>
+                                                                        <Zero> 0 </Zero>
+                                                                    </Joint>
+
+                                                                    <Mass> 0 </Mass>
+                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                    <InertiaMatrix> 0 0 0
+                                                                                    0 0 0
+                                                                                    0 0 0
+                                                                    </InertiaMatrix>
+                                                                
+                                                                    <Children>
+                                                                        <Link> LArm_5
+                                                                            <Joint type="Revolute">
+                                                                                <BaseFrame>
+                                                                                    <Origin> 0 0 0.1373 </Origin>
+                                                                                    <Orient> 0 0 -1 
+                                                                                             -1 0 0 
+                                                                                             0 1 0 
+                                                                                             </Orient>
+                                                                                </BaseFrame>
+                                                                                <Axis> EZ </Axis>
+                                                                                <Range> -150 150 </Range>
+                                                                                <Zero> 0 </Zero>
+                                                                            </Joint>
+
+                                                                            <Mass> 0 </Mass>
+                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                            <InertiaMatrix> 0 0 0
+                                                                                            0 0 0
+                                                                                            0 0 0
+                                                                            </InertiaMatrix>
+                                                                        
+                                                                            <Children>
+                                                                                <Link> LArm_6
+                                                                                    <Joint type="Revolute">
+                                                                                        <BaseFrame>
+                                                                                            <Origin> 0 0 0 </Origin>
+                                                                                            <Orient> 0 0 1 
+                                                                                                     1 0 0 
+                                                                                                     0 1 0 
+                                                                                                     </Orient>
+                                                                                        </BaseFrame>
+                                                                                        <Axis> EZ </Axis>
+                                                                                        <Range> -150 150 </Range>
+                                                                                        <Zero> 0 </Zero>
+                                                                                    </Joint>
+
+                                                                                    <Mass> 0 </Mass>
+                                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                                    <InertiaMatrix> 0 0 0
+                                                                                                    0 0 0
+                                                                                                    0 0 0
+                                                                                    </InertiaMatrix>
+
+                                                                                    <Children>
+                                                                                        <Link> LHand
+                                                                                            <Joint type="None">
+                                                                                                <BaseFrame>
+                                                                                                    <Origin> 0.0625 0 -0.016 </Origin>
+                                                                                                    <Orient> 1 0 0 
+                                                                                                             0 1 0 
+                                                                                                             0 0 1 
+                                                                                                             </Orient>
+                                                                                                </BaseFrame>
+                                                                                                <Axis> EZ </Axis>
+                                                                                                <Range> -150 150 </Range>
+                                                                                                <Zero> 0 </Zero>
+                                                                                            </Joint>
+
+                                                                                            <Mass> 0 </Mass>
+                                                                                            <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                                            <InertiaMatrix> 0 0 0
+                                                                                                            0 0 0
+                                                                                                            0 0 0
+                                                                                            </InertiaMatrix>
+                                                                                        </Link>                
+                                                                                    </Children>    
+                                                                                
+                                                                                </Link>                
+                                                                            </Children>    
+                                                                        </Link>                
+                                                                    </Children>    
+                                                                </Link>                
+                                                            </Children>    
+                                                        </Link>                
+                                                    </Children>    
+                                                </Link>                
+                                            </Children>    
+                                        </Link>                
+                                    </Children>    
+                                </Link>                
+
+                            </Children>    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+
+
+                        
+                            <Children>
+
+
+
+
+
+
+
+
+
+
+                                                            <Children>
+                                                                <Link> TOOL
+                                                                    <Joint type="None">
+                                                                        <BaseFrame>
+                                                                            <Origin> 0.0 0.0 0.0609 </Origin>
+                                                                            <Orient>  1  0  0
+                                                                                      0  1  0
+                                                                                      0  0  1    
+                                                                            </Orient>
+                                                                        </BaseFrame>
+                                                                    </Joint>
+        
+                                                                    <Mass> 0 </Mass>
+                                                                    <CenterOfMass> 0 0 0 </CenterOfMass>
+                                                                    <InertiaMatrix>  0 0 0
+                                                                                     0 0 0
+                                                                                     0 0 0
+                                                                    </InertiaMatrix>                                                                
+        
+                                                                </Link>                    
+                                                                
+                                                            </Children>    
+                                                        </Link>                    
+                                                    </Children>    
+                                                </Link>                    
+                                            </Children>    
+                                        </Link>                    
+                                    </Children>    
+                                </Link>                    
+                            </Children>                    
+                        </Link>                
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+

@@ -1,0 +1,68 @@
+<World>	
+
+	
+    <Include file="Objects/RealField.xml"> HF
+        <Origin>  -0.16  -0.96  0 </Origin>
+        <aOrient>  0 1 0
+                  -1 0 0
+                  0 0 1 </aOrient>
+	<Orient>
+	  -0.7071 0.7071 0
+	  -0.7071 -0.7071 0
+	  0          0   1
+
+
+	</Orient>
+    </Include> 
+	
+	 <Include file="Objects/hole.xml"> hole
+        <Origin>  0.363   -1.483  0 </Origin>
+        <aOrient>  1 0 0
+                  0 1 0
+                  0 0 1 </aOrient>
+	<Orient>
+	  0.7071 0.7071 0
+	  -0.7071 0.7071 0
+	  0          0   1
+
+
+	</Orient>
+
+
+    </Include> 
+	
+    
+    <Include file="Objects/GolfBall.xml"> Ball
+		<Velocity> 0 0 0</Velocity>
+        <Origin>  -0.48 -0.62 0.06 </Origin>
+        <aOrigin>  1.45 2 0.2 </aOrigin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+     </Include>  
+	 
+	 
+	 
+	 
+	 <Object>
+	    <BBoxShape>
+			
+            <Shape> Cube
+				<Color> 0.3 0.7 0.0 </Color>
+                <Origin>  0.5 -0.5 -0.05 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   20 20 0.1 </Scale>
+            </Shape> 
+        </BBoxShape>
+		<Material>
+			<StaticFriction> 50 </StaticFriction>
+		</Material>
+		</Object>
+		
+	 
+	 
+	 
+	 
+</World>

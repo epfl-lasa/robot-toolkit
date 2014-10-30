@@ -1,0 +1,16 @@
+<package>
+  <description brief="mathlib">
+
+     mathlib
+
+  </description>
+  <author>Klas Kronander</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/mathlib</url>
+  <export> <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lmathlib "/> </export>
+ 
+ 
+</package>
+
+

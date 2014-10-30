@@ -1,0 +1,19 @@
+<World>
+    <Object> Ground
+        <BBoxShape>
+            <Shape> Floor
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+     <Include file="Objects/Ball.xml"> Ball3
+        <aAngularVelocity>  0 0 0 </aAngularVelocity>
+        <aVelocity>  2 0 0 </aVelocity>
+        <Origin>  -1  1 1.05 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+     </Include>
+</World>
+
+

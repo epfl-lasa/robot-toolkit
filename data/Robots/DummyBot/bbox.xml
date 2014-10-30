@@ -1,0 +1,54 @@
+<Link> Base
+	<BBoxShape>
+        <Shape> Cube
+            <Origin>  0 0 0.1 </Origin>
+            <Orient>  1 0 0 
+                      0 1 0 
+                      0 0 1 </Orient>
+            <Scale>   0.2 0.2 0.2 </Scale>
+        </Shape>
+	</BBoxShape>	
+    <Children>
+        <Link> DOF_0
+            <BBoxShape>
+                <Shape> Cube
+                    <Origin>  0 0 0 </Origin>
+                    <Orient>  1 0 0 
+                              0 0 1 
+                              0 -1 0 </Orient>
+                    <Scale>   0.1 0.1 0.1 </Scale>
+                </Shape>
+            </BBoxShape>
+            <Children>
+                <Link> DOF_1
+                    <BBoxShape>
+                        <Shape> Cylinder
+                            <Origin>  0 0.2 0 </Origin>
+                            <Orient>  1 0 0 
+                                      0 0 1 
+                                      0 -1 0 </Orient>
+                            <Scale>   0.1 0.1 0.2 </Scale>
+                        </Shape>
+                    </BBoxShape>
+                    <Children>
+                        <Link> DOF_2
+                            <BBoxShape>
+                                <Shape> Cylinder
+                                    <Origin>  0 0.0 0 </Origin>
+                                    <Orient>  1 0 0 
+                                              0 0 1 
+                                              0 -1 0 </Orient>
+                                    <Scale>   0.1 0.1 0.05 </Scale>
+                                </Shape>
+                            </BBoxShape>
+                        </Link>
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+
+
+

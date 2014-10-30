@@ -1,0 +1,377 @@
+<World>
+
+    <Object> Ground
+        <BBoxShape>
+            <Shape> Floor
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+
+
+    <Object> IST_9344
+        <Origin>  1.0 0 0.5 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape>  data/Worlds/Examples/Objects/IST_objects/9344r.obj
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .1 .1 .1 </Scale>
+                <Color> 0 1 0 </Color>
+            </Shape>
+	<Shape> Sphere
+                <Origin>   -0.012666 0.023638 -0.0013974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.011826 0.022048 -0.0049974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.011406 0.022418 -0.0054974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.011136 0.022138 -0.0058974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.011306 0.021578 -0.0057974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.015016 0.024618 0.0010026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   5.0209e-005 0.018148 0.0062026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.010736 0.021938 0.0072026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.012336 0.018568 -0.0098974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.016016 0.014448 0.0089026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0053715 0.013068 -0.0092974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.0084615 -0.021762 0.0071026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.013906 0.0098984 0.0033026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0074455 0.018298 0.0087026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.014446 0.024148 -0.0025974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.017364 0.0038334 -0.0056974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.010686 0.018698 0.010403 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0099365 0.019888 0.0098026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0090255 0.019878 0.0084026 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0069765 0.014878 -0.0092974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.013096 0.011678 -0.0083974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0079115 0.016758 -0.0083974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0098565 0.015068 -0.0067974 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+
+        </GfxShape>
+
+    </Object>
+
+    <Object> IST_9360
+        <Origin>  1.0 0 0.3 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape>  data/Worlds/Examples/Objects/IST_objects/9360r.obj
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   .1 .1 .1 </Scale>
+                <Color> 0 1 0 </Color>
+            </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0046471 -0.0023857 -0.064598 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0052041 -0.0016837 -0.055198 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0022421 -0.0042377 -0.082098 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0052561 -0.0006017 -0.078598 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.0025171 -0.0039877 -0.096298 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.0062211 0.034682 -0.13304 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.015739 0.030942 -0.13308 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.018589 0.029412 -0.13316 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.031701 0.011954 -0.13301 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.029711 -0.012848 -0.13315 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   0.014981 -0.027248 -0.13381 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.033489 -0.0004227 -0.13328 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+	<Shape> Sphere
+                <Origin>   -0.019029 -0.025328 -0.13363 </Origin>
+
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.01 0.01 0.01 </Scale>
+                <Color> 1 0 0 </Color>
+         </Shape>
+
+
+        </GfxShape>
+    </Object>
+
+
+
+</World>
+

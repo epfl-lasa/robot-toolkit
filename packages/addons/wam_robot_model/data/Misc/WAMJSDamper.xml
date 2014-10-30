@@ -1,0 +1,45 @@
+<PIDController>
+  <PIDEntry>
+    <KP>  0 </KP>
+    <KD>   0 </KD>
+    <KI>    0 </KI>
+    <Max>  150 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP> 0 </KP>
+    <KD>  0  </KD>
+    <KI>    0  </KI>
+    <Max> 250 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP>  0  </KP>
+    <KD>  0  </KD>
+    <KI>    0  </KI>
+    <Max>   80 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP>  0  </KP>
+    <KD>  0  </KD>
+    <KI>    0  </KI>
+    <Max>   80 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP>   0  </KP>
+    <KD>  1.5  </KD>
+    <KI>    0  </KI>
+    <Max>   20 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP>   0  </KP>
+    <KD>  1.5  </KD>
+    <KI>    0  </KI>
+    <Max>   30 </Max>
+  </PIDEntry>
+  <PIDEntry>
+    <KP>   0  </KP>
+    <KD>  0.05 </KD>
+    <KI>    0  </KI>
+    <Max>   20 </Max>
+  </PIDEntry>
+</PIDController>
+

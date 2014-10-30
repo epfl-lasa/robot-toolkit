@@ -1,0 +1,10 @@
+<Object> Target
+    <Origin>  0 0 0 </Origin>
+    <GfxShape>
+        <Shape> Sphere
+            <Scale>   0.04 0.04 0.04 </Scale>
+            <Color> 0.3 0.3 0.3 </Color>
+        </Shape>
+    </GfxShape>
+</Object>
+

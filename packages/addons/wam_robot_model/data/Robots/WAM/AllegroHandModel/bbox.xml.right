@@ -1,0 +1,256 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Include file="../bbox.xml">
+    Base
+    <Children>
+        <Link>
+            DOF_0
+            <Children>
+                <Link>
+                    DOF_1
+                    <Children>
+                        <Link>
+                            DOF_2
+                            <Children>
+                                <Link>
+                                    DOF_3
+                                    <Children>
+                                        <Link>
+                                            DOF_4
+                                            <Children>
+                                                <Link>
+                                                    DOF_5
+                                                    <Children>
+                                                        <Link>
+                                                            DOF_6
+                                                            <Children>
+                                                                <Link>
+                                                                    TOOL
+                                                                    <Children>
+                                                                        <Link>
+                                                                            AllegroHand
+                                                                            <BBoxShape>
+                                                                                <Shape>
+                                                                                    Cube
+                                                                                    <Origin>0  0  -0.0475</Origin>
+                                                                                    <Scale>0.024 0.1116 0.095</Scale>
+                                                                                </Shape>
+                                                                            </BBoxShape>
+                                                                            <Children>
+                                                                                <Link>EndEffector</Link>
+                                                                                <Link>
+                                                                                    HandF1Dof0
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            HandF1Dof1
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cylinder
+                                                                                                    <Origin>0.0 0.027 0.0</Origin>
+                                                                                                    <Orient>-1.0 0.0 0.0
+                                                         							0.0  0.0 1.0
+                                                         							0.0  1.0 0.0</Orient>
+                                                                                                    <Scale>0.024 0.024 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    HandF1Dof2
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cylinder
+                                                                                                            <Origin>0.0  0.0192  0.0</Origin>
+                                                                                                            <Orient>-1 0 0
+											  			0 0 1
+											  			0 1 0</Orient>
+                                                                                                            <Scale>0.024 0.024 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            HandF1Dof3
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cylinder
+                                                                                                                    <Origin>0.0 0.01935 0.0</Origin>
+                                                                                                                    <Orient>-1 0 0
+                                                                								0 0 1
+                                                                							0 1 0</Orient>
+                                                                                                                    <Scale>0.024 0.024 0.0387</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                                <Link>
+                                                                                    HandF2Dof0
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            HandF2Dof1
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cylinder
+                                                                                                    <Origin>0.0 0.027 0.0</Origin>
+                                                                                                    <Orient>-1.0 0.0 0.0
+                                                         							0.0  0.0 1.0
+                                                         						0.0  1.0 0.0</Orient>
+                                                                                                    <Scale>0.024 0.024 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    HandF2Dof2
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cylinder
+                                                                                                            <Origin>0.0  0.0192  0.0</Origin>
+                                                                                                            <Orient>-1 0 0
+											  			0 0 1
+											  			0 1 0</Orient>
+                                                                                                            <Scale>0.024 0.024 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            HandF2Dof3
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cylinder
+                                                                                                                    <Origin>0.0 0.01935 0.0</Origin>
+                                                                                                                    <Orient>-1 0 0
+                                                                							0 0 1
+                                                                							0 1 0</Orient>
+                                                                                                                    <Scale>0.024 0.024 0.0387</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                                <Link>
+                                                                                    HandF3Dof0
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            HandF3Dof1
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cylinder
+                                                                                                    <Origin>0.0 0.027 0.0</Origin>
+                                                                                                    <Orient>-1.0 0.0 0.0
+                                                         						0.0  0.0 1.0
+                                                         						0.0  1.0 0.0</Orient>
+                                                                                                    <Scale>0.024 0.024 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    HandF3Dof2
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cylinder
+                                                                                                            <Origin>0.0  0.0192  0.0</Origin>
+                                                                                                            <Orient>-1 0 0
+											  			0 0 1
+											  			0 1 0</Orient>
+                                                                                                            <Scale>0.024 0.024 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            HandF3Dof3
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cylinder
+                                                                                                                    <Origin>0.0 0.01935 0.0</Origin>
+                                                                                                                    <Orient>	-1 0 0
+                                                                								0  0 1
+                                                                								0  1 0</Orient>
+                                                                                                                    <Scale>0.024 0.024 0.0387</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+										<Link>
+                                                                                    HandF4Dof0
+										    <BBoxShape>
+											<Shape> Cube
+												<Origin>0.0 0.0156 0.012</Origin>
+												<Orient>
+												1.0 0.0 0.0
+												0.0 1.0 0.0
+												0.0 0.0 1.0
+												</Orient>
+												<Scale> 0.032 0.0551 0.048 </Scale>
+											</Shape>
+										    </BBoxShape>	
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            HandF4Dof1
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    HandF4Dof2
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cylinder
+                                                                                                            <Origin>0.0  0.0257  0.0</Origin>
+                                                                                                            <Orient>1 0 0
+											  		            0 0 1
+											  			    0 1 0</Orient>
+                                                                                                            <Scale>0.024 0.024 0.0514</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            HandF4Dof3
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cylinder
+                                                                                                                    <Origin>0.0 0.01935 0.0</Origin>
+                                                                                                                    <Orient>	1  0 0
+                                                                								0  0 1
+                                                                								0  1 0</Orient>
+                                                                                                                    <Scale>0.024 0.024 0.0543</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                            </Children>
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>
+        </Link>
+    </Children>
+</Include>
+
+

@@ -1,0 +1,33 @@
+<World>
+
+    <Include file="Objects/Floor.xml"> </Include>
+
+
+    <Object> Box
+        <Origin>  0.97 0.0 0.5 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+
+        <Mass>          2.0       </Mass>
+        <CenterOfMass>  0 0 0.0   </CenterOfMass>
+
+        <Material>
+            <Bouncyness> 0.8 </Bouncyness>
+            <StaticFriction> 100 </StaticFriction>
+        </Material>
+
+        <BBoxShape>
+            <Shape> Cube
+                <Color> 1 0 0 </Color>
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.1 0.4 1 </Scale>
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+</World>
+

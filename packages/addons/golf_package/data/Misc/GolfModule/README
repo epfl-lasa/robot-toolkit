@@ -1,0 +1,20 @@
+README FILE FOR GOLF CONFIG. 
+
+In this file, different settings can be specified before running the module. All the values that you might want to change should be in this file. 
+
+Default dir: this is the direction in which the robot will hit the ball without an angle specified. 
+
+Dynamic dir: this is the direction of the dynamical system used to reproduce the hitting motion. Example, if a hitting motion was recorded while hitting along the x-axis, dynamic_ should be set to 1 0 0. 
+
+Ball_pos: You can specify the position of the ball. Note that if the module is run in simulator mode, any information about ball position from the world will override this value. 
+
+Racket_dir: Specify the direction of the racket.
+
+manual initial position: set this to true and specify an initial point if you want to manually decide on an initial point. If this is set to false, an initial position will automaticly be set, based on the default direction and ball position. 
+
+record ideal: determines if actual or joint angle targets should be recorded. Used only for debugging purposes, default value should be false, which means that the actual joint angles from the real robot are recorded.
+
+record1: true:enable record method 1, which is the one that should be used for analyzing data. 
+
+record2: true: enable record method 2, which is mainly used for analyzing control signals and debugging. 
+

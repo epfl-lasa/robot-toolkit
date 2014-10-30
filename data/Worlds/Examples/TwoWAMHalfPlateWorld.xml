@@ -1,0 +1,44 @@
+<World>
+
+    <Include file="Objects/Floor.xml"> </Include>
+
+    <FixJoint>
+        <ObjectA> WAM_0 HALFPLATE
+        </ObjectA>
+        <ObjectB> WAM_1 HALFPLATE
+        </ObjectB>
+    </FixJoint>
+
+
+    <Object> Box
+        <Origin>  0 0.0 1.0 </Origin>
+        <Orient>  1  0  0
+                  0  1  0 
+                  0  0  1 </Orient>
+
+        <Mass>          2.0       </Mass>
+        <CenterOfMass>  0 0 0.0   </CenterOfMass>
+        <InertiaMatrix> 0.0004  0 0
+                        0  0.0004 0
+                        0  0   0.0004
+        </InertiaMatrix>
+
+        <Material>
+            <Bouncyness> 0.8 </Bouncyness>
+            <StaticFriction> 100 </StaticFriction>
+        </Material>
+
+        <BBoxShape>
+            <Shape> Cube
+                <Color> 1 0 0 </Color>
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.1 0.1 0.1 </Scale>
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+</World>
+

@@ -1,0 +1,31 @@
+<Object> HF
+
+    <Origin>  0 0 0 </Origin>
+    <Orient>  1 0 0 
+              0 1 0 
+              0 0 1 </Orient>
+
+
+
+
+    <Material>
+      <Bouncyness> 0.8 </Bouncyness>
+        <StaticFriction>50</StaticFriction>
+    </Material>
+
+	    
+
+    <BBoxShape>
+        <Shape> HeightField
+            <Color> 0.3 0.7 0 </Color>
+            <Origin>  0 0 0 </Origin>
+            <Orient>  1 0 0 
+                      0 1 0 
+                      0 0 1 </Orient>
+            <DataFile> RandHF.txt </DataFile>
+            <Scale>   0.014 0.018 1 </Scale>
+        </Shape>
+    </BBoxShape>
+
+</Object>
+

@@ -1,0 +1,300 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Include file="../bbox.xml">
+    Base
+    <Children>
+        <Link>
+            DOF_0
+            <Children>
+                <Link>
+                    DOF_1
+                    <Children>
+                        <Link>
+                            DOF_2
+                            <Children>
+                                <Link>
+                                    DOF_3
+                                    <Children>
+                                        <Link>
+                                            DOF_4
+                                            <Children>
+                                                <Link>
+                                                    DOF_5
+                                                    <Children>
+                                                        <Link>
+                                                            DOF_6
+                                                            <Children>
+                                                                <Link>
+                                                                    TOOL
+                                                                    <Children>
+                                                                        <Link>
+                                                                            base_link
+									    <BBoxShape>
+                                                                                <Shape>
+                                                                                    Cube
+                                                                                    <Origin>0  0  -0.0475</Origin>
+                                                                                    <Scale>0.0408 0.1130 0.095</Scale>
+                                                                                </Shape>
+                                                                            </BBoxShape>
+                                                                            <Children>
+                                                                            <Link> EndEffector   </Link>
+                                                                                <Link>
+                                                                                    link_0_0
+										    <BBoxShape>
+                                                                                        <Shape>
+                                                                                           Cube
+                                                                                           <Origin>0 0 0.0082</Origin>
+                                                                                           <Orient> 1.000000 0.000000 0.000000 
+												    0.000000 0.996195 -0.087156 
+												    0.000000 0.087156 0.996195 
+											   </Orient>
+                                                                                           <Scale>0.0196 0.0275 0.0164</Scale>
+                                                                                        </Shape>
+                                                                                    </BBoxShape>
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            link_1_0
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cube
+                                                                                                    <Origin>0 0 0.027</Origin>
+                                                                                                    <Orient>1.0 0.0 0.0
+                                                         						    0.0  1.0 0.0
+                                                         						    0.0  0.0 1.0</Orient>
+                                                                                                    <Scale>0.0196 0.0275 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    link_2_0
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cube
+                                                                                                            <Origin>0 0 0.0192</Origin>
+                                                                                                            <Orient>1 0 0
+											  			0 1 0
+											  			0 0 1</Orient>
+                                                                                                            <Scale>0.0196 0.0275 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            link_3_0
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cube
+                                                                                                                    <Origin>0.0 0.0 0.01735</Origin>
+                                                                                                                    <Orient>1 0 0
+                                                                								0 1 0
+                                                                							0 0 1</Orient>
+                                                                                                                    <Scale>0.0196 0.0275 0.0317</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                                <Link>
+                                                                                    link_4_0
+										    <BBoxShape>
+                                                                                        <Shape>
+                                                                                           Cube
+                                                                                           <Origin>0 0 0.0082</Origin>
+                                                                                           <Orient> 1.000000 0.000000 0.000000 
+												    0.000000 1.000000 0.000000 
+												    0.000000 0.000000 1.000000 
+											   </Orient>
+                                                                                           <Scale>0.0196 0.0275 0.0164</Scale>
+                                                                                        </Shape>
+                                                                                    </BBoxShape>
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            link_5_0
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cube
+                                                                                                    <Origin>0.0 0.0 0.027</Origin>
+                                                                                                    <Orient>1.0 0.0 0.0
+                                                         							0.0  1.0 0.0
+                                                         						0.0  0.0 1.0</Orient>
+                                                                                                    <Scale>0.0196 0.0275 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    link_6_0
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cube
+                                                                                                            <Origin>0.0 0.0 0.0192</Origin>
+                                                                                                            <Orient>1 0 0
+											  			0 1 0
+											  			0 0 1</Orient>
+                                                                                                            <Scale>0.0196 0.0275 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            link_7_0
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cube
+                                                                                                                    <Origin>0.0 0.0 0.01735</Origin>
+                                                                                                                    <Orient>1 0 0
+                                                                							0 1 0
+                                                                							0 0 1</Orient>
+                                                                                                                    <Scale>0.0196 0.0275 0.0317</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                                <Link>
+                                                                                    link_8_0
+										    <BBoxShape>
+                                                                                        <Shape>
+                                                                                           Cube
+                                                                                           <Origin>0 0 0.0082</Origin>
+                                                                                           <Orient> 1.000000 0.000000 0.000000 
+												    0.000000 0.996195 0.087156 
+												    0.000000 -0.087156 0.996195 
+											   </Orient>
+                                                                                           <Scale>0.0196 0.0275 0.0164</Scale>
+                                                                                        </Shape>
+                                                                                    </BBoxShape>
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            link_9_0
+                                                                                            <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cube
+                                                                                                    <Origin>0.0 0.0 0.027</Origin>
+                                                                                                    <Orient>1.0 0.0 0.0
+                                                         						0.0  1.0 0.0
+                                                         						0.0  0.0 1.0</Orient>
+                                                                                                    <Scale>0.0196 0.0275 0.054</Scale>
+                                                                                                </Shape>
+                                                                                            </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    link_10_0
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cube
+                                                                                                            <Origin>0.0 0.0 0.0192</Origin>
+                                                                                                            <Orient>1 0 0
+											  			0 1 0
+											  			0 0 1</Orient>
+                                                                                                            <Scale>0.0196 0.0275 0.0384</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            link_11_0
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cube
+                                                                                                                    <Origin>0.0 0.0 0.01735</Origin>
+                                                                                                                    <Orient>	1  0 0
+                                                                								0  1 0
+                                                                								0  0 1</Orient>
+                                                                                                                    <Scale>0.0196 0.0275 0.0317</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+										<Link>
+                                                                                    link_12_0
+										    <BBoxShape>
+											<Shape> Cube
+												<Origin>-0.01 -0.009 0.0145</Origin>
+												<Orient>
+												1.0 0.0 0.0
+												0.0 1.0 0.0
+												0.0 0.0 1.0
+												</Orient>
+												<Scale> 0.0358 0.034 0.0455 </Scale>
+											</Shape>
+										    </BBoxShape>	
+                                                                                    <Children>
+                                                                                        <Link>
+                                                                                            link_13_0
+										    	    <BBoxShape>
+                                                                                                <Shape>
+                                                                                                    Cube
+                                                                                           	    <Origin>0 0 0.00885</Origin>
+                                                                                           	    <Orient> 1.000000 0.000000 0.000000 
+												    	     0.000000 1.000000 0.000000 
+												    	     0.000000 0.000000 1.000000 
+											   	    </Orient>
+                                                                                           	    <Scale>0.0196 0.0275 0.0177</Scale>
+                                                                                        	</Shape>
+                                                                                    	    </BBoxShape>
+                                                                                            <Children>
+                                                                                                <Link>
+                                                                                                    link_14_0
+                                                                                                    <BBoxShape>
+                                                                                                        <Shape>
+                                                                                                            Cube
+                                                                                                            <Origin>0.0  0.0 0.0257</Origin>
+                                                                                                            <Orient>1 0 0
+											  		            0 1 0
+											  			    0 0 1</Orient>
+                                                                                                            <Scale>0.0196 0.0275 0.0514</Scale>
+                                                                                                        </Shape>
+                                                                                                    </BBoxShape>
+                                                                                                    <Children>
+                                                                                                        <Link>
+                                                                                                            link_15_0
+                                                                                                            <BBoxShape>
+                                                                                                                <Shape>
+                                                                                                                    Cube
+                                                                                                                    <Origin>0.0 0.0 0.0293</Origin>
+                                                                                                                    <Orient>	1  0 0
+                                                                								0  1 0
+                                                                								0  0 1</Orient>
+                                                                                                                    <Scale>0.0196 0.0275 0.0666</Scale>
+                                                                                                                </Shape>
+                                                                                                            </BBoxShape>
+                                                                                                        </Link>
+                                                                                                    </Children>
+                                                                                                </Link>
+                                                                                            </Children>
+                                                                                        </Link>
+                                                                                    </Children>
+                                                                                </Link>
+                                                                            </Children>
+                                                                        </Link>
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            </Children>
+                        </Link>
+                    </Children>
+                </Link>
+            </Children>
+        </Link>
+    </Children>
+</Include>
+
+

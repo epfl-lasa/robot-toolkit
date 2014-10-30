@@ -1,0 +1,65 @@
+<Link> GripperBase
+<Joint type="None">
+        <BaseFrame>
+            <Origin> 0.0 0.0 0.0 </Origin>
+            <Orient>  1.0  0.0  0.0 
+                      0.0  1.0  0.0
+                      0.0  0.0  1.0
+            </Orient>            
+            
+        </BaseFrame>
+    </Joint>
+<Children>
+	<Link> GripperDOF_0
+	<Joint type="Slider">
+		<BaseFrame>
+		    <Origin> 0.0 0.005 0.13 </Origin>
+		    <Orient>  1.0  0.0  0.0 
+		              0.0  0.0  -1.0
+		              0.0  1.0  0.0
+		    </Orient>            
+		</BaseFrame>
+ 		<Axis> EZ </Axis>
+                <Range> -0.05 0 </Range>
+                <Zero>  -0.05 </Zero>
+	    </Joint>
+	</Link>
+
+	<Link> GripperDOF_1
+	<Joint type="Slider">
+		<BaseFrame>
+		    <Origin> 0.0 -0.005 0.13 </Origin>
+		    <Orient>  1.0  0.0  0.0 
+			      0.0  0.0  1.0
+			      0.0  -1.0  0.0
+		    </Orient>            
+		</BaseFrame>
+ 		<Axis> EZ </Axis>
+                <Range> -0.05 0 </Range>
+                <Zero>  -0.05 </Zero>
+	    </Joint>
+	</Link>
+	<Link> EndEffector
+	<Joint type="None">
+		<BaseFrame>
+		    <Origin> 0.0 0.0 0.13 </Origin>
+		    <Orient>  0.0  -1.0  0.0 
+			      1.0  0.0  0.0
+			      0.0  0.0  1.0
+		    </Orient>            
+		</BaseFrame>
+	    </Joint>
+	</Link>
+	<Link> CAMERA
+		<Joint type="None">
+				<BaseFrame>
+					<Origin> 0.25 0.0 0.073 </Origin>
+					<Orient>  1.0 0.0  0.0 
+						  0.0  1.0  0.0
+						  0.0  0.0  1.0
+					</Orient>
+				</BaseFrame>
+		    	</Joint>
+	</Link>
+</Children>
+</Link>

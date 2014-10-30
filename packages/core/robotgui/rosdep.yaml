@@ -1,0 +1,11 @@
+qt4-dev:
+        ubuntu: libqt4-dev
+	debian: libqt4-dev
+
+ffmpeg:
+        ubuntu: ffmpeg
+	debian: ffmpeg
+
+freeimage:
+        ubuntu: libfreeimage-dev
+        debian: libfreeimage-dev

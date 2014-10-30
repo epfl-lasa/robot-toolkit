@@ -1,0 +1,136 @@
+<Include file="../bbox.xml"> Base
+    <Children>
+    <Link> DOF_0
+      <Children>
+        <Link> DOF_1
+          <Children>
+            <Link> DOF_2
+              <Children>
+                <Link> DOF_3
+                  <Children>
+                    <Link> DOF_4
+                      <Children>
+                        <Link> DOF_5
+                          <Children>
+                            <Link> DOF_6
+                              <Children>
+                              	<Link> TOOL
+                              		<Children>
+                                <Link> WAMHand 
+                                  <BBoxShape>
+									<Shape>   Cylinder
+									  <Origin>  0  0  -0.05 </Origin> 
+									  <Scale> 0.09 0.09 0.09 </Scale>
+									</Shape>
+                                  </BBoxShape>																			
+								  <Children>
+								     <Link> EndEffector
+                              		</Link>
+									<Link> HandF1Dof0
+									 
+									  <Children>
+										<Link> HandF1Dof1
+										  <BBoxShape>	
+											<Shape> Cylinder
+											  <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.025 0.06 </Scale>
+											</Shape>	
+										  </BBoxShape>
+										  
+										  <Children>
+											<Link> HandF1Dof2
+											  <BBoxShape>	
+												<Shape> Cylinder
+												   <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.015 0.05 </Scale>
+												</Shape>	
+											  </BBoxShape>	
+											</Link>
+										  </Children>
+										</Link>
+									  </Children>
+									</Link>
+
+									<Link> HandF2Dof0
+									  <Children>
+										<Link> HandF2Dof1
+										 <BBoxShape>	
+											<Shape> Cylinder
+											  <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.025 0.06 </Scale>
+											</Shape>	
+										  </BBoxShape>
+										  
+										  <Children>
+											<Link> HandF2Dof2
+											  <BBoxShape>	
+												<Shape> Cylinder
+												   <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.015 0.05 </Scale>
+												</Shape>	
+											  </BBoxShape>	
+											</Link>
+										  </Children>
+										</Link>
+									  </Children>
+									</Link>
+
+									<Link> HandF3Dof1
+										<BBoxShape>	
+											<Shape> Cylinder
+											  <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.025 0.06 </Scale>
+											</Shape>	
+										  </BBoxShape>
+									  <Children>
+										<Link> HandF3Dof2
+										  <BBoxShape>	
+												<Shape> Cylinder
+												   <Origin>  0.03  0  0.0 </Origin> 
+											  <Orient> 0 0 1
+											  			0 1 0
+											  			-1 0 0 </Orient>
+											<Scale> 0.025 0.015 0.05 </Scale>
+												</Shape>	
+											  </BBoxShape>	
+										</Link>
+									  </Children>
+									</Link>
+									
+								  </Children>
+								  
+                                </Link>                                                              
+                              </Children>    
+                            </Link>                    
+                          </Children>    
+                        </Link>                    
+                      </Children>    
+                    </Link>                    
+                  </Children>    
+                </Link>                    
+              </Children>                    
+            </Link>                
+          </Children>    
+        </Link>
+      </Children>    
+    </Link>
+  </Children>  
+      </Link>
+    </Children>
+    
+</Include>

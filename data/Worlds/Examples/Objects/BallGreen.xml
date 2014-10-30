@@ -1,0 +1,21 @@
+<Object> Ball
+
+    <Origin>  0 0 0 </Origin>
+    <Orient>  1 0 0 
+              0 1 0 
+              0 0 1 </Orient>
+    
+
+    <GfxShape>
+        <Shape> Sphere
+            <Color> 0 1 0 </Color>
+            <Origin>  0 0 0 </Origin>
+            <Orient>  1 0 0 
+                      0 1 0 
+                      0 0 1 </Orient>
+            <Scale>   0.1 0.1 0.1 </Scale>
+        </Shape>
+    </GfxShape>
+
+</Object>
+

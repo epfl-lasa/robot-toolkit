@@ -1,0 +1,29 @@
+<World>
+
+    <Object> Ground
+        <BBoxShape>
+            <Shape> Floor
+            </Shape>
+        </BBoxShape>
+    </Object>
+
+    <Object> Ball
+        <Origin>  0.5 0 0.5 </Origin>
+        <Orient>  1 0 0 
+                  0 1 0 
+                  0 0 1 </Orient>
+        <GfxShape>
+            <Shape> Sphere
+                <Origin>  0 0 0 </Origin>
+                <Orient>  1 0 0 
+                          0 1 0 
+                          0 0 1 </Orient>
+                <Scale>   0.1 0.1 0.1 </Scale>
+                <Color> 1 0 0 </Color>
+            </Shape>
+        </GfxShape>
+
+    </Object>
+
+</World>
+

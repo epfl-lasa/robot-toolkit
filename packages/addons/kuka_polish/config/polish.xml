@@ -1,0 +1,25 @@
+<Config>
+  <Packages> kuka_polish kuka_robot_model  </Packages>
+  
+    <World> Examples/BasicWorld
+     </World>
+
+    <Robot> KUKA friction
+        <Name> WAM </Name>
+        <RobotModule> kuka_polish_module
+           
+        </RobotModule> 
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+
+
+  <Simulator>
+
+    <Gravity> 0 0 -9.81 </Gravity>
+
+    <Period> 0.005</Period>
+  </Simulator>
+</Config>
+

@@ -1,0 +1,12 @@
+<Link> Contact
+    <Joint type="Contact">
+        <BaseFrame>
+            <Origin> 0 0 0 </Origin>
+            <Orient>  1.0  0.0  0.0 
+                      0.0  1.0  0.0
+                      0.0  0.0  1.0
+            </Orient>
+        </BaseFrame>
+    </Joint>
+</Link>
+

@@ -1,0 +1,111 @@
+<Link> Base
+<GfxShape>
+  <Shape> WAMBase.obj
+  <Origin>  0  0  0 </Origin> 
+  <Orient>  0  0  1
+  1  0  0
+  0  1  0 
+  </Orient>
+  </Shape>
+</GfxShape>	
+<Children>
+  <Link> DOF_0
+  <GfxShape>
+    <Shape> WAMDof_00.obj
+    <Origin>  0  0  0 </Origin> 
+    <Orient>  1  0  0
+    0  0 -1
+    0  1  0 
+    </Orient>
+    </Shape>
+  </GfxShape>	
+  <Children>
+    <Link> DOF_1
+    <GfxShape>
+      <Shape> WAMDof_01.obj
+      <Origin>  0  0  0 </Origin> 
+      <Orient>  0  0 -1
+      0 -1  0
+      -1  0  0
+      </Orient>
+      </Shape>	
+    </GfxShape>
+    <Children>
+      <Link> DOF_2
+      <GfxShape>
+	<Shape> WAMDof_02.obj
+	<Origin>  0  0  0 </Origin> 
+	<Orient>  0  0 -1
+	-1  0  0
+	0  1  0
+	</Orient>
+	</Shape>	
+      </GfxShape>
+      <Children>
+	<Link> DOF_3
+	<GfxShape>
+	  <Shape> WAMDof_03.obj
+	  <Origin>  0  0  0 </Origin> 
+	  <Orient>  0 -1  0
+	  0  0 -1
+	  1  0  0
+	  </Orient>
+	  </Shape>	
+	</GfxShape>
+	<Children>
+	  <Link> DOF_4
+	  <GfxShape>
+	    <Shape> WAMDof_04.obj
+	    <Origin>  0  0  0.3 </Origin> 
+	    <Orient>  1  0  0 
+	    0  0 -1
+	    0  1  0
+	    </Orient>
+	    </Shape>	
+	  </GfxShape>
+	  <Children>
+	    <Link> DOF_5                                                    
+	    <GfxShape>
+	      <Shape> WAMDof_05.obj
+	      <Origin>  0  -0.049  0 </Origin> 
+	      <Orient>  0  0  1
+	      0 -1  0  
+	      1  0  0
+	      </Orient>
+	      </Shape>	
+	    </GfxShape>
+	    <Children>
+	      <Link> DOF_6
+	      <GfxShape>
+		<Shape> WAMDof_06.obj
+		<Origin>  0  0  -0.004 </Origin> 
+		<Orient>  1  0  0
+		0  0 -1
+		0  1  0
+		</Orient>
+		</Shape>	
+	      </GfxShape>
+	      <Children>
+		<Link> TOOLPLATE
+		</Link>                    
+	      </Children>    
+
+	      </Link>      
+              
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+    </Link>
+  </Children>    
+  </Link>
+</Children>    
+</Link>
+
+
+

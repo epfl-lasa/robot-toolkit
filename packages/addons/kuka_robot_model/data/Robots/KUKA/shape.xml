@@ -1,0 +1,166 @@
+<Link> Base
+  <GfxShape>
+    <Shape> arm_lwr_link01.obj
+    <Origin>  -0.005 0 0 </Origin> 
+    <Orient>  0  -1  0
+    1  0  0
+    0  0  1 
+    </Orient>
+    <Color> 1 0.4 0 0.5</Color>
+    </Shape>
+  </GfxShape>
+  <Children>
+    <Link> DOF_0
+    <GfxShape>
+      <Shape> arm_lwr_link12.obj
+      <Origin>  0  0.0  -0.21 </Origin> 
+      <Orient>  -1  0  0
+      0  -1  0
+      0  0  1 
+      </Orient>
+      <Color> 1 0.4 0 0.5</Color>
+      </Shape>
+      <Shape> Cylinder
+      <Origin>  0  0.0  -0.2 </Origin> 
+      <Orient>  1  0  0
+      0  1  0
+      0  0  1 
+      </Orient>
+      <Color> 0.6 0.6 0.6  0.5</Color>
+      <Scale> 0.12 0.12 0.016 </Scale>
+      </Shape>
+    </GfxShape>
+    <Children>
+      <Link> DOF_1
+      <GfxShape>
+	<Shape> arm_lwr_link23.obj
+	<Origin>  0  0.0  -0.01 </Origin> 
+	<Orient>  1  0  0
+	0  1  0
+	0  0  1 
+	</Orient>
+	<Color> 1 0.4 0 0.5 </Color>
+	</Shape>
+	<Shape> Cylinder
+	<Origin>  0  0.0  0.0 </Origin> 
+	<Orient>  1  0  0
+	0  1  0
+	0  0  1 
+	</Orient>
+	<Color> 0.6 0.6 0.6  0.5</Color>
+	<Scale> 0.12 0.12 0.016 </Scale>
+	</Shape>
+      </GfxShape>
+      <Children>
+	<Link> DOF_2
+	<GfxShape>
+	  <Shape> arm_lwr_link34.obj
+	  <Origin>  0  0.0  -0.21 </Origin> 
+	  <Orient>  1  0  0
+	  0  1  0
+	  0  0  1 
+	  </Orient>
+	  <Color> 1 0.4 0 0.5</Color>
+	  </Shape>
+	  <Shape> Cylinder
+	  <Origin>  0  0.0  -0.20 </Origin> 
+	  <Orient>  1  0  0
+	  0  1  0
+	  0  0  1 
+	  </Orient>
+	  <Color> 0.6 0.6 0.6 0.5</Color>
+	  <Scale> 0.12 0.12 0.016 </Scale>
+	  </Shape>
+	</GfxShape>
+	<Children>
+	  <Link> DOF_3
+	  <GfxShape>
+	    <Shape> arm_lwr_link45.obj
+	    <Origin>  0  0  -0.01 </Origin> 
+	    <Orient>  -1  0  0
+	    0  -1  0
+	    0  0  1 
+	    </Orient>
+	    <Color> 1 0.4 0 0.5</Color>
+	    </Shape>
+	    <Shape> Cylinder
+	    <Origin>  0  0.0  0.0 </Origin> 
+	    <Orient>  1  0  0
+	    0  1  0
+	    0  0  1 
+	    </Orient>
+	    <Color> 0.6 0.6 0.6  0.5</Color>
+	    <Scale> 0.12 0.12 0.016 </Scale>
+	    </Shape>
+	  </GfxShape>
+	  <Children>
+	    <Link> DOF_4
+	    <GfxShape>
+	      <Shape> arm_lwr_link56.obj
+	      <Origin>  0  0.0  -0.2 </Origin> 
+	      <Orient>  -1  0  0
+	      0  -1  0
+	      0  0  1 
+	      </Orient>
+	      <Color> 1 0.4 0 0.5</Color>
+	      </Shape>
+	      <Shape> Cylinder
+	      <Origin>  0  0.0  -0.19 </Origin> 
+	      <Orient>  1  0  0
+	      0  1  0
+	      0  0  1 
+	      </Orient>
+	      <Color> 0.6 0.6 0.6 0.5 </Color>
+	      <Scale> 0.12 0.12 0.016 </Scale>
+	      </Shape>
+	    </GfxShape>
+	    <Children>
+	      <Link> DOF_5
+	      <GfxShape>
+		<Shape> arm_lwr_link67.obj
+		<Origin>  0  0.0  0 </Origin> 
+		<Orient>  1  0  0
+		0  1  0
+		0  0  1 
+		</Orient>
+		<Color> 0.1 0.1 0.1 0.5</Color>
+		</Shape>
+		<Shape> Cylinder
+		<Origin>  0  0  -0.05 </Origin> 
+		<Orient>  1  0  0
+		0  1  0
+		0  0  1 
+		</Orient>
+		<Scale> 0.13 0.13 0.016  </Scale>
+		<Color> 0.6 0.6 0.6 0.5</Color>
+		</Shape>
+	      </GfxShape>
+	      <Children>
+		<Link> DOF_6
+		<GfxShape>
+		  <Shape> arm_lwr_link78.obj
+		  <Origin>  0  0.0  0.048 </Origin> 
+		  <Orient>  1  0  0
+		  0  1  0
+		  0  0  1 
+		  </Orient>
+		  <Color> 0.6 0.6 0.6 0.5 </Color>
+		  </Shape>
+		</GfxShape>
+		</Link>
+	      </Children>
+	      </Link>
+	    </Children>
+	    </Link>
+	  </Children>
+	  </Link>
+	</Children>
+	</Link>
+      </Children>
+      </Link>
+    </Children>
+    </Link>	
+  </Children>
+</Link>
+
+

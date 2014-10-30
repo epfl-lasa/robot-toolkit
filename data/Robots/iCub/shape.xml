@@ -1,0 +1,224 @@
+<Link> Base
+    <GfxShape>
+        <Shape> hip.obj
+            <Origin>  0  0  -0.07 </Origin>
+            <Orient>  0 -1 0
+                      -1 0  0
+                      0  0 -1
+            </Orient>
+            <Scale> 0.001 0.001 0.001 </Scale>
+        </Shape>
+    </GfxShape>
+
+    <Children>
+        <Link> Torso_0
+            <Children>
+                <Link> Torso_1
+                    <Children>
+                        <Link> Torso_2
+                            <GfxShape>
+                                <Shape> torso.obj
+                                    <Origin>  0  0  -0.1 </Origin>
+                                    <Orient>  -0.001 0 0
+                                              0 -0.001  0
+                                              0  0 0.001
+                                    </Orient>
+                                    <Scale> 0.001 0.001 0.001 </Scale>
+                                </Shape>
+                            </GfxShape>
+                            <Children>
+                                <Link> Neck_0
+                                    <Children>
+                                        <Link> Neck_1
+                                            <Children>
+                                                <Link> Neck_2
+                                                    <GfxShape>
+                                                        <Shape> head.obj
+                                                            <Origin>  0  0.015  0.09 </Origin>
+                                                            <Orient>  1  0  0
+                                                                      0  1  0
+                                                                      0  0 -1
+                                                            </Orient>
+                                                            <Scale> 0.001 0.001 0.001 </Scale>
+                                                        </Shape>
+                                                    </GfxShape>
+                                                    <Children>
+                                                        <Link> Eye_0
+                                                            <Children>
+                                                                <Link> REye_1
+                                                                    <Children>
+                                                                        <Link> REye
+                                                                        </Link> 
+                                                                    </Children>
+                                                                </Link>
+                                                                <Link> LEye_1
+                                                                    <Children>
+                                                                        <Link> LEye
+                                                                        </Link> 
+                                                                    </Children>
+                                                                </Link>
+                                                            </Children>
+                                                        </Link>
+
+                                                    </Children>
+                                                </Link>
+                                            </Children>
+                                        </Link>
+                                    </Children>
+                                </Link>
+                            
+                            
+                            
+                            
+                            
+                                <Link> RArm_0
+                                    <Children>
+                                        <Link> RArm_1
+                                            <Children>
+                                                <Link> RArm_2
+                                                    <GfxShape>
+                                                        <Shape> upperarm_right.obj
+                                                            <Origin>  0  0  -0.1 </Origin>
+                                                            <Orient>  0 -1 0
+                                                                      1  0 0
+                                                                      0  0 1
+                                                            </Orient>
+                                                            <Scale> 0.001 0.001 0.001 </Scale>
+                                                        </Shape>
+                                                    </GfxShape>
+
+                                                    <Children>
+                                                        <Link> RArm_3
+                                                            <Children>
+                                                                <Link> RArm_4
+                                                                    <GfxShape>
+                                                                        <Shape> forearm_right.obj
+                                                                            <Origin>  0.005  0  -0.085 </Origin>
+                                                                            <Orient>  0 -1 0
+                                                                                     -1 0  0
+                                                                                      0  0 -1
+                                                                            </Orient>
+                                                                            <Scale> 0.001 0.001 0.001 </Scale>
+                                                                        </Shape>
+                                                                    </GfxShape>
+
+                                                                    <Children>
+                                                                        <Link> RArm_5
+                                                                            <Children>
+                                                                                <Link> RArm_6
+                                                                                    <Children>
+                                                                                        <Link> RHand
+                                                                                            <GfxShape>
+                                                                                                <Shape> Cylinder
+                                                                                                    <Origin>  -0.02  0  -0.015 </Origin>
+                                                                                                    <Orient>  0  0 1
+                                                                                                              -1 0 0
+                                                                                                              0 1 0
+                                                                                                    </Orient>
+                                                                                                    <Scale> 0.02 0.02 0.04 </Scale>
+                                                                                                </Shape>
+                                                                                                <Shape> Cube
+                                                                                                    <Origin>  -0.015  0  -0.015 </Origin>
+                                                                                                    <Orient>  1 0 0
+                                                                                                              0  1  0
+                                                                                                              0  0 1
+                                                                                                    </Orient>
+                                                                                                    <Scale> 0.03 0.04 0.01 </Scale>
+                                                                                                </Shape>
+                                                                                            </GfxShape>
+                                                                                        </Link>                
+                                                                                    </Children>    
+                                                                                </Link>                
+                                                                            </Children>    
+                                                                        </Link>                
+                                                                    </Children>    
+                                                                </Link>                
+                                                            </Children>    
+                                                        </Link>                
+                                                    </Children>    
+                                                </Link>                
+                                            </Children>    
+                                        </Link>                
+                                    </Children>    
+                                </Link>        
+
+                                <Link> LArm_0
+                                    <Children>
+                                        <Link> LArm_1
+                                            <Children>
+                                                <Link> LArm_2
+                                                    <GfxShape>
+                                                        <Shape> upperarm_left.obj
+                                                            <Origin>  0  0  0.1 </Origin>
+                                                            <Orient>  0 -1 0
+                                                                      -1  0 0
+                                                                      0  0 -1
+                                                            </Orient>
+                                                            <Scale> 0.001 0.001 0.001 </Scale>
+                                                        </Shape>
+                                                    </GfxShape>
+
+                                                    <Children>
+                                                        <Link> LArm_3
+                                                            <Children>
+                                                                <Link> LArm_4
+                                                                    <GfxShape>
+                                                                        <Shape> forearm_left.obj
+                                                                            <Origin>  0  0  0.085 </Origin>
+                                                                            <Orient>  0 1 0
+                                                                                      -1 0  0
+                                                                                      0  0 1
+                                                                            </Orient>
+                                                                            <Scale> 0.001 0.001 0.001 </Scale>
+                                                                        </Shape>
+                                                                    </GfxShape>
+
+                                                                    <Children>
+                                                                        <Link> LArm_5
+                                                                            <Children>
+                                                                                <Link> LArm_6
+                                                                                    <Children>
+                                                                                        <Link> LHand
+                                                                                            <GfxShape>
+                                                                                                <Shape> Cylinder
+                                                                                                    <Origin>  -0.02  0  0.015 </Origin>
+                                                                                                    <Orient>  0  0 1
+                                                                                                              -1 0 0
+                                                                                                              0 1 0
+                                                                                                    </Orient>
+                                                                                                    <Scale> 0.02 0.02 0.04 </Scale>
+                                                                                                </Shape>
+                                                                                                <Shape> Cube
+                                                                                                    <Origin>  -0.015  0  0.015 </Origin>
+                                                                                                    <Orient>  1 0 0
+                                                                                                              0  1  0
+                                                                                                              0  0 1
+                                                                                                    </Orient>
+                                                                                                    <Scale> 0.03 0.04 0.01 </Scale>
+                                                                                                </Shape>
+                                                                                            </GfxShape>
+                                                                                        </Link>                
+                                                                                    </Children>    
+                                                                                </Link>                
+                                                                            </Children>    
+                                                                        </Link>                
+                                                                    </Children>    
+                                                                </Link>                
+                                                            </Children>    
+                                                        </Link>                
+                                                    </Children>    
+                                                </Link>                
+                                            </Children>    
+                                        </Link>                
+                                    </Children>    
+                                </Link>        
+        
+                            </Children>    
+                        </Link>                
+                    </Children>    
+                </Link>                
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+

@@ -1,0 +1,95 @@
+<Link> Base
+    <Origin>  0.0 0.0 0.0 </Origin>
+    <Orient>  1.0  0.0  0.0 
+              0.0  1.0  0.0
+              0.0  0.0  1.0
+    </Orient>            
+    <Joint type="None">
+        <BaseFrame>
+            <Origin> 0.0 0.0 0.0 </Origin>
+            <Orient>  1.0  0.0  0.0 
+                      0.0  1.0  0.0
+                      0.0  0.0  1.0
+            </Orient>                        
+        </BaseFrame>
+    </Joint>
+
+    <Mass> 0 </Mass>
+    <CenterOfMass> 0 0 0 </CenterOfMass>
+    <InertiaMatrix> 0 0 0
+                    0 0 0
+                    0 0 0
+    </InertiaMatrix>
+    
+    <Children>
+        <Link> DOF_0
+            <Joint type="Slider">
+                <BaseFrame>
+                    <Origin> 0.0 0.0 0.5 </Origin>
+                        <Orient>  1.0  0.0  0.0 
+                                  0.0  1.0  0.0
+                                  0.0 0.0  1.0
+                    </Orient>
+                </BaseFrame>
+                <Axis> EZ </Axis>
+                <Range> -0.1 1.5 </Range>
+                <Zero> 0.4 </Zero>
+                <ControlMode> Torque </ControlMode>
+            </Joint>
+
+            <Mass> 1 </Mass>
+            <CenterOfMass>   0 0.0 0 </CenterOfMass>
+            <InertiaMatrix>  0.01 0 0
+                             0 0.01 0
+                             0 0 0.01
+            </InertiaMatrix>        
+            <Children>
+                <Link> DOF_1
+                    <Joint type="Revolute">
+                        <BaseFrame>
+                            <Origin> 0.0 0.0 0.5 </Origin>
+                                <Orient>  1.0  0.0  0.0 
+                                          0.0  0.0  1.0
+                                          0.0 -1.0  0.0
+                            </Orient>
+                        </BaseFrame>
+                        <Axis> EZ </Axis>
+                        <Range> -45 45 </Range>
+                        <Zero> 45 </Zero>
+                        <ControlMode> Position </ControlMode>
+                    </Joint>
+
+                    <Mass> 1 </Mass>
+                    <CenterOfMass>   0 0.2 0 </CenterOfMass>
+                    <InertiaMatrix>  0.1 0 0
+                                     0 0.1 0
+                                     0 0 0.1
+                    </InertiaMatrix>        
+                    <Children>
+                        <Link> DOF_2
+                            <Joint type="ForceSensor6DOF">
+                                <BaseFrame>
+                                    <Origin> 0.0 0.35 0.0 </Origin>
+                                        <Orient>  1.0  0.0  0.0 
+                                                  0.0  1.0  0.0
+                                                  0.0  0.0  1.0
+                                    </Orient>
+                                </BaseFrame>
+                            </Joint>
+    
+                            <Mass> 0.1 </Mass>
+                            <CenterOfMass>   0 0 0 </CenterOfMass>
+                            <InertiaMatrix>  0.01 0 0
+                                             0 0.01 0
+                                             0 0 0.01
+                            </InertiaMatrix>        
+                        </Link>
+                    </Children>    
+                </Link>
+            </Children>    
+        </Link>
+    </Children>    
+</Link>
+
+
+

@@ -1,0 +1,89 @@
+<Include file="../structure.xml"> Base
+<Link> base_link
+  <Children> 
+    <Link> link_0_0
+      <Children> 
+        <Link> link_1_0
+          <Children> 
+            <Link> link_2_0
+              <Children> 
+                <Link> link_3_0
+                  <Children> 
+                    <Link> link_3_0_tip
+                    </Link>
+                  </Children>
+                </Link>
+			<Include file="subpatches/Contact.xml"> ContactF0P2_00 </Include>
+              </Children>
+            </Link>
+                  	<Include file="subpatches/Contact.xml"> ContactF0P1_00 </Include>
+          </Children>
+        </Link>
+                  	<Include file="subpatches/Contact.xml"> ContactF0P0_00 </Include>
+
+      </Children>
+    </Link>
+
+    <Link> link_4_0
+      <Children> 
+        <Link> link_5_0
+          <Children> 
+            <Link> link_6_0
+              <Children> 
+                <Link> link_7_0
+                  <Children> 
+                    <Link> link_7_0_tip
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+
+    <Link> link_8_0
+      <Children> 
+        <Link> link_9_0
+          <Children> 
+            <Link> link_10_0
+              <Children> 
+                <Link> link_11_0
+                  <Children> 
+                    <Link> link_11_0_tip
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+
+    <Link> link_12_0
+      <Children> 
+        <Link> link_13_0
+          <Children> 
+            <Link> link_14_0
+              <Children> 
+                <Link> link_15_0
+                  <Children> 
+                    <Link> link_15_0_tip
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+      <Link> EndEffector  
+          			0 -1 0 
+  </Link>
+  </Children>
+</Link>
+
+</Include>

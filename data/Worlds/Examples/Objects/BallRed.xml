@@ -1,0 +1,21 @@
+<Object> Ball
+
+    <Origin>  0 0 0 </Origin>
+    <Orient>  1 0 0 
+              0 1 0 
+              0 0 1 </Orient>
+    
+
+    <BBoxShape>
+        <Shape> Cube
+            <Color> 1 0 0 </Color>
+            <Origin>  0 0 0 </Origin>
+            <Orient>  1 0 0 
+                      0 1 0 
+                      0 0 1 </Orient>
+            <Scale>   0.2 0.2 0.2 </Scale>
+        </Shape>
+    </BBoxShape>
+
+</Object>
+

@@ -1,0 +1,55 @@
+<Include file="../structure.xml"> Base
+<Children>
+  <Link> DOF_0
+  <Children>
+    <Link> DOF_1
+    <Children>
+      <Link> DOF_2
+      <Children>
+	<Link> DOF_3
+	<Children>
+	  <Link> DOF_4
+	  <Children>
+	    <Link> DOF_5
+	    <Children>
+	      <Link> DOF_6
+	      <Children>
+		<Link> TOOLPLATE
+		<Children>
+		<Link> TOOLdd
+		<Joint type="None">
+		  <BaseFrame>
+		    <Origin> 0.0 0.0 0.1 </Origin>
+		    <Orient>  1  0  0
+		    0  1  0
+		    0  0  1    
+		    </Orient>
+		  </BaseFrame>
+		</Joint> 
+		<Mass> 0.606 </Mass>
+		<CenterOfMass> 0 0 -0.0093515     </CenterOfMass>
+		<InertiaMatrix> 0.0057113   0.0000000   0.0000000
+		0.0000000   0.0057113   0.0000000
+		0.0000000   0.0000000   0.0001720
+		</InertiaMatrix>                                                                
+		</Link>                                                                                
+		</Children>
+		</Link>
+	      </Children>    
+	      </Link>                    
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+    </Link>
+  </Children>    
+  </Link>
+</Children>    
+</Include>
+
+

@@ -1,0 +1,304 @@
+<Link> base_link
+  <Joint type="None"> 
+    <BaseFrame> 
+      <Origin> 0 0 0.095 </Origin>
+      <Orient> -1 0 0 0 -1 0 0 0 1 </Orient>
+    </BaseFrame>
+  </Joint>
+  <Mass> 0 </Mass>
+  <CenterOfMass> 0 0 0 </CenterOfMass>
+  <Children> 
+    <Link> link_0_0
+      <Joint type="Revolute"> 
+        <BaseFrame> 
+          <Origin> 0 -0.044981 -0.002298 </Origin>
+          <Orient> 1.000000 0.000000 0.000000 0.000000 0.996195 -0.087156 0.000000 0.087156 0.996195 </Orient>
+        </BaseFrame>
+        <Axis> EZ </Axis>
+        <Range> -26.929016 26.929016 </Range>
+        <Zero> 0 </Zero>
+      </Joint>
+      <Mass> 0 </Mass>
+      <CenterOfMass> 0 0 0 </CenterOfMass>
+      <InertiaMatrix>  0 0 0 0 0 0 0 0 0 </InertiaMatrix>
+      <Children> 
+        <Link> link_1_0
+          <Joint type="Revolute"> 
+            <BaseFrame> 
+              <Origin> 0 0 0.0164 </Origin>
+              <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+            </BaseFrame>
+            <Axis> EY </Axis>
+            <Range> -11.229973 92.246205 </Range>
+            <Zero> -10 </Zero>
+          </Joint>
+          <Mass> 0 </Mass>
+          <CenterOfMass> 0 0 0 </CenterOfMass>
+	  <InertiaMatrix>  0 0 0 0 0 0 0 0 0 </InertiaMatrix>
+          <Children> 
+            <Link> link_2_0
+              <Joint type="Revolute"> 
+                <BaseFrame> 
+                  <Origin> 0 0 0.054 </Origin>
+                  <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                </BaseFrame>
+                <Axis> EY </Axis>
+                <Range> -9.969466 97.918487 </Range>
+                <Zero> 45 </Zero>
+              </Joint>
+              <Mass> 0 </Mass>
+              <CenterOfMass> 0 0 0 </CenterOfMass>
+              <Children> 
+                <Link> link_3_0
+                  <Joint type="Revolute"> 
+                    <BaseFrame> 
+                      <Origin> 0 0 0.0384 </Origin>
+                      <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                    </BaseFrame>
+                    <Axis> EY </Axis>
+                    <Range> -13.006142 92.704571 </Range>
+                    <Zero> 45 </Zero>
+                  </Joint>
+                  <Mass> 0 </Mass>
+                  <CenterOfMass> 0 0 0 </CenterOfMass>
+                  <Children> 
+                    <Link> link_3_0_tip
+                      <Joint type="None"> 
+                        <BaseFrame> 
+                          <Origin> 0 0 0 </Origin>
+                          <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                        </BaseFrame>
+                      </Joint>
+                      <Mass> 0 </Mass>
+                      <CenterOfMass> 0 0 0 </CenterOfMass>
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+    <Link> link_4_0
+      <Joint type="Revolute"> 
+        <BaseFrame> 
+          <Origin> 0 0 0 </Origin>
+          <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+        </BaseFrame>
+        <Axis> EZ </Axis>
+        <Range> -26.929016 26.929016 </Range>
+        <Zero> 0 </Zero>
+      </Joint>
+      <Mass> 0 </Mass>
+      <CenterOfMass> 0 0 0 </CenterOfMass>
+      <Children> 
+        <Link> link_5_0
+          <Joint type="Revolute"> 
+            <BaseFrame> 
+              <Origin> 0 0 0.0164 </Origin>
+              <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+            </BaseFrame>
+            <Axis> EY </Axis>
+            <Range> -11.229973 92.246205 </Range>
+            <Zero> -10 </Zero>
+          </Joint>
+          <Mass> 0 </Mass>
+          <CenterOfMass> 0 0 0 </CenterOfMass>
+          <Children> 
+            <Link> link_6_0
+              <Joint type="Revolute"> 
+                <BaseFrame> 
+                  <Origin> 0 0 0.054 </Origin>
+                  <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                </BaseFrame>
+                <Axis> EY </Axis>
+                <Range> -9.969466 97.918487 </Range>
+                <Zero> 45 </Zero>
+              </Joint>
+              <Mass> 0 </Mass>
+              <CenterOfMass> 0 0 0 </CenterOfMass>
+              <Children> 
+                <Link> link_7_0
+                  <Joint type="Revolute"> 
+                    <BaseFrame> 
+                      <Origin> 0 0 0.0384 </Origin>
+                      <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                    </BaseFrame>
+                    <Axis> EY </Axis>
+                    <Range> -13.006142 92.704571 </Range>
+                    <Zero> 45 </Zero>
+                  </Joint>
+                  <Mass> 0 </Mass>
+                  <CenterOfMass> 0 0 0 </CenterOfMass>
+                  <Children> 
+                    <Link> link_7_0_tip
+                      <Joint type="None"> 
+                        <BaseFrame> 
+                          <Origin> 0 0 0 </Origin>
+                          <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                        </BaseFrame>
+                      </Joint>
+                      <Mass> 0 </Mass>
+                      <CenterOfMass> 0 0 0 </CenterOfMass>
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+    <Link> link_8_0
+      <Joint type="Revolute"> 
+        <BaseFrame> 
+          <Origin> 0 0.044981 -0.002298 </Origin>
+          <Orient> 1.000000 0.000000 0.000000 0.000000 0.996195 0.087156 0.000000 -0.087156 0.996195 </Orient>
+        </BaseFrame>
+        <Axis> EZ </Axis>
+        <Range> -26.929016 26.929016 </Range>
+        <Zero> 5 </Zero>
+      </Joint>
+      <Mass> 0 </Mass>
+      <CenterOfMass> 0 0 0 </CenterOfMass>
+      <Children> 
+        <Link> link_9_0
+          <Joint type="Revolute"> 
+            <BaseFrame> 
+              <Origin> 0 0 0.0164 </Origin>
+              <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+            </BaseFrame>
+            <Axis> EY </Axis>
+            <Range> -11.229973 92.246205 </Range>
+            <Zero> -5 </Zero>
+          </Joint>
+          <Mass> 0 </Mass>
+          <CenterOfMass> 0 0 0 </CenterOfMass>
+          <Children> 
+            <Link> link_10_0
+              <Joint type="Revolute"> 
+                <BaseFrame> 
+                  <Origin> 0 0 0.054 </Origin>
+                  <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                </BaseFrame>
+                <Axis> EY </Axis>
+                <Range> -9.969466 97.918487 </Range>
+                <Zero> 50 </Zero>
+              </Joint>
+              <Mass> 0 </Mass>
+              <CenterOfMass> 0 0 0 </CenterOfMass>
+              <Children> 
+                <Link> link_11_0
+                  <Joint type="Revolute"> 
+                    <BaseFrame> 
+                      <Origin> 0 0 0.0384 </Origin>
+                      <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                    </BaseFrame>
+                    <Axis> EY </Axis>
+                    <Range> -13.006142 92.704571 </Range>
+                    <Zero> 45 </Zero>
+                  </Joint>
+                  <Mass> 0 </Mass>
+                  <CenterOfMass> 0 0 0 </CenterOfMass>
+                  <Children> 
+                    <Link> link_11_0_tip
+                      <Joint type="None"> 
+                        <BaseFrame> 
+                          <Origin> 0 0 0 </Origin>
+                          <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                        </BaseFrame>
+                      </Joint>
+                      <Mass> 0 </Mass>
+                      <CenterOfMass> 0 0 0 </CenterOfMass>
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+    <Link> link_12_0
+      <Joint type="Revolute"> 
+        <BaseFrame> 
+          <Origin> -0.0182 -0.0168753 -0.07308 </Origin>
+          <Orient> 0 1 0 0.087156 0 -0.996195 -0.996195 0 -0.087156 </Orient>
+        </BaseFrame>
+        <Axis> EX </Axis>
+        <Range> -79 -15 </Range>
+        <Zero> -50 </Zero>
+      </Joint>
+      <Mass> 0 </Mass>
+      <CenterOfMass> 0 0 0 </CenterOfMass>
+      <Children> 
+        <Link> link_13_0
+          <Joint type="Revolute"> 
+            <BaseFrame> 
+              <Origin> 0 0.0034 0.0375 </Origin>
+              <Orient> 0.000000 -1.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+            </BaseFrame>
+            <Axis> EZ </Axis>
+            <Range> -66 6 </Range>
+            <Zero> -25 </Zero>
+          </Joint>
+          <Mass> 0 </Mass>
+          <CenterOfMass> 0 0 0 </CenterOfMass>
+          <Children> 
+            <Link> link_14_0
+              <Joint type="Revolute"> 
+                <BaseFrame> 
+                  <Origin> 0 0 0.0177 </Origin>
+                  <Orient> 0.000000 1.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                </BaseFrame>
+                <Axis> NEG_EY </Axis>
+                <Range> -10.828902 94.194261 </Range>
+                <Zero> 15 </Zero>
+              </Joint>
+              <Mass> 0 </Mass>
+              <CenterOfMass> 0 0 0 </CenterOfMass>
+              <Children> 
+                <Link> link_15_0
+                  <Joint type="Revolute"> 
+                    <BaseFrame> 
+                      <Origin> 0 0 0.0514 </Origin>
+                      <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                    </BaseFrame>
+                    <Axis> NEG_EY </Axis>
+                    <Range> -9.281916 98.491445 </Range>
+                    <Zero> 45 </Zero>
+                  </Joint>
+                  <Mass> 0 </Mass>
+                  <CenterOfMass> 0 0 0 </CenterOfMass>
+                  <Children> 
+                    <Link> link_15_0_tip
+                      <Joint type="None"> 
+                        <BaseFrame> 
+                          <Origin> 0 0 0 </Origin>
+                          <Orient> 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 </Orient>
+                        </BaseFrame>
+                      </Joint>
+                      <Mass> 0 </Mass>
+                      <CenterOfMass> 0 0 0 </CenterOfMass>
+                    </Link>
+                  </Children>
+                </Link>
+              </Children>
+            </Link>
+          </Children>
+        </Link>
+      </Children>
+    </Link>
+      <Link> EndEffector  
+  <Joint type="None">
+  <BaseFrame> 
+  <Origin> 0.06 -0.02 0 </Origin>
+          <Orient> 0 0 1 
+          			0 -1 0 
+          			1 0 0</Orient>
+  </BaseFrame>
+  </Joint>
+  </Link>
+  </Children>
+</Link>

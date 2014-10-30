@@ -1,0 +1,54 @@
+<Include file="../bbox.xml"> Base
+<Children>
+  <Link> DOF_0
+  <Children>
+    <Link> DOF_1
+    <Children>
+      <Link> DOF_2
+      <Children>
+	<Link> DOF_3
+	<Children>
+	  <Link> DOF_4
+	  <Children>
+	    <Link> DOF_5
+	    <Children>
+	      <Link> DOF_6
+	      <Children>                                                            
+
+
+	      <Link> TOOLPLATE
+	      <Children>                                                            
+
+
+		<Link> FORCE_SENSOR
+		<BBoxShape>
+		  <Shape> Cylinder
+		  <Origin>  0.0 0.0 0.00 </Origin>
+		  <Orient>  1 0 0 
+		  0 1 0 
+		  0 0 1 </Orient>
+		  <Scale>   0.08 0.08 0.016 </Scale>
+		  </Shape>
+		</BBoxShape>
+
+		</Link>
+		</Children>
+		</Link>                                                                                    
+	      </Children>    
+	      </Link>                    
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+    </Link>
+  </Children>    
+  </Link>
+</Children>    
+</Include>
+
+

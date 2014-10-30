@@ -1,0 +1,152 @@
+
+<Link> Base
+    <Joint type="None">
+        <BaseFrame>
+            <Origin> 0.0 0.0 0.0 </Origin>
+            <Orient>  1.0  0.0  0.0 
+                      0.0  1.0  0.0
+                      0.0  0.0  1.0
+            </Orient>            
+            
+        </BaseFrame>
+    </Joint>
+
+    <Mass> 0 </Mass>
+    <CenterOfMass> 0 0 0 </CenterOfMass>
+    <InertiaMatrix> 0 0 0
+                    0 0 0
+                    0 0 0
+    </InertiaMatrix>
+
+<Children>
+
+<Link> DOF_0
+<Joint type="Revolute">
+  <BaseFrame>
+    <Origin> 0 0 0.31 </Origin>
+    <Orient>  1.0  0.0  0.0 
+    0.0  1.0  0.0
+    0.0  0.0  1.0
+    </Orient>
+  </BaseFrame>
+  <Axis> EZ </Axis>
+  <Range> -160 160 </Range>
+  <Zero> 0 </Zero>
+</Joint>
+<Children>
+  <Link> DOF_1
+  <Joint type="Revolute">
+    <BaseFrame>
+      <Origin> 0.0 0.0 0.0 </Origin>
+      <Orient>  1.0  0.0  0.0 
+      0.0  0.0  -1.0
+      0.0  1.0  0.0
+      </Orient>
+    </BaseFrame>
+    <Axis> EZ </Axis>
+    <Range> -160 160 </Range>
+    <Zero> 0 </Zero>
+  </Joint>
+  <Children>
+    <Link> DOF_2
+    <Joint type="Revolute">
+      <BaseFrame>
+	<Origin> 0.0 0.4 0.0 </Origin>
+	<Orient>  1.0  0.0  0.0 
+	0.0  0.0  1.0
+	0.0  -1.0  0.0
+	</Orient>
+      </BaseFrame>
+      <Axis> EZ </Axis>
+      <Range> -160 160 </Range>
+      <Zero> 0 </Zero>
+    </Joint>
+    <Children>
+      <Link> DOF_3
+      <Joint type="Revolute">
+	<BaseFrame>
+	  <Origin> 0.0 0.0 0.0 </Origin>
+	  <Orient>  1.0  0.0  0.0 
+	  0.0  0.0  1.0
+	  0.0  -1.0  0.0
+	  </Orient>
+	</BaseFrame>
+	<Axis> EZ </Axis>
+	<Range> -160 160 </Range>
+	<Zero> 0 </Zero>
+      </Joint>
+      <Children>
+	<Link> DOF_4
+	<Joint type="Revolute">
+	  <BaseFrame>
+	    <Origin> 0.0 -0.39 0.0 </Origin>
+	    <Orient>  1.0  0.0  0.0 
+	    0.0  0.0  -1.0
+	    0.0  1.0  0.0
+	    </Orient>
+	  </BaseFrame>
+	  <Axis> EZ </Axis>
+	  <Range> -160 160 </Range>
+	  <Zero> 0 </Zero>
+	</Joint>
+	<Children>
+	  <Link> DOF_5
+	  <Joint type="Revolute">
+	    <BaseFrame>
+	      <Origin> 0.0 0.0 0.0 </Origin>
+	      <Orient>  1.0  0.0  0.0 
+	      0.0  0.0  -1.0
+	      0.0  1.0  0.0
+	      </Orient>
+	    </BaseFrame>
+	    <Axis> EZ </Axis>
+	    <Range> -160 160 </Range>
+	    <Zero> 0 </Zero>
+	  </Joint>
+	  <Children>
+	    <Link> DOF_6
+	    <Joint type="Revolute">
+	      <BaseFrame>
+		<Origin> 0.0 0.0 0.0 </Origin>
+		<Orient>  1.0  0.0  0.0 
+		0.0  0.0  1.0
+		0.0  -1.0  0.0
+		</Orient>
+	      </BaseFrame>
+	      <Axis> EZ </Axis>
+	      <Range> -180 180 </Range>
+	      <Zero> 0 </Zero>
+	    </Joint>
+	    <Children>
+	      <Link> TOOL
+	      <Joint type="None">
+		<BaseFrame>
+		  <Origin> 0.0 0.0 0.078 </Origin>
+		  <Orient>  1.0 0.0  0.0 
+                            0.0  1.0  0.0
+                            0.0  0.0  1.0
+		  </Orient>
+		</BaseFrame>
+	      </Joint>
+	      <Children>
+
+	      </Children>
+	      </Link>
+	    </Children>
+	    </Link>
+	  </Children>
+	  </Link>
+	</Children>
+	</Link>
+      </Children>
+      </Link>
+    </Children>
+    </Link>
+  </Children>
+  </Link>
+</Children>
+</Link>
+
+</Children>
+</Link>
+
