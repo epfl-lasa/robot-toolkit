@@ -10,5 +10,5 @@ set(rtk_modules )
 include(${rtk_pkg_tools_SOURCE_DIR}/rtk_create_symlinks.cmake)
 
 # Uncomment the following line if you want catkin dependencies you specify in CMakeLists.txt to be automatically copied to the package.xml
-#execute_process(COMMAND ${rtk_pkg_tools_SOURCE_DIR}/scripts/CopyDepsFromCMakeListsToPackageXML.py))
+#execute_process(COMMAND ${rtk_pkg_tools_SOURCE_DIR}/scripts/CopyDepsFromCMakeListsToPackageXML.py ${PROJECT_NAME})
 
