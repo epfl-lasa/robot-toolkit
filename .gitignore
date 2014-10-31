@@ -1,5 +1,9 @@
 *~*
 *#*
-*.so
 *.bzr*
 packages/addons/
+*.so*
+*.bzr*
+config/packages/*
+data/packages/*
+
