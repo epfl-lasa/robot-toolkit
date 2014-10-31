@@ -1,6 +1,5 @@
 *~*
 *#*
 *.so
-*ode-0.13*
-*.tar.bz2*
 *.bzr*
+packages/addons/
