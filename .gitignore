@@ -6,4 +6,4 @@ packages/addons/
 *.bzr*
 config/packages/*
 data/packages/*
-
+bin/*
