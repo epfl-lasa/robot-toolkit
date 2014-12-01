@@ -255,7 +255,7 @@
 						</Shape>
 						</GfxShape>
 						<Children>
-							<Link> HandF2Dof1
+							<Link> HandF4Dof1
 								<GfxShape>
 								<Shape id="HandF4Dof1"> shapes/allegro_fingerdof0.obj
 								<Origin>-0.0098 -0.0098 -0.0232</Origin>
@@ -279,7 +279,7 @@
 										</Shape>
 										</GfxShape>
 										<Children>
-											<Link> HandF2Dof3
+											<Link> HandF4Dof3
 												<GfxShape>
 												<Shape id="HandF4Dof3"> shapes/allegro_thumbdof3.obj
 												<Origin>-0.0098 -0.0098 0.012</Origin>
@@ -291,7 +291,7 @@
 												</Shape>
 												</GfxShape>
 												<Children>
-													<Link> HandF3
+													<Link> HandF4
 													<GfxShape>
 													<Shape id="HandF4"> shapes/allegro_fingertip.obj
 													<Origin>-0.012 -0.0098 0.012</Origin>
