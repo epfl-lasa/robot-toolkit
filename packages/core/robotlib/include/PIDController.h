@@ -71,7 +71,7 @@ public:
           void    SetKD(const Vector& kd);
           void    SetKI(const Vector& ki);
           void    SetKs(const Vector& kp, const Vector& kd, const Vector& ki);
-          //void    SetBounds(const Vector& low,const Vector& high);
+          void    SetBounds(const Vector& low,const Vector& high);
           
           void    Resize(int size,bool Ks=false);
   

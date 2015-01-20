@@ -125,13 +125,11 @@ void    PIDController::Update(REALTYPE dt){
   case PIDCTRL_START:
     mTarget.Sub(mInput,mErrors);
     //mErrors
-    //mErrors.Print();
 
     mErrors.Sub(mLastErrors,mErrorsDiff);
     mErrorsDiff *= (R_ONE/dt);
     mErrors.Mult(dt,mOutput);
     mErrorsInt += mOutput;
-
 
 
     mKp.PMult(mErrors,mOutput);
@@ -141,12 +139,14 @@ void    PIDController::Update(REALTYPE dt){
     mOutput+=mBuffer;
 
     mLastErrors.Set(mErrors);
-    //cout <<"InPID";
-    //mOutput.Print();
+//    cout <<"InPID";
+//    mOutput.Print("mOutput");
     break;
   }
-  //mOutput.Print();
+//  mOutput.Print("outBef");
   mOutput.Trunc(mOutputLowBound,mOutputHighBound);
+//  mOutput.Print("outAft");
+
 }
 
 
@@ -166,11 +166,11 @@ void    PIDController::SetInput(const Vector & input){
   mInput = input;
 }
 Vector& PIDController::GetOutput(Vector & result){
-  //cout <<"GetO";mOutput.Print();
+//  cout <<"GetO";mOutput.Print();
 
   result.Set(mOutput);
-  //cout <<"GetR";
-  //  result.Print();
+//  cout <<"GetR";
+//    result.Print();
   return result;
 }
 Vector&  PIDController::GetOutput(){
@@ -195,12 +195,12 @@ void    PIDController::SetKs(const Vector& kp, const Vector& kd, const Vector& k
   SetKD(kd);
   SetKI(ki);
 }
-/*
+
 void    PIDController::SetBounds(const Vector& low,const Vector& high){
   mOutputLowBound.Set(low);
   mOutputHighBound.Set(high);
 }
-*/
+
 
 
 
