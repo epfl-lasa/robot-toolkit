@@ -10,6 +10,8 @@ find_package(catkin REQUIRED COMPONENTS
   robotlib
   simulator_dynamics
   std_tools
+  rtk_libode
+  rtk_libbullet
 )
 
 ## System dependencies are found with CMake's conventions
@@ -33,8 +35,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 message(STATUS "CMAKE_CURRENT_BINARY_DIR:  ${CMAKE_CURRENT_BINARY_DIR}")
 
 # find_package(Ode REQUIRED)
-find_package(Bullet REQUIRED)
-find_package(OpenGL)
+# find_package(Bullet REQUIRED)
+# find_package(OpenGL)
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -115,7 +117,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
  include_directories(include)
 include_directories(
-  ${catkin_INCLUDE_DIRS} ${QT_INCLUDES} ${BULLET_INCLUDE_DIRS} ${ODE_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS} ${QT_INCLUDES} 
 )
 
 ## Declare a cpp library

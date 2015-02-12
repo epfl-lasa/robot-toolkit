@@ -33,6 +33,17 @@ def clean_bullet(rtk_libbullet_path):
     subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'build')])
     subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'bullet3-master')])
     subprocess.call(['rm','-r',os.path.join(rtk_libbullet_path,'master.zip')])
+    # remove "installed" libs and include files, but keep the folder structure and .gitignore files
+    for root, dirs, files in os.walk(os.path.join(rtk_libbullet_path,'local_install')):
+        # remove files
+        for name in files:
+            if name != '.gitignore':
+                os.remove(os.path.join(root,name))
+        # remove empty dirs
+        for name in dirs:
+            path = os.path.join(root,name)
+            if len(os.listdir(path))==0:
+                os.rmdir(path)
     print 'finished cleaning'
 
 def build_bullet(rtk_libbullet_path):

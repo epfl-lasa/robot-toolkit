@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_tools
   gl_tools
   rtk_pkg_tools
+  rtk_libode
+  rtk_libbullet
 )
 
 ## System dependencies are found with CMake's conventions
@@ -130,6 +132,7 @@ FILE(GLOB theSourceFiles src/*.cpp)
 # add_dependencies(robot_simulator_node robot_simulator_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
+message("libraries: "${catkin_LIBRARIES})
  target_link_libraries(robot_simulator
     ${catkin_LIBRARIES} ${QT_LIBRARIES} freeimage
   )

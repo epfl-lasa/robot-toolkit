@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<package>
+<?xml version="1.0" ?><package>
   <name>robot_gui</name>
   <version>0.0.0</version>
   <description>The robot_gui package</description>
@@ -40,7 +39,9 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>gl_tools</build_depend>
+  <build_depend>rtk_libbullet</build_depend>
+<build_depend>rtk_libode</build_depend>
+<build_depend>gl_tools</build_depend>
   <build_depend>mathlib</build_depend>
   <build_depend>robotlib</build_depend>
   <build_depend>simulator_dynamics</build_depend>
@@ -48,7 +49,9 @@
   <build_depend>ffmpeg</build_depend>
   <build_depend>freeimage</build_depend>
   <build_depend>qt4-dev</build_depend>
-  <run_depend>gl_tools</run_depend>
+  <run_depend>rtk_libode</run_depend>
+<run_depend>rtk_libbullet</run_depend>
+<run_depend>gl_tools</run_depend>
   <run_depend>mathlib</run_depend>
   <run_depend>robotlib</run_depend>
   <run_depend>simulator_dynamics</run_depend>

@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<package>
+<?xml version="1.0" ?><package>
   <name>robot_simulator</name>
   <version>0.0.0</version>
   <description>The robot_simulator package</description>
@@ -40,14 +39,20 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>mathlib</build_depend>
+  <build_depend>rtk_libbullet</build_depend>
+<build_depend>rtk_libode</build_depend>
+<build_depend>rtk_pkg_tools</build_depend>
+<build_depend>mathlib</build_depend>
   <build_depend>robot_gui</build_depend>
   <build_depend>robotlib</build_depend>
   <build_depend>simulator_dynamics</build_depend>
   <build_depend>std_tools</build_depend>
   <build_depend>gl_tools</build_depend>
 
-  <run_depend>mathlib</run_depend>
+  <run_depend>rtk_pkg_tools</run_depend>
+<run_depend>rtk_libode</run_depend>
+<run_depend>rtk_libbullet</run_depend>
+<run_depend>mathlib</run_depend>
   <run_depend>robot_gui</run_depend>
   <run_depend>robotlib</run_depend>
   <run_depend>simulator_dynamics</run_depend>
