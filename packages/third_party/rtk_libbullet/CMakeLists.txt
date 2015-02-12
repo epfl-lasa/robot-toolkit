@@ -26,7 +26,7 @@ find_package(catkin REQUIRED)
 #execute_process(COMMAND "python" "${PROJECT_SOURCE_DIR}/rtk_libode_scripts/rtk_libode_setup.py")
 
 catkin_package(
-INCLUDE_DIRS build/include build/include/bullet
+INCLUDE_DIRS local_install/include local_install/include/bullet
 #LIBRARIES rtk_libode ode
 LIBRARIES rtk_libbullet
 #LIBRARIES ${PROJECT_SOURCE_DIR}/lib/libode.so
@@ -50,41 +50,16 @@ add_custom_command(TARGET rtk_libbullet_setup_dummy_target  PRE_BUILD COMMAND "p
 set(BulletLibs BulletDynamics BulletCollision BulletSoftBody LinearMath)
 foreach(lib ${BulletLibs})
 add_library(${lib} SHARED IMPORTED)
-set_property(TARGET ${lib} PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/build/lib/lib${lib}.so)
+set_property(TARGET ${lib} PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/local_install/lib/lib${lib}.so)
 #message(${PROJECT_SOURCE_DIR}/build/lib/lib${lib}.so)
 set_target_properties(${lib} PROPERTIES LINKER_LANGUAGE CXX)
 add_dependencies(${lib} rtk_libbullet_setup_dummy_target)
 endforeach(lib)
 
-# add_library(BulletDynamics SHARED IMPORTED)
-# set_property(TARGET BulletDynamics PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/build/lib/libBulletDynamics.so)
-# add_library(BulletCollision SHARED IMPORTED)
-# set_property(TARGET BulletCollision PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/build/lib/libBulletCollision.so)
-# add_library(BulletSoftBody SHARED IMPORTED)
-# set_property(TARGET BulletSoftBody PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/build/lib/libBulletSoftBody.so)
-# add_library(LinearMath SHARED IMPORTED)
-# set_property(TARGET BulletDynamics PROPERTY IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/build/lib/libLinearMath.so)
-
-#set_target_properties(ode PROPERTIES LINKER_LANGUAGE CXX)
 add_library(rtk_libbullet SHARED)
 set_target_properties(rtk_libbullet PROPERTIES LINKER_LANGUAGE CXX)
-add_dependencies(rtk_libbullet rtk_libbullet_setup_dummy_target)
+add_dependencies(rtk_libbullet ${BulletLibs})
 target_link_libraries(rtk_libbullet ${BulletLibs})
-#add_dependencies(rtk_libode ode rtk_libode_setup_dummy_target)
-#   src/${PROJECT_NAME}/rtk_libode.cpp
-# )
-
-## Declare a cpp executable
-# add_executable(rtk_libode_node src/rtk_libode_node.cpp)
-
-## Add cmake target dependencies of the executable/library
-## as an example, message headers may need to be generated before nodes
-# add_dependencies(rtk_libode_node rtk_libode_generate_messages_cpp)
-
-## Specify libraries to link a library or executable target against
-# target_link_libraries(rtk_libode_node
-#   ${catkin_LIBRARIES}
-# )
 
 #############
 ## Install ##

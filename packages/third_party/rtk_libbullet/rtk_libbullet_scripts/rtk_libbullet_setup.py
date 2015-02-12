@@ -40,8 +40,9 @@ def build_bullet(rtk_libbullet_path):
     rtk_libbullet_build_path = os.path.join(rtk_libbullet_path,'build')
     os.mkdir(rtk_libbullet_build_path)
     os.chdir(rtk_libbullet_build_path)
+    rtk_libbullet_install_path = os.path.join(rtk_libbullet_path,'local_install')
     # calling cmake for the bullet project with a bunch of options for a minimal and suitable build for rtk
-    subprocess.call(['cmake','-DUSE_DOUBLE_PRECISION=ON','-DBUILD_SHARED_LIBS=ON','-DBUILD_BULLET2_DEMOS=OFF','-DBUILD_BULLET3=OFF','-DBUILD_CPU_DEMOS=OFF','-DBUILD_OPENGL3_DEMOS=OFF','-DBUILD_EXTRAS=OFF','-DCMAKE_INSTALL_PREFIX='+rtk_libbullet_build_path,'../bullet3-master'])
+    subprocess.call(['cmake','-DUSE_DOUBLE_PRECISION=ON','-DBUILD_SHARED_LIBS=ON','-DBUILD_BULLET2_DEMOS=OFF','-DBUILD_BULLET3=OFF','-DBUILD_CPU_DEMOS=OFF','-DBUILD_OPENGL3_DEMOS=OFF','-DBUILD_EXTRAS=ON','-DINSTALL_EXTRA_LIBS=ON','-DCMAKE_INSTALL_PREFIX='+rtk_libbullet_install_path,'../bullet3-master'])
     # compile with speed!
     subprocess.call(['make','-j8'])
     # dont worry it will only 'install' locally
@@ -62,17 +63,18 @@ if __name__ == '__main__':
             build_bullet(rtk_libbullet_path)
         elif(sys.argv[1]=='--download'):
             download_bullet(rtk_libbullet_path)
+    else:
+        # if there were no arguments, try to do the right thing
+        print "made it in here"
+        if glob.glob('master.zip'):
+            print 'libbullet already downloaded'
         else:
-            # if there were no arguments, try to do the right thing
-            if glob.glob('master.zip'):
-                print 'libbullet already downloaded'
-            else:
-                download_bullet(rtk_libbullet_path)
+            download_bullet(rtk_libbullet_path)
 
-            if glob.glob('build/lib/*.so'):
-                print 'libbullet already built'
-            else:
-                build_bullet(rtk_libbullet_path)
+        if glob.glob('local_install/lib/*.so'):
+            print 'libbullet already built'
+        else:
+            build_bullet(rtk_libbullet_path)
 
             
 
