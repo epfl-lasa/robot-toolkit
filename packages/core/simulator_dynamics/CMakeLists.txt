@@ -10,6 +10,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_tools
   udp_network
   rtk_libode
+  rtk_libbullet
+  rtk_package_tools
 )
 
 ## System dependencies are found with CMake's conventions
@@ -17,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 #  make sure that CMAKE_MODULE_PATH includes the dir of simulator_dynamics
 #list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 #message("the cmake module path is : ${CMAKE_MODULE_PATH}")
-find_package(Bullet REQUIRED)
+#find_package(Bullet REQUIRED)
 #find_package(Ode REQUIRED)
 
 
@@ -89,8 +91,8 @@ find_package(Bullet REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES simulator_dynamics
-  CATKIN_DEPENDS mathlib robotlib std_tools udp_network rtk_libode
-  DEPENDS Bullet
+  CATKIN_DEPENDS mathlib robotlib std_tools udp_network rtk_libode rtk_libbullet
+#  DEPENDS 
 )
 
 ###########
@@ -101,7 +103,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
  include_directories(include)
 include_directories(
-  ${catkin_INCLUDE_DIRS} ${BULLET_INCLUDE_DIRS} 
+  ${catkin_INCLUDE_DIRS} 
 )
 
 ## Declare a cpp library
@@ -119,53 +121,22 @@ FILE(GLOB theSourceFiles src/*.cpp)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(simulator_dynamics
-   ${catkin_LIBRARIES} ${BULLET_LIBRARIES} 
+   ${catkin_LIBRARIES}
  )
 
-#############
-## Install ##
-#############
 
-# all install targets should use catkin DESTINATION variables
-# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
 
-## Mark executable scripts (Python etc.) for installation
-## in contrast to setup.py, you can choose the destination
-# install(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+###################################
+## RobotToolKit specific stuff  ###
+###################################
+# to comply with the file structure of RobotToolKit, you need to create symlinks 
+# to any compiled modules in the RobotToolKit/module folder. This is automated below.
+# just add the modules of this package as set(rtk_modules myAwesomeModule1 myAwesomeModule2)
+# modules can be world or robot modules. Note that you need to specify your targets using 
+# standard cmake/catkin procedures above. This is step is only for linking the build modules.
+#set(rtk_modules )
+#include(${rtk_pkg_tools_SOURCE_DIR}/rtk_create_symlinks.cmake)
 
-## Mark executables and/or libraries for installation
-# install(TARGETS simulator_dynamics simulator_dynamics_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+# Uncomment the following line if you want catkin dependencies you specify in CMakeLists.txt to be automatically copied to the package.xml
+execute_process(COMMAND ${rtk_pkg_tools_SOURCE_DIR}/scripts/CopyDepsFromCMakeListsToPackageXML.py ${PROJECT_NAME})
 
-## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
-
-## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
-
-#############
-## Testing ##
-#############
-
-## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_simulator_dynamics.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
-# endif()
-
-## Add folders to be run by python nosetests
-# catkin_add_nosetests(test)
