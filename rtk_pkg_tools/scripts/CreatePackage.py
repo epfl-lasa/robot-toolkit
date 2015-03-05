@@ -40,7 +40,10 @@ if pkg_name in existing_pkgs:
     exit(1)
 # create catkin_pkg
 os.chdir(rtk_addons_path)
-subprocess.call(['catkin_create_pkg',pkg_name])
+command = ['catkin_create_pkg',pkg_name]
+dep_list = ['robotlib','mathlib']
+command.extend(dep_list)
+subprocess.call(command)
 pkg_path = rtk_addons_path+pkg_name+'/'
 # add config and data folders
 os.chdir(pkg_path)
