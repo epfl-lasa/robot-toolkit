@@ -76,8 +76,11 @@ class LWRRobot: public Robot {
 
   float * GetCartCommandAsFloat();
 
-  Matrix GetMassMatrix();
+  const Matrix& GetMassMatrix();
   void SetMassMatrix(float **massMatrixPointer);
+
+  const Matrix& GetJacobian();
+  void SetJacobian(float **jacobianPointer);
 
   float * GetCartStiffnessAsFloat();
   float * GetCartDampingAsFloat();
@@ -102,6 +105,7 @@ private:
   Vector3 MeasuredCartPosition;
   Matrix3 MeasuredCartOrientation;
   Matrix massMatrix;
+  Matrix Jacobian;
 
   float MeasuredSamplingTime; //s
 

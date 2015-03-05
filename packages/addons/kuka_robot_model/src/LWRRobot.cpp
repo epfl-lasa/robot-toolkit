@@ -136,10 +136,26 @@ void LWRRobot::SetMassMatrix(float** massMatrixPointer)
 {
   for (int i=0; i<NB_JOINTS; i++)
     for (int j=0;j<NB_JOINTS;j++)
-      massMatrix(i,j) = massMatrixPointer[i][j];
+        massMatrix(i,j) = massMatrixPointer[i][j];
 }
 
-Matrix LWRRobot::GetMassMatrix()
+const Matrix& LWRRobot::GetJacobian()
+{
+    return Jacobian;
+}
+
+void LWRRobot::SetJacobian(float **jacobianPointer)
+{
+    for (int i = 0; i < NB_CART; i++) {
+        for (int  j= 0; j < NB_JOINTS; j++) {
+            Jacobian(i,j) = jacobianPointer[i][j];
+        }
+    }
+}
+
+
+
+const Matrix& LWRRobot::GetMassMatrix()
 {
   return massMatrix;
 }
@@ -149,6 +165,7 @@ void LWRRobot::InitializeLWRComponents(){
 
   CommandedJointTorques.Resize(NB_JOINTS);
   massMatrix.Resize(NB_JOINTS,NB_JOINTS);
+  Jacobian.Resize(NB_CART,NB_JOINTS);
 
   SelectedGravComp.Resize(7);
   SelectedGravComp.One();
