@@ -1,0 +1,32 @@
+<Config>
+
+  <Packages>RTK_examples wam_robot_model </Packages>
+    <World> Examples/MyGolfWorld
+     </World>
+
+    <Robot> WAM/Racket friction
+        <Name> WAM </Name>
+        <RobotModule> ExampleOpenLoopPIDControlModule
+            <Options>
+            </Options>
+        </RobotModule> 
+
+
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+    <Simulator>
+        <Aspect>
+            <Camera>
+                <Position>    -2 -2 1 </Position>
+                <LookAtPoint> 1 0 0 </LookAtPoint>
+            </Camera>
+        </Aspect>
+        <Period>  0.001  </Period>
+        <Gravity> 0 0 -9.81 </Gravity>
+    </Simulator>
+
+
+</Config>
+

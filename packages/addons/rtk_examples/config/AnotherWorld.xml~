@@ -1,0 +1,17 @@
+<Config>
+    <World> Examples/AnotherWorld
+        <WorldModule> ExampleWorldControlModule
+        </WorldModule>
+     </World>
+
+    <Simulator>
+        <Aspect>
+            <Camera>
+                <Position>    3.5 -4.5 2 </Position>
+                <LookAtPoint> 0.5 0 0.5 </LookAtPoint>
+            </Camera>
+        </Aspect>
+        <Gravity> 0 0 -9.81 </Gravity>
+    </Simulator>
+</Config>
+

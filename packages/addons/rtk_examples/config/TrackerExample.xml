@@ -1,0 +1,18 @@
+<Config>
+
+  <Packages>RTK_examples wam_robot_model </Packages>
+    <World> Examples/OneBallWorld
+     </World>
+
+    <Robot> WAM/Racket friction
+        <Name> WAM </Name>
+        <RobotModule> ExampleTracker
+            <Options>
+            </Options>
+        </RobotModule> 
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+</Config>
+

@@ -1,0 +1,29 @@
+<Config>
+  <Packages> golf_package wam_robot_model   </Packages>
+  
+    <World> Golf_World
+     </World>
+
+    <Robot> WAM/Golf friction
+        <Name> WAM </Name>
+        <RobotModule> golf_module
+           
+        </RobotModule> 
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+
+    <aSimulator>
+        <CameraPos>    -2 -2 1 </CameraPos>
+        <CameraLookAt> 1 0 0.5 </CameraLookAt>
+        <Period>         0.001  </Period>
+    </aSimulator>
+
+  <Simulator>
+    <Gravity> 0 0 -9.81 </Gravity>
+
+    <Period> 0.005</Period>
+  </Simulator>
+</Config>
+

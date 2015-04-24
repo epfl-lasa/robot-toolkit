@@ -1,0 +1,11 @@
+<Config>
+    <World> Examples/AnotherWorld
+        <WorldModule> ExampleWorldControlModule
+        </WorldModule>
+     </World>
+
+    <Simulator>
+        <Gravity> 0 0 -9.81 </Gravity>
+    </Simulator>
+</Config>
+

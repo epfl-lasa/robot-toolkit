@@ -1,0 +1,42 @@
+<Config>
+    <World> Examples/ReachGraspWorld
+        <WorldModule> ManipulateObjects
+            <Name> ManipulateObjects </Name>
+            <Options>
+                <ServerName> lasapc17.epfl.ch </ServerName>
+                <ServerPort> 1207      </ServerPort>
+            </Options>
+        </WorldModule>
+     </World>
+
+    <Robot> WAM/Hand friction
+        <Name> ReachGrasp </Name>
+        <RobotModule> ReachGrasp </RobotModule>
+        <ControlMode>   position    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+<Simulator>
+<Aspect>
+	<Lights>
+		<Light>
+		<Position> -8 -8 2 1</Position>
+		<Direction>8 8 -2 1 </Direction>
+		<AmbientColor> 0.4 0.4 0.4 1</AmbientColor>
+<DiffuseColor> 0.9 0.9 0.9 1</DiffuseColor>
+<SpecularColor> 0 0 0 1</SpecularColor>
+		</Light>
+
+		<Light>
+		<Position> 6 6 2 1</Position>
+		<Direction>-6 -6 -2 1 </Direction>
+		<AmbientColor> 0.4 0.4 0.4 1</AmbientColor>
+<DiffuseColor> 0.9 0.9 0.9 1</DiffuseColor>
+<SpecularColor> 0 0 0 1</SpecularColor>
+		</Light>
+	</Lights>
+</Aspect>
+</Simulator>
+
+</Config>
+

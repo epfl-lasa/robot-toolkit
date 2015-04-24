@@ -1,0 +1,85 @@
+<Include file="../structure.xml"> Base
+<Children>
+  <Link> DOF_0
+  <Children>
+    <Link> DOF_1
+    <Children>
+      <Link> DOF_2
+      <Children>
+	<Link> DOF_3
+	<Children>
+	  <Link> DOF_4
+	  <Children>
+	    <Link> DOF_5
+	    <Children>
+	      <Link> DOF_6
+
+	      <Children>
+		<Link> TOOLPLATE
+
+
+		<Children>
+		  <Link> FORCE_SENSOR
+		  <Joint type="ForceSensor6DOF">
+		    <BaseFrame>
+		      <Origin> 0.0 0.0 0.012 </Origin>
+		      <Orient>  1  0  0
+		      0  1  0
+		      0  0  1    
+		      </Orient>
+		    </BaseFrame>
+		  </Joint>
+		  
+                  <Mass> 0.136 </Mass>
+                  <CenterOfMass> 0.0 0 -0.006 </CenterOfMass>
+                  <InertiaMatrix> 0.0000774  0.0000000  0.0000000
+                                  0.0000000  0.0000074  0.0000000
+                                  0.0000000  0.0000000  0.0000539
+                  </InertiaMatrix>
+
+		  <Children>
+		    <Link> TOOL
+		    <Joint type="None">
+                      <BaseFrame>
+                      <Origin> -0.03 -0.008 0.22 </Origin>
+                      <Orient> 1 0 0
+                               0 1 0
+                               0 0 1
+                      </Orient>
+                      <aOrient> 1 0 0
+                      0 -1 0
+                      0 0 -1
+
+                      </aOrient>
+                    </BaseFrame>
+                  </Joint>
+
+                  <Mass> 0.748  </Mass>
+                  <CenterOfMass>  0.01737 0.0 -0.11244  </CenterOfMass>
+                  <InertiaMatrix> 0.0135964   0.0005660   0.0023423
+                                  0.0005660   0.0118595  -0.0000521
+                                  0.0023423  -0.0000521   0.0012501
+                  </InertiaMatrix>
+		    </Link>                                                                         
+		  </Children>
+		  </Link> 
+		</Children>    
+		</Link>
+	      </Children>
+	      </Link>        
+	    </Children>    
+	    </Link>                    
+	  </Children>    
+	  </Link>                    
+	</Children>    
+	</Link>                    
+      </Children>                    
+      </Link>                
+    </Children>    
+    </Link>
+  </Children>    
+  </Link>
+</Children>    
+</Include>
+
+

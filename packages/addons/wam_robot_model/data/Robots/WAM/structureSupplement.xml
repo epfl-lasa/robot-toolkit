@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Robot>
+    <Link> Base 
+        <Children>
+            <Link> DOF_0 
+                <friction>
+                    <robot>
+                        <columb> 2.0 </columb>
+                        <viscous> 1.35 </viscous>
+                    </robot>
+                    <simulation>
+                        <columb> 2.73577046 </columb>
+                        <viscous> 0.00000000 </viscous>
+                    </simulation>
+                </friction>
+                <motorInertia> 0.00011631 </motorInertia>
+                <motorInstallationLink> 0 </motorInstallationLink>
+                <Children>
+                    <Link> DOF_1 
+                        <friction>
+                            <robot>
+                                <columb> 0.48 </columb>
+                                <viscous> 0.25 </viscous>
+                            </robot>
+                            <simulation>
+                                <columb> 4.17269238 </columb>
+                                <viscous> 0.00000000 </viscous>
+                            </simulation>
+                        </friction>
+                        <motorInertia> 0.00011831 </motorInertia>
+                        <motorInstallationLink> 1 </motorInstallationLink>
+                        <Children>
+                            <Link> DOF_2 
+                                <friction>
+                                    <robot>
+                                        <columb> 0.90 </columb>
+                                        <viscous> 0.45 </viscous>
+                                    </robot>
+                                    <simulation>
+                                        <columb> 2.81415626 </columb>
+                                        <viscous> 0.00000000 </viscous>
+                                    </simulation>
+                                </friction>
+                                <motorInertia> 0.00011831 </motorInertia>
+                                <motorInstallationLink> 1 </motorInstallationLink>
+                                <Children>
+                                    <Link> DOF_3 
+                                        <friction>
+                                            <robot>
+                                                <columb> 0.53 </columb>
+                                                <viscous> 0.25 </viscous>
+                                            </robot>
+                                            <simulation>
+                                                <columb> 0.962294181 </columb>
+                                                <viscous> 0.00000000 </viscous>
+                                            </simulation>
+                                        </friction>
+                                        <motorInertia> 0.00010686 </motorInertia>
+                                        <motorInstallationLink> 1 </motorInstallationLink>
+                                        <Children>
+                                            <Link> DOF_4 
+                                                <friction>
+                                                    <robot>
+                                                        <columb> 0.115 </columb>
+                                                        <viscous> 0.025 </viscous>
+                                                    </robot>
+                                                    <simulation>
+                                                        <columb> 0.212380496 </columb>
+                                                        <viscous> 0.00000000 </viscous>
+                                                    </simulation>
+                                                </friction>
+                                                <motorInertia> 0.00001685 </motorInertia>
+                                                <motorInstallationLink> 4 </motorInstallationLink>
+                                                <Children>
+                                                    <Link> DOF_5 
+                                                        <friction>
+                                                            <robot>
+                                                                <columb> 0.115 </columb>
+                                                                <viscous> 0.025 </viscous>
+                                                            </robot>
+                                                            <simulation>
+                                                                <columb> 0.295175075 </columb>
+                                                                <viscous> 0.00000000 </viscous>
+                                                            </simulation>
+                                                        </friction>
+                                                        <motorInertia> 0.00001745 </motorInertia>
+                                                        <motorInstallationLink> 4 </motorInstallationLink>
+                                                        <Children>
+                                                            <Link> DOF_6 
+                                                                <friction>
+                                                                    <robot>
+                                                                        <columb> 0.04000000 </columb>
+                                                                        <viscous> 0.00500000 </viscous>
+                                                                    </robot>
+                                                                    <simulation>
+                                                                        <columb> 0.111245582 </columb>
+                                                                        <viscous> 0.00000000 </viscous>
+                                                                    </simulation>
+                                                                </friction>
+                                                                <motorInertia> 0.00000142 </motorInertia>
+                                                                <motorInstallationLink> 6 </motorInstallationLink>
+                                                                <Children>
+                                                                    <Link> TOOLPLATE 
+                                                                        <Children>
+                                                                            <Link> TOOL 
+                                                                            </Link>
+                                                                        </Children>
+                                                                    </Link>
+                                                                </Children>
+                                                            </Link>
+                                                        </Children>
+                                                    </Link>
+                                                </Children>
+                                            </Link>
+                                        </Children>
+                                    </Link>
+                                </Children>
+                            </Link>
+                        </Children>
+                    </Link>
+                </Children>
+            </Link>
+        </Children>
+    </Link>
+    <TransmissionMatrix>  -42.00000000    0.00000000    0.00000000    0.00000000    0.00000000    0.00000000    0.00000000 
+        0.00000000   28.25000000  -16.81547619    0.00000000    0.00000000    0.00000000    0.00000000 
+        0.00000000  -28.25000000  -16.81547619    0.00000000    0.00000000    0.00000000    0.00000000 
+        0.00000000    0.00000000    0.00000000  -18.00000000    0.00000000    0.00000000    0.00000000 
+        0.00000000    0.00000000    0.00000000    0.00000000    9.48000000   -9.48000000    0.00000000 
+        0.00000000    0.00000000    0.00000000    0.00000000    9.48000000    9.48000000    0.00000000 
+        0.00000000    0.00000000    0.00000000    0.00000000    0.00000000    0.00000000  -14.93000000 
+    </TransmissionMatrix>
+    <MotorsMaxTorque>   4860.00   4860.00   4860.00   4320.00   3900.00   3900.00   3200.00 </MotorsMaxTorque>
+    <TransmissionCablesLimit>   1.8000   1.8000   1.8000   1.6000   0.6000   0.6000   0.1813 </TransmissionCablesLimit>
+</Robot>

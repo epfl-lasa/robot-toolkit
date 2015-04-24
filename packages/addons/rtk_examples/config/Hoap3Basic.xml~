@@ -1,0 +1,28 @@
+<Config>
+    <World> Examples/BasicWorld
+    </World>
+
+    <Robot> Hoap3
+        <Name> Hoap3 </Name>
+        <RobotModule> ExamplePositionControl
+            <Options>
+            </Options>
+        </RobotModule> 
+        <ControlMode>   position    </ControlMode>
+        <Args>                    </Args>
+
+        <Origin>  0 0.0 -0.06 </Origin>
+        <Orient>  1.0  0.0  0.0 
+                  0.0  1.0  0.0
+                  0.0  0.0  1.0
+        </Orient>            
+    </Robot>
+
+
+    <Simulator>
+        <CameraPos> -3 -5 1 </CameraPos>
+        <CameraLookAt> 0 0 0.5 </CameraLookAt>
+    </Simulator>
+
+</Config>
+

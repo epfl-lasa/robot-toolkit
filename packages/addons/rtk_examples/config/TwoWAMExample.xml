@@ -1,0 +1,36 @@
+<Config>
+  <Packages>RTK_examples wam_robot_model </Packages>
+
+    <World> Examples/TwoWAMHalfPlateWorld
+     </World>
+
+    <Robot> WAM/HalfPlate friction initPose
+        <Name> WAM_0 </Name>
+        <Origin>  1.125 0.0 0.0 </Origin>
+        <Orient> -1.0  0.0  0.0 
+                  1.0 -1.0  0.0
+                  0.0  0.0  1.0
+        </Orient>            
+        <RobotModule> ExampleGravityCompModule
+        </RobotModule> 
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+    <Robot> WAM/HalfPlate friction initPose
+        <Name> WAM_1 </Name>
+        <Origin>  -1.125 0.0 0.0 </Origin>
+        <Orient>  1.0  0.0  0.0 
+                  0.0  1.0  0.0
+                  0.0  0.0  1.0
+        </Orient>            
+        <RobotModule> ExampleGravityCompModule
+        </RobotModule> 
+
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+
+</Config>
+

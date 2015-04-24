@@ -1,0 +1,19 @@
+<Config>
+    <World> Examples/NetworkWorld
+        <WorldModule> WorldNetworkClient
+            <Name> Client </Name>
+            <Options>
+                <ServerName> 127.0.0.1 </ServerName>
+                <ServerPort> 1207      </ServerPort>
+            </Options>
+        </WorldModule>
+     </World>
+
+    <Robot> WAM/Racket friction
+        <Name> WAM </Name>
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+</Config>
+

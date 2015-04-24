@@ -1,0 +1,21 @@
+<Config>
+    <World> Examples/BasicWorld </World>
+
+    <Robot> iCub
+        <Name> iCub </Name>
+        <RobotModule> ExampleVelocityControl
+            <Options>
+            </Options>
+        </RobotModule> 
+        <ControlMode>   velocity    </ControlMode>
+        <Args>                    </Args>
+
+        <Origin>  0 0.0 0.2 </Origin>
+        <Orient> -1.0  0.0  0.0 
+                  1.0 -1.0  0.0
+                  0.0  0.0  1.0
+        </Orient>            
+    </Robot>
+    
+</Config>
+

@@ -1,0 +1,18 @@
+<Config>
+  <Packages>RTK_examples WAMRobotModel </Packages>
+
+    <World> Examples/WallWorld
+     </World>
+
+    <Robot> WAM/FTSensorHapticBall friction
+        <Name> WAM </Name>
+        <RobotModule> ExampleForceSensorModule
+            <Options>
+            </Options>
+        </RobotModule> 
+        <ControlMode>   torque    </ControlMode>
+        <Args>                    </Args>
+    </Robot>
+
+</Config>
+
