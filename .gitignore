@@ -7,3 +7,4 @@ packages/addons/
 config/packages/*
 data/packages/*
 bin/*
+modules/*
