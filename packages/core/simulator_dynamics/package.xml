@@ -46,6 +46,7 @@
   <build_depend>std_tools</build_depend>
   <build_depend>udp_network</build_depend>
   <build_depend>rtk_libode</build_depend>
+  <build_depend>roslib</build_depend>
 
   <!-- <build_depend>bullet</build_depend> -->
   <!-- <build_depend>opende</build_depend> -->
@@ -56,6 +57,7 @@
   <run_depend>std_tools</run_depend>
   <run_depend>udp_network</run_depend>
   <run_depend>rtk_libode</run_depend>
+  <run_depend>roslib</run_depend>
 
   <!-- <run_depend>bullet</run_depend> -->
   <!-- <run_depend>opende</run_depend> -->

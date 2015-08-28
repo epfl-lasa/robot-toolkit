@@ -22,6 +22,8 @@
 #include "StdTools/LogStream.h"
 #include "RobotLib/WorldInterface.h"
 
+#include "ros/package.h"
+
 SimulatorDynamicsInterface::SimulatorDynamicsInterface()
 :WorldInterface(true){
     mPeriod = 0.001;
@@ -114,6 +116,10 @@ bool SimulatorDynamicsInterface::LoadConfig(pXmlTree config){
 
     bool bError         = false;
 
+    // Find rtk_pkg_tools to cd to the right folder package
+    std::string path_rtkpkgtools = ros::package::getPath("rtk_pkg_tools");
+
+
     FileFinder::ClearAdditionalPaths();
     if((tree = config->Find("UserPath"))!=NULL){
         string path = config->Find("UserPath")->GetData();
@@ -129,10 +135,13 @@ bool SimulatorDynamicsInterface::LoadConfig(pXmlTree config){
         vector<string> paths = Tokenize(config->Find("Packages")->GetData());
         int cnt=0;
         for(unsigned int i=0;i<paths.size();i++){
-            string path = string("./data/packages/")+paths[i];
+          string path = string("./data/packages/")+paths[i];
+
             paths[i] = path;
             if(path.length()>0){
-                FileFinder::AddAdditionalPath(path);
+              FileFinder::AddAdditionalPath(path);
+              // Wow, such hack.
+              FileFinder::AddAdditionalPath(path_rtkpkgtools + "/." + path);
                 cnt++;
             }
         }

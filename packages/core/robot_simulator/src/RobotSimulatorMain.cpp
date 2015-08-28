@@ -30,6 +30,8 @@
 #include "RobotGUI/MainWindow.h"
 
 #include "UDPNetwork/UDPNetwork.h"
+
+#include "ros/package.h"
 UDPNetwork net;
 
 void ShowHelp();
@@ -40,6 +42,11 @@ int main( int argc, char **argv )
 {
     QApplication myApp( argc, argv );
 
+    // Use Ros function to get rtk_pkg_tools path.
+    std::string path = ros::package::getPath("rtk_pkg_tools");
+    // Wow, so much skill.
+    FileFinder::AddBasePath(path + "/..");
+    FileFinder::AddBasePath(path + "/../data");
 
     FileFinder::AddBasePath(".");
     FileFinder::AddBasePath("./data");

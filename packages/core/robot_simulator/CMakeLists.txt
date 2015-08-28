@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   rtk_pkg_tools
   rtk_libode
   rtk_libbullet
+  roslib
 )
 
 ## System dependencies are found with CMake's conventions
