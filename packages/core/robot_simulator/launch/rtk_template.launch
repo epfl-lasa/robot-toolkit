@@ -1,0 +1,4 @@
+<launch>
+<node name="robot_simulator" pkg="robot_simulator" type="robot_simulator" args="--config packages/robot_haptic_controller/RobotHapticController"/>
+
+</launch>
