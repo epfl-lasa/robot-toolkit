@@ -1,4 +1,4 @@
-The new version of RobotToolKit has a largely unchanged structure from robuild version. Differences include stuff such as our-of-source build that comes with catkin. As before, modules need to be linked to the RobotToolKit/module folder for the executables to find them. Executables should be run from RobotToolKit folder e.g. 
+The new version of RobotToolKit has a largely unchanged structure from robuild version. Differences include stuff such as our-of-source build that comes with catkin. As before, modules need to be linked to the RobotToolKit/module folder for the executables to find them. Executables should be run from RobotToolKit folder e.g.
 
 ./bin/robot_simulator --config packages/myPackage/myConfig
 
@@ -22,7 +22,7 @@ you will find a CreateRobotModule.py script, which if you run it will create a r
 
 ./CreateRobotModule.py MODULE_NAME
 
-This will create a folder PACKAGE_NAME/MODULE_NAME with boilerplate cpp code for defining a robot module. Note that modules are just libraries that are part of a catkin package. 
+This will create a folder PACKAGE_NAME/MODULE_NAME with boilerplate cpp code for defining a robot module. Note that modules are just libraries that are part of a catkin package.
 
 
 ######################
@@ -32,11 +32,11 @@ Next, you need to specify what your package should compile by modifying the CMak
 
 include_directories(${catkin_INCLUDE_DIRS})
 
-and 
+and
 
 target_link_library(MODULE_NAME ${catkin_LIBRARIES})
 
-At the end of the CMakeLists there is a small RobotToolKit specific part which will create symlinks for your modules to the correct place. You just need to list the modules that should be linked and the rest is automatic. 
+At the end of the CMakeLists there is a small RobotToolKit specific part which will create symlinks for your modules to the correct place. You just need to list the modules that should be linked and the rest is automatic.
 
 set(rtk_modules MODULE_NAME)
 
@@ -46,6 +46,4 @@ You also have the option to activate a script that will automatically synchroniz
 ###############
 config and data
 ###############
-if you used rtk_package_tools/scripts/CreatePackage.py to create your package, you will also find empty config and data folders in your new package. These will be linked to to the correct place. If you are convering a package from rosbuild, keep in mind that to comply with the catkin best practices your package shoudl follow this_naming_convention which means that you may need to change the package names at the top of the config file. 
-
-
+if you used rtk_package_tools/scripts/CreatePackage.py to create your package, you will also find empty config and data folders in your new package. These will be linked to to the correct place. If you are convering a package from rosbuild, keep in mind that to comply with the catkin best practices your package shoudl follow this_naming_convention which means that you may need to change the package names at the top of the config file.
