@@ -8,3 +8,4 @@ config/packages/*
 data/packages/*
 bin/*
 modules/*
+local_install
