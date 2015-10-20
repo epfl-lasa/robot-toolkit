@@ -393,6 +393,27 @@ public:
       std::cout << _[i] <<" ";
     std::cout << std::endl;    
   }
+
+  /// Prints out the vector to stdout with desired name
+  void Print(std::string name) const{
+    PRINT_BEGIN(cout);
+
+    std::cout << "Vector " <<ROW<<" "<<name.c_str()<<endl;;
+    for (unsigned int i = 0; i < ROW; i++){
+
+      std::cout <<"| ";
+      std::cout.width(PRINT_WIDTH);
+      std::cout<< _[i] ;
+      std::cout<<" |"<<endl;
+
+    }
+
+    PRINT_END(cout);
+  }
+
+
+
+
 };
 
 template<unsigned int ROW> const TVector<ROW> TVector<ROW>::ZERO;
