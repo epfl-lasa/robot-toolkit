@@ -24,20 +24,62 @@ RobotStatePublisher::~RobotStatePublisher(){
 }
 
 RobotInterface::Status RobotStatePublisher::RobotInit(){
+
+
+    mLWRRobot = (LWRRobot*)mRobot; 
+ 
     nh = mRobot->InitializeROS();
     string topicName;
     topicName = mRobot->GetName();
-    topicName += "/JointState";
-    jointStatePublisher = nh->advertise<sensor_msgs::JointState>(topicName,100);
+
+    GetConsole()->Print("Robot Init Publisher");
+    float new_sampling_time = 0.002;
+    mLWRRobot->SetSamplingTime(new_sampling_time);
+    dt = mLWRRobot->GetSamplingTime();
+    std::ostringstream ss;
+    ss << "DT: " << dt;
+    std::string msg(ss.str());
+    GetConsole()->Print(msg);
+
+    // topicName += "/JointState";
+    string JointStateName = "/joint_states";
+
+    jointStatePublisher = nh->advertise<sensor_msgs::JointState>(JointStateName,100);
     topicName = mRobot->GetName();
     topicName += "/Pose";
     posePublisher = nh->advertise<geometry_msgs::PoseStamped>(topicName,100);
+
+    topicName = mRobot->GetName();
+    topicName += "/FT";
+    ftPublisher = nh->advertise<geometry_msgs::WrenchStamped>(topicName,3);
+
+    topicName = mRobot->GetName();
+    topicName += "/Stiff";
+    stiffPublisher = nh->advertise<geometry_msgs::TwistStamped>(topicName,3);
+
 
     mSensorsGroup.SetSensorsList(mRobot->GetSensors());
 
     jointStateMsg.position.resize(mRobot->GetDOFCount());
     jointStateMsg.velocity.resize(mRobot->GetDOFCount());
     jointStateMsg.effort.resize(mRobot->GetDOFCount());
+    jointStateMsg.name.resize(mRobot->GetDOFCount());
+    char buf[255];
+    pXmlTree options = GetOptionTree();
+    string which_arm;
+    if(options) {
+        which_arm = options->CGet("Options.Arm", string("right"));
+    } else {
+        which_arm = "right";
+    }
+    cout<<"Using as "<<which_arm<<" arm";
+
+    for(int i=0; i<mRobot->GetDOFCount(); ++i) {
+        sprintf(buf, "%s_arm_%d_joint",which_arm.c_str(), i);
+        jointStateMsg.name[i] = buf;
+    }
+
+
 
     topicName = mRobot->GetName();
     topicName += "/CoreRate";
@@ -88,18 +130,45 @@ RobotInterface::Status RobotStatePublisher::RobotUpdate(){
 
     poseStampedMsg.header.stamp = ros::Time::now();
 
-
     jointStatePublisher.publish(jointStateMsg);
     posePublisher.publish(poseStampedMsg);
 
+
+     // New message for Cart FT
+     ftMsg.header.stamp = ros::Time::now();
+     ftMsg.wrench.force.x = eeFT[0];
+     ftMsg.wrench.force.y = eeFT[1];
+     ftMsg.wrench.force.z = eeFT[2];
+     ftMsg.wrench.torque.x = eeFT[3];
+     ftMsg.wrench.torque.y = eeFT[4];
+     ftMsg.wrench.torque.z = eeFT[5];
+     
+     // New message for Cart Stiffness
+     stiffMsg.header.stamp = ros::Time::now();
+     stiffMsg.twist.linear.x = eeStiff[0];
+     stiffMsg.twist.linear.y = eeStiff[1];
+     stiffMsg.twist.linear.z = eeStiff[2];
+     stiffMsg.twist.angular.x = eeStiff[3];
+     stiffMsg.twist.angular.y = eeStiff[4];
+     stiffMsg.twist.angular.z = eeStiff[5];
+
+     ftPublisher.publish(ftMsg);
+     stiffPublisher.publish(stiffMsg);
     return STATUS_OK;
 }
+
 RobotInterface::Status RobotStatePublisher::RobotUpdateCore(){
     //ratePublisher->publish(emptyMsg);
     // not safe for realtime
     mSensorsGroup.ReadSensors();
     currEEPos  = mRobot->GetReferenceFrame(mRobot->GetLinksCount()-1,0).GetOrigin();
     rot_MathLib = mRobot->GetReferenceFrame(mRobot->GetLinksCount()-1,0).GetOrient();
+
+    // New Cartesian Measurements
+    eeFT = ((LWRRobot*)mRobot)->GetEstimatedExternalCartForces();
+    eeStiff = ((LWRRobot*)mRobot)->GetCartStiffness();
+
+
     return STATUS_OK;
 }
 int RobotStatePublisher::RespondToConsoleCommand(const string cmd, const vector<string> &args){

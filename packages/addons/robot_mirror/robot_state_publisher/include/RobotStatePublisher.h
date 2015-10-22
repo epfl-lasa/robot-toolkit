@@ -22,26 +22,45 @@
 //#include "rosrt/rosrt.h"
 #include "sensor_msgs/JointState.h"
 #include "geometry_msgs/PoseStamped.h"
+ #include "geometry_msgs/TwistStamped.h"
+#include "geometry_msgs/WrenchStamped.h"
 #include "std_msgs/Empty.h"
 #include "eigen3/Eigen/Dense"
+
+#include "KUKARobotModel/LWRRobot.h"
 
 class RobotStatePublisher : public RobotInterface
 {
 
+    // Publishers
     ros::Publisher jointStatePublisher;
     ros::Publisher posePublisher;
+    ros::Publisher ftPublisher;
+    ros::Publisher stiffPublisher;
+
     ros::NodeHandle * nh;
+
+
+    LWRRobot * mLWRRobot;
+
     //a realtime publisher that tuns in realtime loop so that the rate of updatecore can be measured by rostopic hz
     //    rosrt::Publisher<std_msgs::Empty> * ratePublisher;
     std_msgs::EmptyPtr emptyMsg;
     sensor_msgs::JointState jointStateMsg;
     geometry_msgs::PoseStamped poseStampedMsg;
+    geometry_msgs::WrenchStamped ftMsg;
+    geometry_msgs::TwistStamped stiffMsg;
+    double dt;
 
     RevoluteJointSensorGroup mSensorsGroup;
     Vector3 currEEPos;
     Eigen::Matrix3d rot_Eigen;
    // Eigen::Quaternion<double> rot_quat;
     Matrix3 rot_MathLib;
+    Vector  eeFT;
+    Vector  eeStiff;
+
+    
 
 public:
             RobotStatePublisher();

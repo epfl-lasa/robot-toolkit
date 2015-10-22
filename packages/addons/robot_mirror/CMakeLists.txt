@@ -8,6 +8,7 @@ find_package(catkin REQUIRED
   mathlib
   robotlib
   std_tools
+  kuka_robot_model
   geometry_msgs
   roscpp
   sensor_msgs
