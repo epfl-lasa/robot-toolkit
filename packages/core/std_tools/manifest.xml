@@ -9,8 +9,6 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/std_tools</url>
   <export> <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lstd_tools"/> </export>
-  <rosdep name="ncurses"/>
-  
+  <rosdep name="libncurses-dev"/>
+
 </package>
-
-
