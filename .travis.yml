@@ -43,6 +43,7 @@ before_install:
   # catkin_make with no ROS packages (this creates devel/setup.bash) and then
   # source this file (this sets the path correctly) *before* adding the
   # repository.
+  - cd ~/catkin_ws
   - catkin_make
   - source devel/setup.bash
   # Add robot-toolkit only *after* setting up the path.
