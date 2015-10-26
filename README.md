@@ -8,12 +8,12 @@ folder e.g.
 
 Installation
 ------------
-cd /path/to/catkin/workspace
-cd src
-git clone git@github.com:epfl-lasa/robot-toolkit.git
-source devel/setup.bash  # See note below
-rosdep install --from-paths src --ignore-src
-catkin_make
+    cd /path/to/catkin/workspace
+    cd src
+    git clone git@github.com:epfl-lasa/robot-toolkit.git
+    source devel/setup.bash  # See note below
+    rosdep install --from-paths src --ignore-src
+    catkin_make
 
 Dependency note: robot toolkit has an intricate circular dependency: to compile
 RTK you must first source RTK's setup.bash. yikes. The easiest way to do this is
