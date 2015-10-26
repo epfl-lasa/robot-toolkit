@@ -1,10 +1,28 @@
-The new version of RobotToolKit has a largely unchanged structure from robuild
-version. Differences include stuff such as our-of-source build that comes with
+The new version of RobotToolKit has a largely unchanged structure from rosbuild
+version. Differences include stuff such as out-of-source build that comes with
 catkin. As before, modules need to be linked to the RobotToolKit/module folder
 for the executables to find them. Executables should be run from RobotToolKit
 folder e.g.
 
     ./bin/robot_simulator --config packages/myPackage/myConfig
+
+Installation
+------------
+cd /path/to/catkin/workspace
+cd src
+git clone git@github.com:epfl-lasa/robot-toolkit.git
+source devel/setup.bash  # See note below
+rosdep install --from-paths src --ignore-src
+catkin_make
+
+Dependency note: robot toolkit has an intricate circular dependency: to compile
+RTK you must first source RTK's setup.bash. yikes. The easiest way to do this is
+to call catkin_make with an empty src directory (this creates devel/setup.bash)
+and then source the setup.bash file (this sets the path correctly) *before*
+attempting to compile the robot_toolkit packages.
+
+[![Build Status](https://travis-ci.org/epfl-lasa/robot-toolkit.svg?branch=master)]
+(https://travis-ci.org/epfl-lasa/robot-toolkit)
 
 
 Creating a new RTK package:
