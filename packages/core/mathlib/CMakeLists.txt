@@ -93,10 +93,9 @@ catkin_package(
 ## Declare a cpp library
 FILE(GLOB theSourceFiles src/*.cpp)
 #FILE(GLOB theHeaderFiles include/*)
-MESSAGE("hello" ${theHeaderFiles})
- add_library(mathlib
-   ${theSourceFiles} 
- )
+add_library(mathlib
+   ${theSourceFiles}
+)
 
 ## Declare a cpp executable
 # add_executable(mathlib_node src/mathlib_node.cpp)
