@@ -171,10 +171,10 @@ public:
         TVector<ROW> vector(false);
         return GetRow(row,vector);
     }
-    /// Returns the given column in the vector
+    /// Returns the given row in the vector
     inline TVector<ROW>& GetRow(unsigned int row, TVector<ROW> &result) const {
         if(row<ROW){
-            REALTYPE *src = _ + row*ROW;
+            REALTYPE *src = (REALTYPE*)_ + row*ROW;
             REALTYPE *dst = result._;
             unsigned int len = ROW;
             while(len--)
