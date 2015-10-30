@@ -79,7 +79,7 @@ int MyRobotModule::RespondToConsoleCommand(const string cmd, const vector<string
             GetConsole()->Print("This is a test");
         }else if(cmd=="argsCount"){
             char txt[256];
-            sprintf(txt,"Found %d arguments",args.size());
+            sprintf(txt,"Found %lu arguments",args.size());
             GetConsole()->Print(txt);
         }else if(cmd=="argsList"){
             for(size_t i=0;i<args.size();i++){
