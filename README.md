@@ -21,6 +21,12 @@ to call catkin_make with an empty src directory (this creates devel/setup.bash)
 and then source the setup.bash file (this sets the path correctly) *before*
 attempting to compile the robot_toolkit packages.
 
+Faster compilation without a simulator:
+
+    catkin_make -DCATKIN_BLACKLIST_PACKAGES="robot_simulator;robot_gui;simulator_dynamics;rtk_libbullet;rtk_libode"
+
+This removes the dependencies on libbullet and libode that are otherwise compiled from source (with special options).
+
 [![Build Status](https://travis-ci.org/epfl-lasa/robot-toolkit.svg?branch=master)]
 (https://travis-ci.org/epfl-lasa/robot-toolkit)
 
