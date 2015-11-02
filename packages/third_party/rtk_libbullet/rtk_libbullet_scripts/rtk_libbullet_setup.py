@@ -27,7 +27,7 @@ def download_bullet(rtk_libode_path):
     subprocess.call(['wget','https://github.com/bulletphysics/bullet3/archive/master.zip'])
     subprocess.call(['unzip','master.zip'])
     print 'finished downloading and unpacking bullet'
-    
+
 def clean_bullet(rtk_libbullet_path):
     print 'cleaning bullet'
     subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'build')])
@@ -76,7 +76,7 @@ if __name__ == '__main__':
             download_bullet(rtk_libbullet_path)
     else:
         # if there were no arguments, try to do the right thing
-        print "made it in here"
+        print "Installing rtk_libbullet."
         if glob.glob('master.zip'):
             print 'libbullet already downloaded'
         else:
@@ -86,10 +86,3 @@ if __name__ == '__main__':
             print 'libbullet already built'
         else:
             build_bullet(rtk_libbullet_path)
-
-            
-
-
-
-
-
