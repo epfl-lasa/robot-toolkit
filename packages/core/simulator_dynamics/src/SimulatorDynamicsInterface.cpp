@@ -371,6 +371,9 @@ bool SimulatorDynamicsInterface::LoadConfig(pXmlTree config){
     bIsPausing  = false;
     bIsPaused   = true;
 
+    bool b_start_paused = config->Get("start_paused",true);
+    if(!b_start_paused) Run();
+
     return true;
 }
 
