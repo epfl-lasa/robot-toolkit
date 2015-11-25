@@ -79,6 +79,14 @@ add_library(WorldNetworkServer ${theSourceFiles})
 # standard cmake/catkin procedures above. This is step is only for linking the build modules.
 set(rtk_modules ExampleWorldControlModule ExampleGravityCompModule ExamplePositionControl ExampleConsoleModule ExampleForceSensorModule ExampleInverseKinematics ExampleOpenLoopPIDControlModule ExampleTracker ExampleVelocityControl)
 execute_process(COMMAND rospack find rtk_pkg_tools OUTPUT_VARIABLE rtk_pkg_tools_DIR OUTPUT_STRIP_TRAILING_WHITESPACE)
+
+# Check for RTK package tools.
+if(rtk_pkg_tools_DIR STREQUAL "")
+  message(FATAL_ERROR
+"Error: Could not find RTK package tools.
+Did you set the path?")
+endif()
+
 include(${rtk_pkg_tools_DIR}/rtk_create_symlinks.cmake)
 
 # Uncomment the following line if you want catkin dependencies you specify in CMakeLists.txt to be automatically copied to the package.xml
