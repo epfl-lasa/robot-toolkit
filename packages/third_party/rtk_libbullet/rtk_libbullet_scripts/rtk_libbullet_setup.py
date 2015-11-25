@@ -49,7 +49,8 @@ def clean_bullet(rtk_libbullet_path):
 def build_bullet(rtk_libbullet_path):
     print 'building bullet'
     rtk_libbullet_build_path = os.path.join(rtk_libbullet_path,'build')
-    os.mkdir(rtk_libbullet_build_path)
+    if not os.path.isdir(rtk_libbullet_build_path):
+        os.mkdir(rtk_libbullet_build_path)
     os.chdir(rtk_libbullet_build_path)
     rtk_libbullet_install_path = os.path.join(rtk_libbullet_path,'local_install')
     # calling cmake for the bullet project with a bunch of options for a minimal and suitable build for rtk
