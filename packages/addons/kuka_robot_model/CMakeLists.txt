@@ -161,10 +161,18 @@ add_library(kuka_robot_model
 ###################################
 ## RobotToolKit specific stuff  ###
 ###################################
-# to comply with the file structure of RobotToolKit, you need to create symlinks 
+# to comply with the file structure of RobotToolKit, you need to create symlinks
 # to any compiled modules in the RobotToolKit/module folder. This is automated below.
 # just add the modules of this package as set(rtk_modules myAwesomeModule1 myAwesomeModule2)
-# modules can be world or robot modules. Note that you need to specify your targets using 
+# modules can be world or robot modules. Note that you need to specify your targets using
 # standard cmake/catkin procedures above. This is step is only for linking the build modules.
+
+# Check for RTK package tools.
+if(rtk_pkg_tools_SOURCE_DIR STREQUAL "")
+  message(FATAL_ERROR
+"Error: Could not find RTK package tools.
+Did you set the path?")
+endif()
+
 set(rtk_modules )
 include(${rtk_pkg_tools_SOURCE_DIR}/rtk_create_symlinks.cmake)

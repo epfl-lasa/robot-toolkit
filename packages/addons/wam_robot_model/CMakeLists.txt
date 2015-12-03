@@ -166,6 +166,13 @@ FILE(GLOB theSourceFiles src/*.cpp)
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+# Check for RTK package tools.
+if(rtk_pkg_tools_SOURCE_DIR STREQUAL "")
+  message(FATAL_ERROR
+"Error: Could not find RTK package tools.
+Did you set the path?")
+endif()
+
 # create symlinks
 set(rtk_modules )
 include(${rtk_pkg_tools_SOURCE_DIR}/rtk_create_symlinks.cmake)
