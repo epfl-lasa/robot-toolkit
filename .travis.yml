@@ -108,6 +108,12 @@ before_script:
 # Compile and test.
 script:
   - cd ~/catkin_ws
+  - echo "Below should be the ros package path."
+  - echo "ROS package path is $ROS_PACKAGE_PATH"
+  - echo "ROS package path is ${ROS_PACKAGE_PATH}"
+  - echo "path is $PATH"
+  - echo "path is ${PATH}"
+  - echo "end of message"
   - echo `export | grep ROS_PACKAGE_PATH`
   # If the CATKIN_OPTIONS file exists, use it as an argument to catkin_make
   - catkin_make $( [ -f $CATKIN_OPTIONS ] && cat $CATKIN_OPTIONS )
