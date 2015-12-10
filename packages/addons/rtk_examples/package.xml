@@ -14,6 +14,7 @@
   <run_depend>std_tools</run_depend>
   <run_depend>mathlib</run_depend>
   <run_depend>robotlib</run_depend>
+  <run_depend>rospy</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

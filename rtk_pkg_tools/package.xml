@@ -41,7 +41,7 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>rospack</buildtool_depend>
-
+  <build_depend>rospy</build_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
