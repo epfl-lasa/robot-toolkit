@@ -301,7 +301,7 @@ void    IKGroupSolver::Solve(){
 		mOutput         += mLimitsOffset;
 		mCurrNullTarget -= mLimitsOffset;
 	}
-
+ 
 	int stepCnt =0;
 	while(1){
 		if(bVerbose) cerr << "IKGroupSolver: Pass <"<< stepCnt <<">"<<endl;
@@ -582,3 +582,469 @@ void IKGroupSolver::Resize(){
 
 
 }
+
+
+
+QPSolver::QPSolver(): mMultiplierRotationJ(1){
+}
+QPSolver::~QPSolver(){}
+
+
+Vector QPSolver::getOutput()const{
+	return mu.GetSubVector(0,mDOF);
+}
+
+void QPSolver::setDimensions(unsigned int DOF, unsigned int EndEffectorDim){
+	mDOF =DOF;
+	mEndEffectorDim = EndEffectorDim;
+	mu.Resize(DOF+EndEffectorDim);
+	mJ = Matrix(mEndEffectorDim, mDOF);
+}
+
+
+void QPSolver::setW(Matrix const& W){
+	mW = W;
+}
+
+void QPSolver::setMultiplierRotationJ(double MultiplierRotationJ){
+	mMultiplierRotationJ = MultiplierRotationJ;
+}
+
+
+void QPSolver::setJacobian(Matrix const& J){
+	mJ = J;
+	for(unsigned int i(0); i<3; ++i){
+		for(unsigned int j(0); j<mDOF; ++j){
+			mJ(i,j)*= mMultiplierRotationJ;
+		}
+	}
+}
+
+
+void QPSolver::setDeltaT(double const& dt){
+	mDeltaT = dt;
+}
+
+
+void QPSolver::setGamma(double const& gamma){
+	mGamma = gamma;
+}
+
+Vector QPSolver::POmega(Vector handle){
+	Vector XiM = XiMinus();
+	Vector XiP = XiPlus();
+
+	for(unsigned int i(0); i<mDOF; ++i){
+		if(handle[i] < XiM[i]){
+			handle[i] = XiM[i];
+		}
+		if(handle[i] > XiP[i]){
+			handle[i] = XiP[i];
+		}
+	}
+	return handle;
+}
+
+
+
+
+Vector QPSolver::q(){
+	Vector q(mDOF+mEndEffectorDim);
+	Vector b=mb();
+	Vector d=md();
+
+	for(unsigned int i(0); i<mDOF; ++i){
+		q[i] = b[i];
+	}
+	for(unsigned int i(mDOF); i<mEndEffectorDim; ++i){
+		q[i] = -d[i];
+	}
+	return q;
+}
+
+
+void QPSolver::Solve(Vector y){
+
+	//Updates u
+	for(unsigned int i(0); i<mEndEffectorDim; ++i){
+		mu[mDOF + i] = y[i];
+	}
+
+	//creates the M matrix
+	Matrix M(mDOF + mEndEffectorDim,mDOF + mEndEffectorDim);
+
+	Matrix tmp_mJT = -mJ.Transpose();
+
+	for(unsigned int i(0); i < mDOF + mEndEffectorDim; ++i){
+		for(unsigned int j(0); j < mDOF + mEndEffectorDim; ++j){
+			if(i<mDOF && j<mDOF){
+				M(i,j)=mW(i,j);
+			}
+			else if(i>=mDOF && j<mDOF){
+				M(i,j) = mJ(i-mDOF,j);
+			}
+			else if(i<mDOF && j>=mDOF){
+				M(i,j) = tmp_mJT(i,j-mDOF);
+			}
+		}
+	}
+
+	Vector handle =  mu - (M*mu + q());
+
+	Matrix I(M);
+	I.Identity();
+
+	Matrix tmpSum= I + M.Transpose();
+	Vector tmpVect = POmega(handle)-mu;
+
+
+	Vector udot = tmpSum*tmpVect;
+	udot = udot.Mult(mGamma,udot);
+
+	mu = mu + udot * mDeltaT;
+
+}
+
+MANSolver::MANSolver(){}
+MANSolver::~MANSolver(){}
+
+
+void MANSolver::setW(){
+	Matrix I(mDOF,mDOF);
+}
+
+void MANSolver::setConstraints(Vector ThetaMinus, Vector ThetaPlus, Vector ThetaDotMinus, Vector ThetaDotPlus, Vector Theta2Minus, Vector Theta2Plus){
+	mThetaMinus = ThetaMinus;
+	mThetaPlus = ThetaPlus;
+	mThetaDotMinus = ThetaDotMinus;
+	mThetaDotPlus = ThetaDotPlus;
+	mTheta2Minus = Theta2Minus;
+	mTheta2Plus = Theta2Plus;
+}
+
+void MANSolver::setMuP(double const& mup){
+	mMuP = mup;
+}
+
+void MANSolver::setEtaP(double const& etap){
+	mEtaP = etap;
+}
+
+void MANSolver::setMuV(double const& muv){
+	mMuV = muv;
+}
+
+void MANSolver::SetCurrent(Vector Theta, Vector ThetaDot){
+	mCurrentTheta = Theta;
+	mCurrentThetaDot = ThetaDot;
+}
+
+void MANSolver::Solve(Vector rdot, Vector Theta, Vector ThetaDot){
+	SetCurrent(Theta, ThetaDot);
+	QPSolver::Solve(rdot);
+}
+
+Vector MANSolver::XiMinus(){
+	Vector tempMinus = (mThetaMinus*mEtaP - mCurrentTheta)*mMuP;
+	Vector tempMinusDot = (mThetaDotMinus - mCurrentThetaDot)*mMuV;
+
+	Vector XiMinus(mDOF + mEndEffectorDim);
+
+	for (unsigned int i(0); i< mDOF; ++i){
+		if(tempMinus[i] > tempMinusDot[i]){
+			XiMinus[i] =tempMinus[i];
+		}
+		else{
+			XiMinus[i] =tempMinusDot[i];
+		}
+		if(mTheta2Minus[i] > XiMinus[i]){
+			XiMinus[i] =mTheta2Minus[i];
+		}
+	}
+	return XiMinus;
+}
+
+Vector MANSolver::XiPlus(){
+	Vector tempPlus = (mThetaPlus*mEtaP - mCurrentTheta)*mMuP;
+	Vector tempPlusDot = (mThetaDotPlus - mCurrentThetaDot)*mMuV;
+
+	Vector XiPlus(mDOF + mEndEffectorDim);
+
+	for (unsigned int i(0); i< mDOF; ++i){
+		if(tempPlus[i] < tempPlusDot[i]){
+			XiPlus[i] =tempPlus[i];
+		}
+		else{
+			XiPlus[i] =tempPlusDot[i];
+		}
+		if(mTheta2Plus[i] < XiPlus[i]){
+			XiPlus[i] =mTheta2Plus[i];
+		}
+	}
+	return XiPlus;
+}
+
+Vector MANSolver::mb(){
+	Vector b(mDOF);
+	return b;
+}
+
+
+Vector MANSolver::md(){
+	Vector d(mEndEffectorDim);
+
+	Matrix Jdot = ((mJ - mOldJ)*(1./mDeltaT));
+
+	d=mu.GetSubVector(mDOF, mEndEffectorDim) - Jdot * mCurrentThetaDot;
+	return d;
+}
+
+void MANSolver::setJacobian(Matrix const& J){
+	mOldJ = mJ;
+	QPSolver::setJacobian(J);
+}
+
+
+
+
+
+MKESolver::MKESolver():QPSolver(){}
+MKESolver::~MKESolver(){}
+
+
+
+void MKESolver::setH(Matrix const& H){
+	setW(H);
+}
+
+
+void MKESolver::setConstraints(Vector ThetaMinus, Vector ThetaPlus, Vector ThetaDotMinus, Vector ThetaDotPlus){
+	mThetaMinus = ThetaMinus;
+	mThetaPlus = ThetaPlus;
+	mThetaDotMinus = ThetaDotMinus;
+	mThetaDotPlus = ThetaDotPlus;
+}
+
+void MKESolver::SetCurrentTheta(Vector Theta){
+	mCurrentTheta= Theta;
+}
+
+void MKESolver::setMuP(double const& mup){
+	mMuP = mup;
+}
+
+Vector MKESolver::XiMinus(){
+	Vector tempMinus = (mThetaMinus - mCurrentTheta)*mMuP;
+	Vector XiMinus(mDOF + mEndEffectorDim);
+
+	for (unsigned int i(0); i< mDOF; ++i){
+		if(tempMinus[i] > mThetaDotMinus[i]){
+			XiMinus[i] =tempMinus[i];
+		}
+		else{
+			XiMinus[i] =mThetaDotMinus[i];
+		}
+	}
+	return XiMinus;
+}
+
+Vector MKESolver::XiPlus(){
+	Vector tempPlus = (mThetaPlus - mCurrentTheta)*mMuP;
+	Vector XiPlus(mDOF + mEndEffectorDim);
+
+	for (unsigned int i(0); i< mDOF; ++i){
+		if(tempPlus[i] < mThetaDotPlus[i]){
+			XiPlus[i] =tempPlus[i];
+		}
+		else{
+			XiPlus[i] =mThetaDotPlus[i];
+		}
+	}
+	return XiPlus;
+}
+
+Vector MKESolver::mb(){
+	Vector b(mDOF);
+	return b;
+}
+
+
+Vector MKESolver::md(){
+	Vector d(mEndEffectorDim);
+	d=mu.GetSubVector(mDOF, mEndEffectorDim);
+	return d;
+}
+
+
+
+void MKESolver::Solve(Vector rdot, Vector Theta){
+	SetCurrentTheta(Theta);
+	QPSolver::Solve(rdot);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+MKESolver::MKESolver(): mMultiplierRotationJ(1){}
+MKESolver::~MKESolver(){}
+
+
+void MKESolver::setDimensions(unsigned int DOF, unsigned int EndEffectorDim){
+	mDOF =DOF;
+	mEndEffectorDim = EndEffectorDim;
+	mu.Resize(DOF+EndEffectorDim);
+}
+
+void MKESolver::setH(Matrix const& H){
+	mH = H;
+}
+
+void MKESolver::setMultiplierRotationJ(double MultiplierRotationJ){
+	mMultiplierRotationJ = MultiplierRotationJ;
+}
+
+
+void MKESolver::setJacobian(Matrix const& J){
+	mJ = J;
+	for(unsigned int i(0); i<3; ++i){
+		for(unsigned int j(0); j<mDOF; ++j){
+			mJ(i,j)*= mMultiplierRotationJ;
+		}
+	}
+}
+
+void MKESolver::setConstraints(Vector ThetaMinus, Vector ThetaPlus, Vector ThetaDotMinus, Vector ThetaDotPlus){
+	mThetaMinus = ThetaMinus;
+	mThetaPlus = ThetaPlus;
+	mThetaDotMinus = ThetaDotMinus;
+	mThetaDotPlus = ThetaDotPlus;
+}
+
+void MKESolver::setDeltaT(double const& dt){
+	mDeltaT = dt;
+}
+
+void MKESolver::setMuP(double const& mup){
+	mMuP = mup;
+}
+
+
+void MKESolver::setGamma(double const& gamma){
+	mGamma = gamma;
+}
+
+
+
+Vector MKESolver::getOutput()const{
+	return mu.GetSubVector(0,mDOF);
+}
+
+
+void MKESolver::Solve(Vector rdot, Vector Theta){
+
+	//creates the vector q and update u
+	Vector q(mDOF + mEndEffectorDim);
+	for(unsigned int i(0); i<mEndEffectorDim; ++i){
+		mu[mDOF + i] = rdot[i];
+		q[mDOF + i] = -rdot[i];
+	}
+
+	//creates the M matrix
+	Matrix M(mDOF + mEndEffectorDim,mDOF + mEndEffectorDim);
+
+	Matrix tmp_mJT = -mJ.Transpose();
+
+
+	for(unsigned int i(0); i < mDOF + mEndEffectorDim; ++i){
+		for(unsigned int j(0); j < mDOF + mEndEffectorDim; ++j){
+			if(i<mDOF && j<mDOF){
+				M(i,j)=mH(i,j);
+			}
+			else if(i>=mDOF && j<mDOF){
+				M(i,j) = mJ(i-mDOF,j);
+			}
+			else if(i<mDOF && j>=mDOF){
+				M(i,j) = tmp_mJT(i,j-mDOF);
+			}
+		}
+	}
+
+
+//	M.InsertSubMatrix(0,0,mH,0,mDOF, 0,mDOF);
+//	M.InsertSubMatrix(0,mDOF, -mJ.Transpose(), 0, mDOF, mDOF, mEndEffectorDim);
+//	M.InsertSubMatrix(mDOF, 0, mJ, mDOF, mEndEffectorDim, 0,mDOF);
+
+
+	Vector handle =  mu - (M*mu + q);
+
+	Matrix I(M);
+	I.Identity();
+
+	Matrix tmpSum= I + M.Transpose();
+	//Vector tmpVect = POmega(handle, Theta)-mu; //////////////////////////////////////////////////////////////////////////////////////////
+	Vector tmpVect = handle-mu;
+
+	Vector udot = tmpSum*tmpVect;
+	udot = udot.Mult(mGamma,udot);
+
+	mu = mu + udot * mDeltaT;
+
+}
+
+
+Vector MKESolver::POmega(Vector handle, Vector const& Theta) {
+	Vector tempMinus = (mThetaMinus - Theta)*mMuP;
+	Vector XiMinus(mDOF + mEndEffectorDim);
+
+	Vector tempPlus = (mThetaPlus - Theta)*mMuP;
+	Vector XiPlus(mDOF + mEndEffectorDim);
+	for (unsigned int i(0); i< mDOF; ++i){
+		if(tempMinus[i] > mThetaDotMinus[i]){
+			XiMinus[i] =tempMinus[i];
+		}
+		else{
+			XiMinus[i] =mThetaDotMinus[i];
+		}
+
+		if(tempPlus[i] < mThetaDotPlus[i]){
+			XiPlus[i] =tempPlus[i];
+		}
+		else{
+			XiPlus[i] =mThetaDotPlus[i];
+		}
+	}
+	for(unsigned int i(mDOF); i < mDOF+ mEndEffectorDim; ++i){
+		XiPlus[i]= 1e30;
+		XiMinus[i]=-1e30;
+	}
+
+	for(unsigned int i(0); i < mDOF + mEndEffectorDim;++i){
+		if(handle[i] < XiMinus[i]){
+			handle[i] = XiMinus[i];
+		}
+		if(handle[i] > XiPlus[i]){
+			handle[i] = XiPlus[i];
+		}
+	}
+	return handle;
+}
+
+
+
+*/
+
+
+
