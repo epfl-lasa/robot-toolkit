@@ -8,12 +8,12 @@
         <Period> 0.002 </Period>
         <Name> KUKA
       </Name>
-        <RobotModule> robot_state_publisher
+        <RobotModule> rtk_robot_state_publisher
             <Options>
                 <Arm> right </Arm>
             </Options>
         </RobotModule>
-        <RobotModule> robot_state_subscriber
+        <RobotModule> rtk_robot_state_subscriber
             <Options>
                 <CtrlInterface> velocity </CtrlInterface>
             </Options>
@@ -25,4 +25,3 @@
 <Period> 0.002 </Period>
 </Simulator>
 </Config>
-

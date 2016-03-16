@@ -100,13 +100,13 @@ include_directories(robot_state_subscriber/include robot_state_publisher/include
 
 file(GLOB_RECURSE statePublisherFiles robot_state_publisher/*.h robot_state_publisher/*.cpp)
 ## Declare a cpp library
- add_library(robot_state_publisher
+ add_library(rtk_robot_state_publisher
    ${statePublisherFiles}
  )
 
 file(GLOB_RECURSE stateSubscriberFiles robot_state_subscriber/*.h robot_state_subscriber/*.cpp)
 ## Declare a cpp library
- add_library(robot_state_subscriber
+ add_library(rtk_robot_state_subscriber
    ${stateSubscriberFiles}
  )
 
@@ -118,10 +118,10 @@ file(GLOB_RECURSE stateSubscriberFiles robot_state_subscriber/*.h robot_state_su
 # add_dependencies(robot_mirror_node robot_mirror_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(robot_state_publisher
+target_link_libraries(rtk_robot_state_publisher
   ${catkin_LIBRARIES}
 )
-target_link_libraries(robot_state_subscriber
+target_link_libraries(rtk_robot_state_subscriber
   ${catkin_LIBRARIES}
 )
 
@@ -175,14 +175,13 @@ target_link_libraries(robot_state_subscriber
 ###################################
 ## RobotToolKit specific stuff  ###
 ###################################
-# to comply with the file structure of RobotToolKit, you need to create symlinks 
+# to comply with the file structure of RobotToolKit, you need to create symlinks
 # to any compiled modules in the RobotToolKit/module folder. This is automated below.
 # just add the modules of this package as set(rtk_modules myAwesomeModule1 myAwesomeModule2)
-# modules can be world or robot modules. Note that you need to specify your targets using 
+# modules can be world or robot modules. Note that you need to specify your targets using
 # standard cmake/catkin procedures above. This is step is only for linking the build modules.
-set(rtk_modules robot_state_subscriber robot_state_publisher)
+set(rtk_modules rtk_robot_state_subscriber rtk_robot_state_publisher)
 include(${rtk_pkg_tools_SOURCE_DIR}/rtk_create_symlinks.cmake)
 
 # Uncomment the following line if you want catkin dependencies you specify in CMakeLists.txt to be automatically copied to the package.xml
 execute_process(COMMAND ${rtk_pkg_tools_SOURCE_DIR}/scripts/CopyDepsFromCMakeListsToPackageXML.py ${PROJECT_NAME})
-
