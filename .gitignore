@@ -9,3 +9,4 @@ data/packages/*
 bin/*
 modules/*
 local_install
+CATKIN_IGNORE
