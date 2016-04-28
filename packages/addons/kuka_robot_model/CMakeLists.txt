@@ -81,7 +81,7 @@ std_tools
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 INCLUDE_DIRS include
-LIBRARIES kuka_robot_model
+LIBRARIES kuka_robot_model iiwa_robot_model
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
@@ -97,6 +97,9 @@ include_directories( ${catkin_INCLUDE_DIRS} include)
 ## Declare a cpp library
 add_library(kuka_robot_model
   src/LWRRobot.cpp
+)
+add_library(iiwa_robot_model
+  src/IIWARobot.cpp
 )
 
 ## Declare a cpp executable
