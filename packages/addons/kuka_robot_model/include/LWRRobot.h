@@ -86,7 +86,7 @@ class LWRRobot: public Robot {
   float * GetCartDampingAsFloat();
   float * GetDesiredForceAsFloat();
 
-private:
+protected:
   //LWR-specific controls:
   Vector JointStiffness;
   Vector JointDamping;
