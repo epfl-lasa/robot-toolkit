@@ -1,13 +1,10 @@
 <Config>
-<Packages>   kuka_robot_model  robot_mirror  </Packages>
+  <Packages>robot_mirror  kuka_robot_model</Packages>
     <World> Examples/BasicWorld
-
      </World>
 
-    <Robot> KUKA friction
-        <Period> 0.002 </Period>
-        <Name> KUKA
-      </Name>
+    <Robot> KUKA
+        <Name> KUKA </Name>
         <RobotModule> rtk_robot_state_publisher
             <Options>
                 <Arm> right </Arm>
@@ -18,10 +15,17 @@
                 <CtrlInterface> velocity </CtrlInterface>
             </Options>
         </RobotModule>
+
+
         <ControlMode>   position    </ControlMode>
         <Args>                    </Args>
     </Robot>
-<Simulator>
-<Period> 0.002 </Period>
-</Simulator>
+
+    <Simulator>
+
+        <Period>  0.002  </Period>
+        <Gravity> 0 0 -9.81 </Gravity>
+    </Simulator>
+
+
 </Config>
