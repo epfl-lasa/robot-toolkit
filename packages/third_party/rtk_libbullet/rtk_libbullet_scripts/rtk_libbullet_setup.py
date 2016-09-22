@@ -20,19 +20,22 @@ import subprocess
 import glob
 import sys
 
+BULLET_RELEASE = '2.83.6'
+BULLET_RELEASE_ZIP = BULLET_RELEASE+'.zip'
+
 
 def download_bullet(rtk_libode_path):
     os.chdir(rtk_libbullet_path)
     print 'downloading bullet'
-    subprocess.call(['wget','https://github.com/bulletphysics/bullet3/archive/master.zip'])
-    subprocess.call(['unzip','master.zip'])
+    subprocess.call(['wget','https://github.com/bulletphysics/bullet3/archive/'+BULLET_RELEASE_ZIP])
+    subprocess.call(['unzip',BULLET_RELEASE_ZIP])
     print 'finished downloading and unpacking bullet'
 
 def clean_bullet(rtk_libbullet_path):
     print 'cleaning bullet'
     subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'build')])
-    subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'bullet3-master')])
-    subprocess.call(['rm','-r',os.path.join(rtk_libbullet_path,'master.zip')])
+    subprocess.call(['rm','-rf',os.path.join(rtk_libbullet_path,'bullet3-'+BULLET_RELEASE)])
+    subprocess.call(['rm','-r',os.path.join(rtk_libbullet_path,BULLET_RELEASE_ZIP)])
     # remove "installed" libs and include files, but keep the folder structure and .gitignore files
     for root, dirs, files in os.walk(os.path.join(rtk_libbullet_path,'local_install')):
         # remove files
@@ -54,7 +57,7 @@ def build_bullet(rtk_libbullet_path):
     os.chdir(rtk_libbullet_build_path)
     rtk_libbullet_install_path = os.path.join(rtk_libbullet_path,'local_install')
     # calling cmake for the bullet project with a bunch of options for a minimal and suitable build for rtk
-    subprocess.call(['cmake','-DUSE_DOUBLE_PRECISION=OFF','-DBUILD_SHARED_LIBS=ON','-DBUILD_BULLET2_DEMOS=OFF','-DBUILD_BULLET3=ON','-DBUILD_CPU_DEMOS=OFF','-DBUILD_OPENGL3_DEMOS=OFF','-DBUILD_EXTRAS=ON','-DINSTALL_EXTRA_LIBS=ON','-DCMAKE_INSTALL_PREFIX='+rtk_libbullet_install_path,'../bullet3-master'])
+    subprocess.call(['cmake','-DUSE_DOUBLE_PRECISION=OFF','-DBUILD_SHARED_LIBS=ON','-DBUILD_BULLET2_DEMOS=OFF','-DBUILD_BULLET3=ON','-DBUILD_CPU_DEMOS=OFF','-DBUILD_OPENGL3_DEMOS=OFF','-DBUILD_EXTRAS=ON','-DINSTALL_EXTRA_LIBS=ON','-DCMAKE_INSTALL_PREFIX='+rtk_libbullet_install_path,'../bullet3-'+BULLET_RELEASE])
     # compile with speed!
     subprocess.call(['make','-j8'])
     # dont worry it will only 'install' locally
@@ -78,7 +81,7 @@ if __name__ == '__main__':
     else:
         # if there were no arguments, try to do the right thing
         print "Installing rtk_libbullet."
-        if glob.glob('master.zip'):
+        if glob.glob(BULLET_RELEASE_ZIP):
             print 'libbullet already downloaded'
         else:
             download_bullet(rtk_libbullet_path)
