@@ -18,11 +18,15 @@ Installation
     rosdep install --from-paths src --ignore-src
     catkin_make
 
-Dependency note: robot toolkit has an intricate circular dependency: to compile
+### Dependency note: 
+robot toolkit has an intricate circular dependency: to compile
 RTK you must first source RTK's setup.bash. yikes. The easiest way to do this is
 to call catkin_make with an empty src directory (this creates devel/setup.bash)
 and then source the setup.bash file (this sets the path correctly) *before*
 attempting to compile the robot_toolkit packages.
+
+There is also a dependency on "ncurses" that you can get by running:
+`sudo apt-get install libncurses5-dev`
 
 ### Minimal compilation
 
