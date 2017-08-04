@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/epfl-lasa/robot-toolkit.svg?branch=master)]
+[![Build Status](https://travis-ci.org/epfl-lasa/robot-toolkit.svg?branch=master)](https://travis-ci.org/epfl-lasa/robot-toolkit)
 
 The new version of RobotToolKit has a largely unchanged structure from rosbuild
 version. Differences include stuff such as out-of-source build that comes with
