@@ -13,6 +13,7 @@ Installation
     cd /path/to/catkin/workspace
     cd src
     git clone git@github.com:epfl-lasa/robot-toolkit.git
+    cd ../
     source devel/setup.bash  # See note below
     rosdep install --from-paths src --ignore-src
     catkin_make
